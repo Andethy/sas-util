@@ -95,10 +95,13 @@ class JsonFileIO(BaseFileIO):
     def __init__(self, *args):
         super().__init__(*args)
 
-    def add_entries(self, entries: Queue):
+    def add_entries(self, entries: Queue, reset=True):
 
         with open(self.file_path, 'r', encoding="utf-8", errors="replace") as self.file:
             self.data = json.load(self.file)
+
+        if reset:
+            self.data = []
 
         for n in range(entries.qsize()):
             entry = {}
