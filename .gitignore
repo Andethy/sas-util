@@ -78,3 +78,6 @@ fabric.properties
 
 # Audio resources
 resources/test
+resources/data
+
+!resources/data/placeholder.txt
