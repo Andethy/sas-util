@@ -203,12 +203,12 @@ TAG_MAP = {'rock': 'rock',
            'house': 'electronic',
            'hip hop': 'hip hop',
            'rap': 'hip hop',
-           'calm': 'safe',
-           'happy': 'safe',
-           'mellow': 'safe',
-           'scary': 'dangerous',
-           'eerie': 'dangerous',
-           'fast beat': 'dangerous',
+           'calm': 'test/safe',
+           'happy': 'test/safe',
+           'mellow': 'test/safe',
+           'scary': 'test/dangerous',
+           'eerie': 'test/dangerous',
+           'fast beat': 'test/dangerous',
            'jazz': 'jazz'}
 
 JSON_FIELDS = ('id', 'tags', 'file')

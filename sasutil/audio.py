@@ -1,4 +1,5 @@
 import os.path
+import sys
 import time
 from pathlib import Path
 
@@ -8,7 +9,7 @@ from constants import TAGS, REQUIRED, TAG_MAP
 from file import FileFinder, JsonFileIO, CsvFileIO
 from pydub import AudioSegment
 from queue import Queue
-from shutil import copyfile
+from shutil import copyfile, rmtree
 
 
 class AudioFormatter:
@@ -32,9 +33,10 @@ class AudioFormatter:
             else:
                 try:
                     self._format_file(path)
-                except:
-                    print(f"ERROR - Could not trim {path.name}")
-         print("Files formatted that could be formatted - DONE")
+                except CouldntDecodeError:
+                    print(f"ERROR - Could not trim {path.name} - removing it")
+                    os.remove(path)
+        print("Files formatted that could be formatted - DONE")
 
     def _format_file(self, file: Path):
         segment = ...
@@ -108,6 +110,13 @@ class AudioOrganizer:
 
 
 if __name__ == '__main__':
+    try:
+        # os.remove(Path("../out").absolute())
+        rmtree(Path("../out").absolute())
+        print("REMOVED OUT")
+    except FileNotFoundError:
+        print("NOT FOUND")
+        pass
     organizer = AudioOrganizer('../resources/data')
     organizer.init_json()
     organizer.organize_files()
