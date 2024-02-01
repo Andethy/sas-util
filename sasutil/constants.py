@@ -1,4 +1,4 @@
-REQUIRED = {'no voice'}
+REQUIRED = ('no voice', 'no voices', 'no vocal', 'no vocals', 'instrumental')
 TAGS = ('X',
         'no voice',
         'singer',
@@ -191,5 +191,24 @@ TAGS = ('X',
         'X')
 
 TAG_COUNT = len(TAGS) - 2
+
+TAG_MAP = {'rock': 'rock',
+           'hard rock': 'rock',
+           'metal': 'rock',
+           'heavy metal': 'rock',
+           'orchestra': 'orchestral',
+           'classical': 'orchestral',
+           'techno': 'electronic',
+           'ambient': 'electronic',
+           'house': 'electronic',
+           'hip hop': 'hip hop',
+           'rap': 'hip hop',
+           'calm': 'safe',
+           'happy': 'safe',
+           'mellow': 'safe',
+           'scary': 'dangerous',
+           'eerie': 'dangerous',
+           'fast beat': 'dangerous',
+           'jazz': 'jazz'}
 
 JSON_FIELDS = ('id', 'tags', 'file')
