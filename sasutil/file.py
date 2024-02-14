@@ -96,10 +96,11 @@ class CsvFileIO(BaseFileIO):
 
 
 class JsonFileIO(BaseFileIO):
-    def __init__(self, *args):
+    def __init__(self, *args, fields=JSON_FIELDS):
+        self.fields = fields
         super().__init__(*args)
 
-    def add_entries(self, entries: Queue, reset=True):
+    def add_entries(self, entries, reset=True):
 
         with open(self.file_path, 'r', encoding="utf-8", errors="replace") as self.file:
             self.data = json.load(self.file)
@@ -107,10 +108,11 @@ class JsonFileIO(BaseFileIO):
         if reset:
             self.data = []
 
-        for n in range(entries.qsize()):
+        for n in range(len(entries)):
             entry = {}
-            items = entries.get()
-            for index, key in enumerate(JSON_FIELDS):
+
+            items = entries.get() if type(entries) is Queue else entries[n]
+            for index, key in enumerate(self.fields):
                 entry[key] = items[index]
             self.data.append(entry)
 
@@ -118,9 +120,27 @@ class JsonFileIO(BaseFileIO):
         self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
         self.file.close()
 
+    def add_fields(self, **kwargs):
+        with open(self.file_path, 'r') as self.file:
+            self.data = json.load(self.file)
+            for coll in self.data:
+                for field, default in kwargs.items():
+                    coll[field] = default
+        with open(self.file_path, 'w') as self.file:
+            self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
+
     def clear_entries(self):
         with open(self.file_path, 'w', encoding="utf-8", errors="replace") as self.file:
             self.file.write(json.dumps([], sort_keys=False, indent=4))
+
+    def rem_fields(self, *args):
+        with open(self.file_path, 'r') as self.file:
+            self.data = json.load(self.file)
+            for coll in self.data:
+                for field in args:
+                    del coll[field]
+        with open(self.file_path, 'w') as self.file:
+            self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
 
     def get_entries(self):
         try:
@@ -147,4 +167,6 @@ if __name__ == '__main__':
     # csv = CsvFileIO('../resources/tagatune/annotations.csv')
     # print(str(csv.headers).replace(',', ',\n'))
     js = JsonFileIO('../resources/fma/mfcc.json')
-    js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
+    # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
+    # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
+    js.add_fields(MFCCS_BUCKET=-1, ONSET_BUCKET=-1)

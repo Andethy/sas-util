@@ -79,7 +79,7 @@ class AudioOrganizer:
         self.json_file.add_entries(res)
         print("Encoded to JSON - DONE")
 
-    def organize_files(self):
+    def organize_files_tgt(self):
         print("Attempting to retrieve data")
         data = self.json_file.get_data()
         print("Attempting to copy files to appropriate directories")
@@ -107,6 +107,9 @@ class AudioOrganizer:
         # exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
         # exp_path.mkdir(parents=True, exist_ok=True)
         print("Files transferred - DONE")
+
+    def organize_files_fma(self):
+        pass
 
 
 if __name__ == '__main__':

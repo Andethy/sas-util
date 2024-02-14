@@ -212,3 +212,8 @@ TAG_MAP = {'rock': 'rock',
            'jazz': 'jazz'}
 
 JSON_FIELDS = ('id', 'tags', 'file')
+
+JSON_MFCC_PATH = '../resources/fma/mfcc.json'
+ENERGY_FIELD = 'Energy'
+MFCC_FIELD = 'MFCCS_BUCKET'
+MFCC_FIELDS = ('Name', 'Index', 'Min', 'Max', 'Energy', 'MFCCS_BUCKET', 'ONSET_BUCKET')
