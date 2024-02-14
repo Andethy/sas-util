@@ -33,6 +33,10 @@ class FileFinder(object):
         else:
             return res if res.suffix[1:] in self.suffixes else None
 
+    def reset(self):
+        self._queue = Queue()
+        self._queue.put(self.root)
+
     def get_rel_path(self, file: Path):
         return Path(os.path.relpath(file.parent, self.root))
 
@@ -128,7 +132,19 @@ class JsonFileIO(BaseFileIO):
         print(self.data)
         return self.data
 
+    def numerize_entries(self, **fields):
+        with open(self.file_path, 'r') as self.file:
+            self.data = json.load(self.file)
+            for coll in self.data:
+                for field, tp in fields.items():
+                    coll[field] = tp(coll[field])
+            print(self.data)
+        with open(self.file_path, 'w') as self.file:
+            self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
+
 
 if __name__ == '__main__':
-    csv = CsvFileIO('../resources/tagatune/annotations.csv')
-    print(str(csv.headers).replace(',', ',\n'))
+    # csv = CsvFileIO('../resources/tagatune/annotations.csv')
+    # print(str(csv.headers).replace(',', ',\n'))
+    js = JsonFileIO('../resources/fma/mfcc.json')
+    js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)

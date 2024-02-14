@@ -1,1 +1,1 @@
-Put the tagatune stuff in this directory
+Place the tagatune dataset in this directory
