@@ -1,7 +1,8 @@
+import collections
 import math
 from queue import Queue
 
-from constants import JSON_MFCC_PATH, ENERGY_FIELD, MFCC_FIELD, MFCC_FIELDS
+from constants import *
 from file import JsonFileIO
 
 
@@ -13,11 +14,13 @@ class Analyzer:
         self.fields = fields
         self.out_file = JsonFileIO(in_dir, fields=fields)
 
-    def analyze_data(self, in_field: tuple, out_field: tuple, buckets: int = 4):
+    def analyze_data(self, in_field, out_field, buckets: int = 4):
         data = self.out_file.get_entries()
         buffer = []
         max_res = 0
         min_res = math.inf
+        print(in_field)
+        print(self.fields)
         in_loc = self.fields.index(in_field)
         out_loc = self.fields.index(out_field)
 
@@ -37,6 +40,22 @@ class Analyzer:
             buffer[n][out_loc] = min(int(n // (len(buffer) // buckets)), buckets - 1)
         self.out_file.add_entries(buffer)
 
+    def classify_data(self, buckets, *jsons):
+        data = collections.defaultdict(list)
+        temp = collections.defaultdict(str)
+        for bucket in buckets:
+            data[bucket] = []
+
+        for json in jsons:
+            file = JsonFileIO(json)
+            for curr in file.get_entries():
+                temp[curr["Name"]] = temp[curr["Name"]] + str(curr["BUCKET"])
+
+        for file, key in temp.items():
+            data[key].append(file)
+
+        self.out_file.add_entries_dict(data)
+
     @staticmethod
     def calculate_bucket(buckets: int, lb: float, ub: float, ac: float):
         bucket = 0
@@ -50,5 +69,8 @@ class Analyzer:
 
 
 if __name__ == '__main__':
-    analyzer = Analyzer(JSON_MFCC_PATH, MFCC_FIELDS)
-    analyzer.analyze_data(ENERGY_FIELD, MFCC_FIELD)
+    # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
+    # analyzer.analyze_data('Onsets', 'BUCKET')
+    analyzer = Analyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
+    analyzer.classify_data(OUTPUT_BUCKETS, JSON_MFCC_PATH, JSON_ONSET_PATH)
+

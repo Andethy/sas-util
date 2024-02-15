@@ -56,6 +56,8 @@ class AudioFormatter:
 
 class AudioOrganizer:
 
+    finder: FileFinder
+
     def __init__(self, in_dir: str):
         self.finder = FileFinder(in_dir, {'wav', 'mp3', 'ogg'})
         self.csv_file = CsvFileIO('../resources/tagatune/annotations.csv')
@@ -104,15 +106,28 @@ class AudioOrganizer:
                     except IsADirectoryError:
                         continue
 
-        # exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
-        # exp_path.mkdir(parents=True, exist_ok=True)
-        print("Files transferred - DONE")
+    def put_all_one_dir(self, src_path):
+        print("Attempting to source files")
+        src = FileFinder(src_path, {'wav', 'mp3', 'ogg'})
+        print("Attempting to copy files to root directory")
+        while True:
+            curr = src.get_next_file()
+            if curr is None:
+                break
+            elif curr is ... or curr.is_dir() or '.' not in str(curr):
+                continue
+            print(f"Attempting to copy {curr.name}")
+            copyfile(curr, Path(self.finder.root).joinpath(curr.name))
+
+    # exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
+    # exp_path.mkdir(parents=True, exist_ok=True)
+    print("Files transferred - DONE")
 
     def organize_files_fma(self):
         pass
 
 
-if __name__ == '__main__':
+def tgt():
     try:
         # os.remove(Path("../out").absolute())
         rmtree(Path("../out").absolute())
@@ -125,3 +140,17 @@ if __name__ == '__main__':
     organizer.organize_files()
     formatter = AudioFormatter(os.path.abspath('../out'), 7)
     formatter.format_all()
+
+
+def fma():
+    """
+    Currently Using my external SSD to store the medium FMA dataset
+    """
+    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma')
+    organizer.put_all_one_dir('/Volumes/Music/Robotics/fma_medium')
+    formatter = AudioFormatter(os.path.abspath('/Volumes/Music/Robotics/fma'), 7)
+    formatter.format_all()
+
+
+if __name__ == '__main__':
+    fma()

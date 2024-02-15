@@ -120,6 +120,20 @@ class JsonFileIO(BaseFileIO):
         self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
         self.file.close()
 
+    def add_entries_dict(self, data, reset=True):
+        with open(self.file_path, 'r', encoding="utf-8", errors="replace") as self.file:
+            self.data = json.load(self.file)
+
+        if reset:
+            self.data = data
+        else:
+            for key, val in data.items():
+                self.data[key] = val
+
+        self.file = open(self.file_path, 'w', encoding="utf-8", errors="replace")
+        self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
+        self.file.close()
+
     def add_fields(self, **kwargs):
         with open(self.file_path, 'r') as self.file:
             self.data = json.load(self.file)
@@ -146,10 +160,9 @@ class JsonFileIO(BaseFileIO):
         try:
             with open(self.file_path, 'r') as self.file:
                 self.data = json.load(self.file)
-                print("DATA:", self.data)
+                # print("DATA:", self.data[0], "..." if len(self.data) > 1 else "")
         except FileNotFoundError:
             print("NOT FOUND?")
-        print(self.data)
         return self.data
 
     def numerize_entries(self, **fields):
@@ -163,10 +176,35 @@ class JsonFileIO(BaseFileIO):
             self.file.write(json.dumps(self.data, sort_keys=False, indent=4))
 
 
+def fma():
+    js1 = JsonFileIO('../resources/fma/mfcc.json')
+    js1.rem_fields("ONSET_BUCKET")
+    js2 = JsonFileIO('../resources/fma/onset.json')
+    js2.add_fields(ONSET_BUCKET=-1)
+
+
+def test():
+    js = JsonFileIO('../resources/fma/buckets.json', fields=((0, 0), (0, 1), (1, 1)))
+    js.add_entries_dict(
+        {
+            "(0, 0)": ["000002.mp3", "000003.mp3"],
+            "(0, 1)": ["000002.mp3", "000003.mp3"],
+            "(0, 2)": ["000002.mp3", "000003.mp3"],
+            "(1, 0)": ["000002.mp3", "000003.mp3"],
+            "(1, 1)": ["000002.mp3", "000003.mp3"],
+            "(1, 2)": ["000002.mp3", "000003.mp3"],
+            "(2, 0)": ["000002.mp3", "000003.mp3"],
+            "(2, 1)": ["000002.mp3", "000003.mp3"],
+            "(2, 2)": ["000002.mp3", "000003.mp3"],
+        })
+
+
 if __name__ == '__main__':
+    test()
+    # fma()
     # csv = CsvFileIO('../resources/tagatune/annotations.csv')
     # print(str(csv.headers).replace(',', ',\n'))
-    js = JsonFileIO('../resources/fma/mfcc.json')
+
     # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
     # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
-    js.add_fields(MFCCS_BUCKET=-1, ONSET_BUCKET=-1)
+

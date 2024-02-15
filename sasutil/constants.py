@@ -214,6 +214,25 @@ TAG_MAP = {'rock': 'rock',
 JSON_FIELDS = ('id', 'tags', 'file')
 
 JSON_MFCC_PATH = '../resources/fma/mfcc.json'
+JSON_ONSET_PATH = '../resources/fma/onset.json'
+JSON_BUCKETS_PATH = '../resources/fma/buckets.json'
 ENERGY_FIELD = 'Energy'
 MFCC_FIELD = 'MFCCS_BUCKET'
-MFCC_FIELDS = ('Name', 'Index', 'Min', 'Max', 'Energy', 'MFCCS_BUCKET', 'ONSET_BUCKET')
+MFCC_FIELDS = ('Name', 'Index', 'Min', 'Max', 'Energy', 'BUCKET')
+ONSET_FIELDS = ('Name', 'Index', 'Onsets', 'BUCKET')
+OUTPUT_BUCKETS = ("00",
+                  "01",
+                  "02",
+                  "03",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "20",
+                  "21",
+                  "22",
+                  "23",
+                  "30",
+                  "31",
+                  "32",
+                  "33")
