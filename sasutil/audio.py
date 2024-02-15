@@ -11,6 +11,8 @@ from pydub import AudioSegment
 from queue import Queue
 from shutil import copyfile, rmtree
 
+from constants import *
+
 
 class AudioFormatter:
     finder: FileFinder
@@ -58,10 +60,27 @@ class AudioOrganizer:
 
     finder: FileFinder
 
-    def __init__(self, in_dir: str):
+    def __init__(self, in_dir: str, json_file='../resources/tagatune/annotations.json'):
         self.finder = FileFinder(in_dir, {'wav', 'mp3', 'ogg'})
         self.csv_file = CsvFileIO('../resources/tagatune/annotations.csv')
-        self.json_file = JsonFileIO('../resources/tagatune/annotations.json')
+        self.json_file = JsonFileIO(json_file)
+
+    def organize_files_fma(self):
+        print("Attempting to retrieve data")
+        data = self.json_file.get_entries()
+        print(data)
+        print("Attempting to copy files to appropriate directories")
+        for bucket, entries in data.items():
+            for entry in entries:
+                src_path = Path(f'/Volumes/Music/Robotics/fma_cut/{entry}')
+                des_path = Path(f'/Volumes/Music/Robotics/fma_out/{bucket}/{entry}')
+                print(f'Copying file {entry} to {des_path}')
+                Path(f'/Volumes/Music/Robotics/fma_out/{bucket}/').mkdir(parents=True, exist_ok=True)
+                try:
+                    copyfile(src_path, des_path)
+                except IsADirectoryError:
+                    continue
+        print("All files copied - DONE")
 
     def init_json(self):
         res = Queue()
@@ -119,12 +138,10 @@ class AudioOrganizer:
             print(f"Attempting to copy {curr.name}")
             copyfile(curr, Path(self.finder.root).joinpath(curr.name))
 
-    # exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
-    # exp_path.mkdir(parents=True, exist_ok=True)
-    print("Files transferred - DONE")
+        # exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
+        # exp_path.mkdir(parents=True, exist_ok=True)
+        print("Files transferred - DONE")
 
-    def organize_files_fma(self):
-        pass
 
 
 def tgt():
@@ -146,11 +163,16 @@ def fma():
     """
     Currently Using my external SSD to store the medium FMA dataset
     """
-    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma')
-    organizer.put_all_one_dir('/Volumes/Music/Robotics/fma_medium')
-    formatter = AudioFormatter(os.path.abspath('/Volumes/Music/Robotics/fma'), 7)
-    formatter.format_all()
-
+    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
+    # organizer.put_all_one_dir('/Volumes/Music/Robotics/fma_medium')
+    # formatter = AudioFormatter(os.path.abspath('/Volumes/Music/Robotics/fma'), 7)
+    # formatter.format_all()
+    print("ORGANIZING?")
+    organizer.organize_files_fma()
 
 if __name__ == '__main__':
-    fma()
+    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
+    organizer.organize_files_fma()
+    print("DONE?")
+    # fma()
+

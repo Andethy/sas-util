@@ -2,6 +2,7 @@ import json
 import os
 from pathlib import Path
 from queue import Queue
+import random
 from typing import TextIO
 
 from constants import JSON_FIELDS
@@ -199,8 +200,36 @@ def test():
         })
 
 
+def trim_folders():
+    # Set the path to the main folder
+    main_folder_path = Path('../out/fma_out')
+
+    # Iterate over each sub_folder in the main folder
+    for sub_folder in os.listdir(main_folder_path):
+        sub_folder_path = os.path.join(main_folder_path, sub_folder)
+
+        # Ensure the path is indeed a directory to avoid processing any files in the main folder
+        if os.path.isdir(sub_folder_path):
+            # List all files in the sub_folder
+            files = [f for f in os.listdir(sub_folder_path) if os.path.isfile(os.path.join(sub_folder_path, f))]
+
+            # Continue only if there are more than 20 files to delete
+            if len(files) > 20:
+                # Randomly select 20 files to keep
+                files_to_keep = random.sample(files, 20)
+
+                # Delete all files not in the 'files_to_keep' list
+                for f in files:
+                    if f not in files_to_keep:
+                        file_path = os.path.join(sub_folder_path, f)
+                        print(f'Attempting to remove {file_path}')
+                        os.remove(file_path)  # Use shutil.rmtree(file_path) if directories are also to be considered
+        print("All files removed that could be removed")
+
+
 if __name__ == '__main__':
-    test()
+    trim_folders()
+    # test()
     # fma()
     # csv = CsvFileIO('../resources/tagatune/annotations.csv')
     # print(str(csv.headers).replace(',', ',\n'))
