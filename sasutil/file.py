@@ -201,6 +201,7 @@ def test():
 
 
 def trim_folders():
+    random.seed(42693)
     # Set the path to the main folder
     main_folder_path = Path('../out/fma_out')
 
