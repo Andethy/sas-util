@@ -181,7 +181,7 @@ def fma():
     js1 = JsonFileIO('../resources/fma/mfcc.json')
     js1.rem_fields("ONSET_BUCKET")
     js2 = JsonFileIO('../resources/fma/onset.json')
-    js2.add_fields(ONSET_BUCKET=-1)
+    js2.add_fields(ONSET=-1)
 
 
 def test():

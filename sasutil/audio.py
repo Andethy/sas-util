@@ -1,6 +1,4 @@
 import os.path
-import sys
-import time
 from pathlib import Path
 
 from pydub.exceptions import CouldntDecodeError
@@ -143,7 +141,6 @@ class AudioOrganizer:
         print("Files transferred - DONE")
 
 
-
 def tgt():
     try:
         # os.remove(Path("../out").absolute())
@@ -169,6 +166,7 @@ def fma():
     # formatter.format_all()
     print("ORGANIZING?")
     organizer.organize_files_fma()
+
 
 if __name__ == '__main__':
     organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
