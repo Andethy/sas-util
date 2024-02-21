@@ -71,9 +71,9 @@ class AudioOrganizer:
         for bucket, entries in data.items():
             for entry in entries:
                 src_path = Path(f'/Volumes/Music/Robotics/fma_cut/{entry}')
-                des_path = Path(f'/Volumes/Music/Robotics/fma_out/{bucket}/{entry}')
+                des_path = Path(f'/Volumes/Music/Robotics/fma_onsets/{bucket}/{entry}')
                 print(f'Copying file {entry} to {des_path}')
-                Path(f'/Volumes/Music/Robotics/fma_out/{bucket}/').mkdir(parents=True, exist_ok=True)
+                Path(f'/Volumes/Music/Robotics/fma_onsets/{bucket}/').mkdir(parents=True, exist_ok=True)
                 try:
                     copyfile(src_path, des_path)
                 except IsADirectoryError:
