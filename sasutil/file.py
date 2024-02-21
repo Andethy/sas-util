@@ -200,10 +200,10 @@ def test():
         })
 
 
-def trim_folders():
+def trim_folders(folder_path, keep=20):
     random.seed(42693)
     # Set the path to the main folder
-    main_folder_path = Path('../out/fma_out')
+    main_folder_path = Path(folder_path)
 
     # Iterate over each sub_folder in the main folder
     for sub_folder in os.listdir(main_folder_path):
@@ -215,9 +215,9 @@ def trim_folders():
             files = [f for f in os.listdir(sub_folder_path) if os.path.isfile(os.path.join(sub_folder_path, f))]
 
             # Continue only if there are more than 20 files to delete
-            if len(files) > 20:
+            if len(files) > keep:
                 # Randomly select 20 files to keep
-                files_to_keep = random.sample(files, 20)
+                files_to_keep = random.sample(files, keep)
 
                 # Delete all files not in the 'files_to_keep' list
                 for f in files:
@@ -229,7 +229,7 @@ def trim_folders():
 
 
 if __name__ == '__main__':
-    trim_folders()
+    trim_folders('/Volumes/Music/Robotics/fma_onsets', 60   )
     # test()
     # fma()
     # csv = CsvFileIO('../resources/tagatune/annotations.csv')
