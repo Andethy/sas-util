@@ -5,6 +5,10 @@ from queue import Queue
 from constants import *
 from file import JsonFileIO
 
+import pandas as pd
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+
 
 # librosa.feature.mfcc
 # librosa.onset.onset_detect
@@ -49,7 +53,7 @@ class Analyzer:
         for json in jsons:
             file = JsonFileIO(json)
             for curr in file.get_entries():
-                temp[curr["Name"]] = temp[curr["Name"]] + str(curr["BUCKET"])
+                temp[curr["Name"]] = temp[curr["Name"]] + str(curr["bucket"])
 
         for file, key in temp.items():
             data[key].append(file)
@@ -67,10 +71,48 @@ class Analyzer:
             bucket += 1
         return bucket
 
+    def correlate_buckets(self, json: JsonFileIO, fields: list, buckets: int = 5):
+        print(f'Gathering entries @ {json.file_path}')
+        data_list = json.get_entries()
+
+        print("Converting entries to DataFrame object")
+        data_df = pd.DataFrame(data_list)
+
+        print("Extracting fields to analyze")
+        variables = data_df[fields]
+
+        print("Standardizing data based on fields")
+        scaler = StandardScaler()
+        variables_scaled = scaler.fit_transform(variables)
+
+        print(f'Performing K-means clustering into {buckets} buckets')
+        kmeans = KMeans(n_clusters=buckets, random_state=42)
+        data_df['bucket'] = kmeans.fit_predict(variables_scaled)
+
+        print("Calculating cluster centroids")
+        centroids = scaler.inverse_transform(kmeans.cluster_centers_)
+        centroids_df = pd.DataFrame(centroids, columns=fields)
+
+        print("Assigning buckets as a field in JSON data")
+        for i, row in data_df.iterrows():
+            data_list[i]['bucket'] = row['bucket']
+
+        print("Writing new field to JSON")
+        json.add_entries(data_list)
+
+        # print("Entries with their respective buckets:")
+        # for item in data_list:
+        #     print(item)
+
+        print("\nAverage values for each bucket (centroids):")
+        print(centroids_df)
+
+        print("Analysis complete - done.")
+
 
 if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
     # analyzer.analyze_data('Onsets', 'BUCKET', 5)
     analyzer = Analyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
-    analyzer.classify_data(OUTPUT_BUCKETS, JSON_ONSET_PATH)
-
+    analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
+    # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS))

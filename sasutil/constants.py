@@ -215,11 +215,13 @@ JSON_FIELDS = ('id', 'tags', 'file')
 
 JSON_MFCC_PATH = '../resources/fma/mfcc.json'
 JSON_ONSET_PATH = '../resources/fma/onset.json'
+JSON_FEATURES_PATH = '../resources/fma/features.json'
 JSON_BUCKETS_PATH = '../resources/fma/buckets.json'
 ENERGY_FIELD = 'Energy'
 MFCC_FIELD = 'MFCCS_BUCKET'
 MFCC_FIELDS = ('Name', 'Index', 'Min', 'Max', 'Energy', 'BUCKET')
 ONSET_FIELDS = ('Name', 'Index', 'Onsets', 'BUCKET')
+FEATURES_FIELDS = ("Onsets", "mfcc_mean", "melSpec_mean", "chromaVec_mean", "roll_mean", "zcr_mean")
 OUTPUT_BUCKETS = ("00",
                   "01",
                   "02",
