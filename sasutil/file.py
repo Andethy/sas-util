@@ -230,29 +230,29 @@ def trim_folders(folder_path, keep=20):
 
 
 if __name__ == '__main__':
-    # trim_folders('/Volumes/Music/Robotics/fma_onsets', 60   )
+    trim_folders('/Volumes/Music/Robotics/fma_buckets', 100)
     # test()
     # fma()
     # csv = CsvFileIO('../resources/tagatune/annotations.csv')
     # print(str(csv.headers).replace(',', ',\n'))
 
-    js = JsonFileIO(JSON_FEATURES_PATH)
-    js.numerize_entries(Index=int,
-                        mfcc_mean=float,
-                        mfcc_min=float,
-                        mfcc_max=float,
-                        melSpec_mean=float,
-                        melSpec_min=float,
-                        melSpec_max=float,
-                        chromaVec_mean=float,
-                        chromaVec_min=float,
-                        chromaVec_max=float,
-                        roll_mean=float,
-                        roll_min=float,
-                        roll_max=float,
-                        zcr_mean=float,
-                        zcr_min=float,
-                        zcr_max=float)
+    # js = JsonFileIO(JSON_FEATURES_PATH)
+    # js.numerize_entries(Index=int,
+    #                     mfcc_mean=float,
+    #                     mfcc_min=float,
+    #                     mfcc_max=float,
+    #                     melSpec_mean=float,
+    #                     melSpec_min=float,
+    #                     melSpec_max=float,
+    #                     chromaVec_mean=float,
+    #                     chromaVec_min=float,
+    #                     chromaVec_max=float,
+    #                     roll_mean=float,
+    #                     roll_min=float,
+    #                     roll_max=float,
+    #                     zcr_mean=float,
+    #                     zcr_min=float,
+    #                     zcr_max=float)
     # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
     # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
 

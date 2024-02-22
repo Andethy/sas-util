@@ -63,7 +63,7 @@ class AudioOrganizer:
         self.csv_file = CsvFileIO('../resources/tagatune/annotations.csv')
         self.json_file = JsonFileIO(json_file)
 
-    def organize_files_fma(self):
+    def organize_files_fma(self, out_dir):
         print("Attempting to retrieve data")
         data = self.json_file.get_entries()
         print(data)
@@ -71,9 +71,9 @@ class AudioOrganizer:
         for bucket, entries in data.items():
             for entry in entries:
                 src_path = Path(f'/Volumes/Music/Robotics/fma_cut/{entry}')
-                des_path = Path(f'/Volumes/Music/Robotics/fma_onsets/{bucket}/{entry}')
+                des_path = Path(f'/Volumes/Music/Robotics/{out_dir}/{bucket}/{entry}')
                 print(f'Copying file {entry} to {des_path}')
-                Path(f'/Volumes/Music/Robotics/fma_onsets/{bucket}/').mkdir(parents=True, exist_ok=True)
+                Path(f'/Volumes/Music/Robotics/{out_dir}/{bucket}/').mkdir(parents=True, exist_ok=True)
                 try:
                     copyfile(src_path, des_path)
                 except IsADirectoryError:
@@ -170,7 +170,7 @@ def fma():
 
 if __name__ == '__main__':
     organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
-    organizer.organize_files_fma()
-    print("DONE?")
+    organizer.organize_files_fma('fma_buckets')
+    print("- DONE")
     # fma()
 

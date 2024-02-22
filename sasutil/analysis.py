@@ -8,6 +8,8 @@ from file import JsonFileIO
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+import matplotlib.pyplot as plt
 
 
 # librosa.feature.mfcc
@@ -104,6 +106,39 @@ class Analyzer:
         # for item in data_list:
         #     print(item)
 
+        # PCA for dimensionality reduction to 2D for visualization
+        pca = PCA(n_components=2)
+        principal_components = pca.fit_transform(variables_scaled)
+        principal_df = pd.DataFrame(data=principal_components, columns=['principal component 1', 'principal component 2'])
+
+        # PCA loadings (eigenvectors)
+        loadings = pca.components_.T  # Transpose to align with original variables: rows are variables, columns are components
+
+        # # Create a DataFrame of loadings with the original variables
+        # loadings_df = pd.DataFrame(loadings, columns=['PC1', 'PC2'], index=variables)
+        #
+        # print("PCA Loadings:")
+        # print(loadings_df)
+
+        # Adding bucket information to the PCA DataFrame
+        principal_df['bucket'] = data_df['bucket']
+
+        # Plotting
+        fig, ax = plt.subplots()
+        colors = ['r', 'g', 'b', 'y', 'c']
+        for bucket, color in zip(principal_df['bucket'].unique(), colors):
+            indices_to_keep = principal_df['bucket'] == bucket
+            ax.scatter(principal_df.loc[indices_to_keep, 'principal component 1']
+                       , principal_df.loc[indices_to_keep, 'principal component 2']
+                       , c=color
+                       , s=50)
+        ax.legend(principal_df['bucket'].unique())
+        ax.grid()
+        plt.xlabel('Principal Component 1')
+        plt.ylabel('Principal Component 2')
+        plt.title('2D PCA of Clustering Results')
+        plt.show()
+
         print("\nAverage values for each bucket (centroids):")
         print(centroids_df)
 
@@ -114,5 +149,6 @@ if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
     # analyzer.analyze_data('Onsets', 'BUCKET', 5)
     analyzer = Analyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
+    analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS))
     analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
-    # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS))
+
