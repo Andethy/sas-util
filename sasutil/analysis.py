@@ -149,6 +149,6 @@ if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
     # analyzer.analyze_data('Onsets', 'BUCKET', 5)
     analyzer = Analyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
-    analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS), 10)
+    analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
     analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
 

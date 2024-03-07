@@ -222,6 +222,7 @@ MFCC_FIELD = 'MFCCS_BUCKET'
 MFCC_FIELDS = ('Name', 'Index', 'Min', 'Max', 'Energy', 'BUCKET')
 ONSET_FIELDS = ('Name', 'Index', 'Onsets', 'BUCKET')
 FEATURES_FIELDS = ("Onsets", "mfcc_mean", "melSpec_mean", "chromaVec_mean", "roll_mean", "zcr_mean")
+FEATURES_FIELDS_SMALL = ("mfcc_mean", "melSpec_mean")
 OUTPUT_BUCKETS = ("00",
                   "01",
                   "02",
