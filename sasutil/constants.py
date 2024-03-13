@@ -446,3 +446,9 @@ TRACKS_ARR = ('000740',
 EVALUATION_KEYS = ('Danger', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable')
 
 SELECTION_FIELD = 'selected_mushra'
+
+RATING_RANGE = range(18, 717, 5)
+
+ID_FIELD = 'ResponseId'
+
+START_ROW = 1

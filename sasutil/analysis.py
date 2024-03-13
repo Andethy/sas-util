@@ -148,12 +148,34 @@ class AudioAnalyzer:
 
 class StudyAnalyzer:
 
-    def __init__(self, fp, op, entries):
+    def __init__(self, fp, op, init_entries=TRACKS_ARR):
         self.csv = CsvFileIO(fp)
         self.out = JsonFileIO(op)
-        self.data = {entry: {} for entry in entries}
-        self.out.add_entries(self.data)
-        print(self.data)
+        self.data = {entry: {} for entry in init_entries}
+
+        self.out.add_entries_dict(self.data)
+
+    def extract_csv(self):
+        for entry in self.csv.data[START_ROW:]:
+            values = list(entry.values())
+            person = entry[ID_FIELD]
+            items: list = entry[SELECTION_FIELD].split(',')
+            for n in RATING_RANGE:
+                response = {}
+                null_count = 0
+                for m, key in enumerate(EVALUATION_KEYS):
+                    curr = values[n + m]
+                    if not curr:
+                        null_count += 1
+                        curr = 0
+                    else:
+                        curr = int(curr)
+                    response[key] = curr
+                if null_count == len(EVALUATION_KEYS):
+                    continue
+                self.data[TRACKS_ARR[int(items[0]) - 1]][person] = response
+                items.pop(0)
+        self.out.add_entries_dict(self.data)
 
 
 if __name__ == '__main__':
@@ -162,5 +184,7 @@ if __name__ == '__main__':
     # analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
     # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
     # analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
-    analyzer = StudyAnalyzer('../resources/study/study.csv', '../resources/study/results.json', TRACKS_ARR)
-    print(analyzer.csv.data[3])
+    analyzer = StudyAnalyzer('../resources/study/study.csv', '../resources/study/results.json')
+    analyzer.extract_csv()
+    x = list(analyzer.csv.data[0].values())
+    print(*(x[n] for n in RATING_RANGE))
