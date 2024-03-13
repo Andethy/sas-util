@@ -87,8 +87,11 @@ import csv
 
 class CsvFileIO(BaseFileIO):
 
-    def __init__(self, file_path):
+    def __init__(self, file_path, active=True):
         super().__init__(file_path)
+        if not active:
+            return
+
         with open(self.file_path, mode='r', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             self.data = [row for row in reader if any(row.values())]

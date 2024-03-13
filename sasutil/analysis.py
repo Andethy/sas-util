@@ -1,6 +1,7 @@
 import collections
 import math
-from queue import Queue
+
+import numpy as np
 
 from constants import *
 from file import JsonFileIO, CsvFileIO
@@ -73,7 +74,8 @@ class AudioAnalyzer:
             bucket += 1
         return bucket
 
-    def correlate_buckets(self, json: JsonFileIO, fields: list, buckets: int = 5):
+    @staticmethod
+    def correlate_buckets(json: JsonFileIO, fields: list, buckets: int = 5):
         print(f'Gathering entries @ {json.file_path}')
         data_list = json.get_entries()
 
@@ -113,7 +115,7 @@ class AudioAnalyzer:
                                     columns=['principal component 1', 'principal component 2'])
 
         # PCA loadings (eigenvectors)
-        loadings = pca.components_.T  # Transpose to align with original variables: rows are variables, columns are components
+        loadings = pca.components_.T  # Transpose to align with original variables: rows=variables, columns=components
 
         # Create a DataFrame of loadings with the original variables
         loadings_df = pd.DataFrame(loadings, columns=['PC1', 'PC2'], index=fields)
@@ -129,10 +131,10 @@ class AudioAnalyzer:
         colors = ['r', 'g', 'b', 'y', 'c']
         for bucket, color in zip(principal_df['bucket'].unique(), colors):
             indices_to_keep = principal_df['bucket'] == bucket
-            ax.scatter(principal_df.loc[indices_to_keep, 'principal component 1']
-                       , principal_df.loc[indices_to_keep, 'principal component 2']
-                       , c=color
-                       , s=50)
+            ax.scatter(principal_df.loc[indices_to_keep, 'principal component 1'],
+                       principal_df.loc[indices_to_keep, 'principal component 2'],
+                       c=color,
+                       s=50)
         ax.legend(principal_df['bucket'].unique())
         ax.grid()
         plt.xlabel('Principal Component 1')
@@ -148,11 +150,15 @@ class AudioAnalyzer:
 
 class StudyAnalyzer:
 
-    def __init__(self, fp, op, init_entries=TRACKS_ARR):
-        self.csv = CsvFileIO(fp)
-        self.out = JsonFileIO(op)
-        self.data = {entry: {} for entry in init_entries}
+    def __init__(self, fp, op1, op2, init_entries=TRACKS_ARR):
+        self.csv = CsvFileIO(fp, active=False)
+        self.out = JsonFileIO(op1)
+        self.summary = JsonFileIO(op2)
+        self.files = init_entries
+        self.data = self.out.get_entries()
 
+    def init_out(self):
+        self.data = {entry: {} for entry in self.files}
         self.out.add_entries_dict(self.data)
 
     def extract_csv(self):
@@ -177,6 +183,38 @@ class StudyAnalyzer:
                 items.pop(0)
         self.out.add_entries_dict(self.data)
 
+    def summarize(self):
+        track_means = {}
+        for keyTrack, valueTrack in self.data.items():
+            person_tracks = [0, 0, 0, 0, 0]
+            for keyPerson, valuePerson in valueTrack.items():
+                track_data = []
+                for keyData, valueData in valuePerson.items():
+                    track_data.append(valueData)
+                person_tracks = np.vstack((person_tracks, track_data))
+            average_values = np.mean(person_tracks, axis=0)
+            track_means[keyTrack] = list(round(value, 2) for value in average_values)
+        self.summary.add_entries_dict(track_means)
+
+        danger = []
+        urgency = []
+        rof = []
+        collab = []
+        approach = []
+
+        for track_key, tv in track_means.items():
+            danger.append(tv[0])
+            urgency.append(tv[1])
+            rof.append(tv[2])
+            collab.append(tv[3])
+            approach.append(tv[4])
+
+        plt.boxplot([danger, urgency, rof, collab, approach])
+        plt.xticks([1, 2, 3, 4, 5], EVALUATION_KEYS, minor=True, rotation=45)
+        plt.xlabel(' --------- '.join(EVALUATION_KEYS))
+
+        plt.show()
+
 
 if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
@@ -184,7 +222,7 @@ if __name__ == '__main__':
     # analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
     # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
     # analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
-    analyzer = StudyAnalyzer('../resources/study/study.csv', '../resources/study/results.json')
-    analyzer.extract_csv()
-    x = list(analyzer.csv.data[0].values())
-    print(*(x[n] for n in RATING_RANGE))
+    analyzer = StudyAnalyzer('../resources/study/study.csv',
+                             '../resources/study/results.json',
+                             '../resources/study/summary.json')
+    analyzer.summarize()
