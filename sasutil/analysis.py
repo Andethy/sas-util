@@ -3,7 +3,7 @@ import math
 from queue import Queue
 
 from constants import *
-from file import JsonFileIO
+from file import JsonFileIO, CsvFileIO
 
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # librosa.feature.mfcc
 # librosa.onset.onset_detect
 
-class Analyzer:
+class AudioAnalyzer:
     def __init__(self, in_dir, fields):
         self.fields = fields
         self.out_file = JsonFileIO(in_dir, fields=fields)
@@ -109,7 +109,8 @@ class Analyzer:
         # PCA for dimensionality reduction to 2D for visualization
         pca = PCA(n_components=2)
         principal_components = pca.fit_transform(variables_scaled)
-        principal_df = pd.DataFrame(data=principal_components, columns=['principal component 1', 'principal component 2'])
+        principal_df = pd.DataFrame(data=principal_components,
+                                    columns=['principal component 1', 'principal component 2'])
 
         # PCA loadings (eigenvectors)
         loadings = pca.components_.T  # Transpose to align with original variables: rows are variables, columns are components
@@ -145,10 +146,21 @@ class Analyzer:
         print("Analysis complete - done.")
 
 
+class StudyAnalyzer:
+
+    def __init__(self, fp, op, entries):
+        self.csv = CsvFileIO(fp)
+        self.out = JsonFileIO(op)
+        self.data = {entry: {} for entry in entries}
+        self.out.add_entries(self.data)
+        print(self.data)
+
+
 if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
     # analyzer.analyze_data('Onsets', 'BUCKET', 5)
-    analyzer = Analyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
-    analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
-    analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
-
+    # analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
+    # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
+    # analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
+    analyzer = StudyAnalyzer('../resources/study/study.csv', '../resources/study/results.json', TRACKS_ARR)
+    print(analyzer.csv.data[3])

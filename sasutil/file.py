@@ -82,18 +82,16 @@ class BaseFileIO:
             return self.file.read().splitlines()
 
 
+import csv
+
+
 class CsvFileIO(BaseFileIO):
 
-    def __init__(self, *args):
-        super().__init__(*args)
-        self.entries = len(self.file.readlines()) - 1
-        self.file.seek(0)
-        self.headers = self.get_next()
-
-    def get_next(self):
-        row = self.file.readline()[:-2].replace('\t', '').split('""')
-        row[0] = row[0].replace('"', '')
-        return row
+    def __init__(self, file_path):
+        super().__init__(file_path)
+        with open(self.file_path, mode='r', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            self.data = [row for row in reader if any(row.values())]
 
 
 class JsonFileIO(BaseFileIO):
