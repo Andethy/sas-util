@@ -215,6 +215,39 @@ class StudyAnalyzer:
 
         plt.show()
 
+        # Extracting data
+        categories = ['Danger', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable']
+        category_data = {cat: [] for cat in categories}
+        keys = []
+
+        for key, values in track_means.items():
+            keys.append(key)
+            for i, cat in enumerate(categories):
+                category_data[cat].append(values[i])
+
+        # The number of key groups
+        n_groups = len(self.data)
+
+        # Create bar chart
+        fig, ax = plt.subplots()
+        index = np.arange(n_groups)
+        bar_width = 0.15
+        opacity = 0.8
+
+        for i, cat in enumerate(categories):
+            plt.bar(index + i * bar_width, category_data[cat], bar_width, alpha=opacity, label=cat)
+
+        # Adding labels, title, and legend
+        plt.xlabel('Keys')
+        plt.ylabel('Scores')
+        plt.title('Scores by category and key')
+        plt.xticks(index + bar_width, keys, rotation='vertical')
+        plt.legend()
+
+        # Show plot
+        plt.tight_layout()
+        plt.show()
+
 
 if __name__ == '__main__':
     # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
