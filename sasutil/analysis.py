@@ -150,10 +150,11 @@ class AudioAnalyzer:
 
 class StudyAnalyzer:
 
-    def __init__(self, fp, op1, op2, init_entries=TRACKS_ARR):
-        self.csv = CsvFileIO(fp, active=False)
+    def __init__(self, fp, op1, op2, op3, init_entries=TRACKS_ARR):
+        self.csv = CsvFileIO(fp, active=True)
         self.out = JsonFileIO(op1)
         self.summary = JsonFileIO(op2)
+        self.analyses = JsonFileIO(op3)
         self.files = init_entries
         self.data = self.out.get_entries()
 
@@ -161,7 +162,7 @@ class StudyAnalyzer:
         self.data = {entry: {} for entry in self.files}
         self.out.add_entries_dict(self.data)
 
-    def extract_csv(self):
+    def extract_tracks(self):
         for entry in self.csv.data[START_ROW:]:
             values = list(entry.values())
             person = entry[ID_FIELD]
@@ -169,7 +170,7 @@ class StudyAnalyzer:
             for n in RATING_RANGE:
                 response = {}
                 null_count = 0
-                for m, key in enumerate(EVALUATION_KEYS):
+                for m, key in enumerate(EVAL_KEYS):
                     curr = values[n + m]
                     if not curr:
                         null_count += 1
@@ -177,14 +178,24 @@ class StudyAnalyzer:
                     else:
                         curr = int(curr)
                     response[key] = curr
-                if null_count == len(EVALUATION_KEYS):
+                if null_count == len(EVAL_KEYS):
                     continue
                 self.data[TRACKS_ARR[int(items[0]) - 1]][person] = response
                 items.pop(0)
         self.out.add_entries_dict(self.data)
 
+    def extract_people(self, json: JsonFileIO):
+        people = {}
+        for entry in self.csv.data[START_ROW:]:
+            info = {}
+            for field in PEOPLE_FIELDS:
+                info[field] = entry[field]
+            people[entry[ID_FIELD]] = info
+        json.add_entries_dict(people)
+
     def summarize(self):
         track_means = {}
+        sd_sorted = []
         for keyTrack, valueTrack in self.data.items():
             person_tracks = [0, 0, 0, 0, 0]
             for keyPerson, valuePerson in valueTrack.items():
@@ -193,7 +204,23 @@ class StudyAnalyzer:
                     track_data.append(valueData)
                 person_tracks = np.vstack((person_tracks, track_data))
             average_values = np.mean(person_tracks, axis=0)
-            track_means[keyTrack] = list(round(value, 2) for value in average_values)
+            sd_values = np.std(person_tracks, axis=0)
+            track_means[keyTrack] = {key + " Mean": round(value, 2) for key, value in zip(EVAL_KEYS, average_values)}
+            track_means[keyTrack].update({key + " SD": round(value, 2) for key, value in zip(EVAL_KEYS, sd_values)})
+            sd_sorted.append((abs(track_means[keyTrack]["Danger SD"]), keyTrack))
+
+        sd_sorted.sort()
+
+        analysis_entries = {}
+
+        lowest20 = [{"Track": item[1], "Danger Mean": track_means[item[1]]["Danger Mean"]} for item in sd_sorted[:20]]
+        analysis_entries["Lowest 20 Danger SD"] = lowest20
+
+        highest20 = [{"Track": item[1], "Danger Mean": track_means[item[1]]["Danger Mean"]} for item in sd_sorted[-20:]]
+        analysis_entries["Highest 20 Danger SD"] = highest20
+
+        self.analyses.add_entries_dict(analysis_entries, reset=False)
+
         self.summary.add_entries_dict(track_means)
 
         danger = []
@@ -203,6 +230,7 @@ class StudyAnalyzer:
         approach = []
 
         for track_key, tv in track_means.items():
+            tv = tuple(tv.values())
             danger.append(tv[0])
             urgency.append(tv[1])
             rof.append(tv[2])
@@ -210,11 +238,13 @@ class StudyAnalyzer:
             approach.append(tv[4])
 
         plt.boxplot([danger, urgency, rof, collab, approach])
-        plt.xticks([1, 2, 3, 4, 5], EVALUATION_KEYS, minor=True, rotation=45)
-        plt.xlabel(' --------- '.join(EVALUATION_KEYS))
+        plt.xticks([1, 2, 3, 4, 5], EVAL_KEYS, minor=True, rotation=45)
+        plt.xlabel(' --------- '.join(EVAL_KEYS))
 
-        plt.show()
+        # Toggle boxplot
+        # plt.show()
 
+        """
         # Extracting data
         categories = ['Danger', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable']
         category_data = {cat: [] for cat in categories}
@@ -247,15 +277,24 @@ class StudyAnalyzer:
         # Show plot
         plt.tight_layout()
         plt.show()
+        """
+
+    def plot_file(self, file):
+        # TODO: validate results.json -> boxplot for ONE audio file across all participants
+        pass
 
 
+# analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
+# analyzer.analyze_data('Onsets', 'BUCKET', 5)
+# analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
+# analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
+# analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
+# ppl = JsonFileIO('../resources/study/people.json')
+# analyzer.extract_people(ppl)
+# ppl.numerize_entries(**PEOPLE_TYPES)
 if __name__ == '__main__':
-    # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
-    # analyzer.analyze_data('Onsets', 'BUCKET', 5)
-    # analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
-    # analyzer.correlate_buckets(JsonFileIO(JSON_FEATURES_PATH), list(FEATURES_FIELDS_SMALL), 10)
-    # analyzer.classify_data(OUTPUT_BUCKETS, JSON_FEATURES_PATH)
     analyzer = StudyAnalyzer('../resources/study/study.csv',
                              '../resources/study/results.json',
-                             '../resources/study/summary.json')
+                             '../resources/study/summary.json',
+                             '../resources/study/analysis.json')
     analyzer.summarize()

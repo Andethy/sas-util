@@ -114,7 +114,8 @@ class JsonFileIO(BaseFileIO):
         for n in range(len(entries)):
             entry = {}
 
-            items = entries.get() if type(entries) is Queue else entries[n] if type(entries[n]) is list else list(entries[n].values())
+            items = entries.get() if type(entries) is Queue else entries[n] if type(entries[n]) is list else list(
+                entries[n].values())
             for index, key in enumerate(self.fields if self.fields is not None else entries[0].keys()):
                 entry[key] = items[index]
             self.data.append(entry)
@@ -172,6 +173,8 @@ class JsonFileIO(BaseFileIO):
         with open(self.file_path, 'r') as self.file:
             self.data = json.load(self.file)
             for coll in self.data:
+                if type(coll) == str:
+                    coll = self.data[coll]
                 for field, tp in fields.items():
                     coll[field] = tp(coll[field])
             print(self.data)
@@ -256,4 +259,3 @@ if __name__ == '__main__':
     #                     zcr_max=float)
     # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
     # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
-

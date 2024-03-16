@@ -1,0 +1,166 @@
+{
+    "Lowest 20 Danger SD": [
+        {
+            "Track": "064445",
+            "Danger Mean": 0.8
+        },
+        {
+            "Track": "057180",
+            "Danger Mean": -0.67
+        },
+        {
+            "Track": "064447",
+            "Danger Mean": 0.25
+        },
+        {
+            "Track": "054833",
+            "Danger Mean": 1.2
+        },
+        {
+            "Track": "056649",
+            "Danger Mean": -1.2
+        },
+        {
+            "Track": "064450",
+            "Danger Mean": 0.33
+        },
+        {
+            "Track": "056872",
+            "Danger Mean": -0.5
+        },
+        {
+            "Track": "059173",
+            "Danger Mean": 0.92
+        },
+        {
+            "Track": "059679",
+            "Danger Mean": -2.25
+        },
+        {
+            "Track": "052648",
+            "Danger Mean": -0.38
+        },
+        {
+            "Track": "052358",
+            "Danger Mean": -0.27
+        },
+        {
+            "Track": "059504",
+            "Danger Mean": -2.0
+        },
+        {
+            "Track": "060701",
+            "Danger Mean": -1.0
+        },
+        {
+            "Track": "050167",
+            "Danger Mean": 0.0
+        },
+        {
+            "Track": "060757",
+            "Danger Mean": -1.33
+        },
+        {
+            "Track": "055100",
+            "Danger Mean": 0.0
+        },
+        {
+            "Track": "052404",
+            "Danger Mean": -0.59
+        },
+        {
+            "Track": "055109",
+            "Danger Mean": 0.14
+        },
+        {
+            "Track": "054465",
+            "Danger Mean": -0.21
+        },
+        {
+            "Track": "040798",
+            "Danger Mean": -0.31
+        }
+    ],
+    "Highest 20 Danger SD": [
+        {
+            "Track": "044821",
+            "Danger Mean": 0.09
+        },
+        {
+            "Track": "004066",
+            "Danger Mean": -0.17
+        },
+        {
+            "Track": "024995",
+            "Danger Mean": 0.09
+        },
+        {
+            "Track": "011454",
+            "Danger Mean": -0.68
+        },
+        {
+            "Track": "013814",
+            "Danger Mean": -0.45
+        },
+        {
+            "Track": "014216",
+            "Danger Mean": -0.16
+        },
+        {
+            "Track": "036988",
+            "Danger Mean": 0.41
+        },
+        {
+            "Track": "048453",
+            "Danger Mean": -0.24
+        },
+        {
+            "Track": "036990",
+            "Danger Mean": -0.03
+        },
+        {
+            "Track": "051657",
+            "Danger Mean": -0.31
+        },
+        {
+            "Track": "036187",
+            "Danger Mean": -0.65
+        },
+        {
+            "Track": "040175",
+            "Danger Mean": -0.23
+        },
+        {
+            "Track": "039984",
+            "Danger Mean": -0.28
+        },
+        {
+            "Track": "040162",
+            "Danger Mean": -0.7
+        },
+        {
+            "Track": "011724",
+            "Danger Mean": -0.34
+        },
+        {
+            "Track": "056802",
+            "Danger Mean": 0.36
+        },
+        {
+            "Track": "048731",
+            "Danger Mean": -0.21
+        },
+        {
+            "Track": "025804",
+            "Danger Mean": -0.6
+        },
+        {
+            "Track": "047835",
+            "Danger Mean": 0.24
+        },
+        {
+            "Track": "051785",
+            "Danger Mean": -0.28
+        }
+    ]
+}

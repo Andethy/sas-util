@@ -1,1 +1,542 @@
-{}
+{
+    "R_3MNJUKBbKeE9IXf": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 47.5964,
+        "LocationLongitude": 19.3535,
+        "Duration (in seconds)": 1086
+    },
+    "R_2zU7oIUrWrTg4s9": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 53.0176,
+        "LocationLongitude": 18.6202,
+        "Duration (in seconds)": 876
+    },
+    "R_8IT5xejZh3C715i": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 45.6089,
+        "LocationLongitude": 9.3103,
+        "Duration (in seconds)": 1223
+    },
+    "R_2pMkTm9tjKN4ebL": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 49.2063,
+        "LocationLongitude": 17.5394,
+        "Duration (in seconds)": 1206
+    },
+    "R_6fJcgomCOZOIct6": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 45.7053,
+        "LocationLongitude": 9.6427,
+        "Duration (in seconds)": 1177
+    },
+    "R_7PKY9qhRTWcF5uS": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1256
+    },
+    "R_7p0aF3ZSIHzraOJ": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 41.5515,
+        "LocationLongitude": -8.4204,
+        "Duration (in seconds)": 1286
+    },
+    "R_1nBQBx0XvqNrCrD": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 52.4454,
+        "LocationLongitude": 4.8213,
+        "Duration (in seconds)": 1240
+    },
+    "R_171fOjYHQ1NRUkP": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.1043,
+        "LocationLongitude": 17.0335,
+        "Duration (in seconds)": 1041
+    },
+    "R_3Byu3flqulCjrr5": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 38.1302,
+        "LocationLongitude": 13.329,
+        "Duration (in seconds)": 1366
+    },
+    "R_2bVY3jGKIkmOegp": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 45.6152,
+        "LocationLongitude": 9.8059,
+        "Duration (in seconds)": 1035
+    },
+    "R_1HnodfKF6jDYX3f": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 22.4023,
+        "LocationLongitude": -97.8934,
+        "Duration (in seconds)": 1376
+    },
+    "R_1lQw4nYHyleUd3j": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -33.4521,
+        "LocationLongitude": -70.6536,
+        "Duration (in seconds)": 1590
+    },
+    "R_6n9p1RgH43YdWZq": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1377
+    },
+    "R_5DwDtmLrdBrxabx": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 19.5412,
+        "LocationLongitude": -99.1666,
+        "Duration (in seconds)": 1531
+    },
+    "R_2z8wni8ZWsL0xdK": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.3337,
+        "LocationLongitude": 6.5815,
+        "Duration (in seconds)": 1638
+    },
+    "R_7IrTxEdHJueshG9": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 52.4052,
+        "LocationLongitude": 16.9339,
+        "Duration (in seconds)": 1492
+    },
+    "R_3JpOhnhqveGhUv7": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1375
+    },
+    "R_2LqzHyQ1brm8mK5": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1502
+    },
+    "R_27j50z5caoMLO0l": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 44.4734,
+        "LocationLongitude": 11.2809,
+        "Duration (in seconds)": 1725
+    },
+    "R_7Klid0ErA4LElDb": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.5323,
+        "LocationLongitude": 0.7101,
+        "Duration (in seconds)": 1716
+    },
+    "R_8LFFnLwERAuwTsk": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1614
+    },
+    "R_1BhcutrR0ozy4Rc": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 56.6477,
+        "LocationLongitude": 23.723,
+        "Duration (in seconds)": 1474
+    },
+    "R_22xC1Ad4zeLaTYH": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 37.69,
+        "LocationLongitude": 22.7176,
+        "Duration (in seconds)": 1536
+    },
+    "R_2fHvrEu0tpxF6Hw": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 55.7123,
+        "LocationLongitude": 12.0564,
+        "Duration (in seconds)": 1199
+    },
+    "R_8YLe8QlgVQcI1Og": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 41.38,
+        "LocationLongitude": -8.771,
+        "Duration (in seconds)": 1689
+    },
+    "R_6KWFCZzNyRGSBzz": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 53.3723,
+        "LocationLongitude": -113.4541,
+        "Duration (in seconds)": 1389
+    },
+    "R_3IY0s7Ehp5FEhlP": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 48.1951,
+        "LocationLongitude": 16.3483,
+        "Duration (in seconds)": 1385
+    },
+    "R_1lsqhwGYHXkdBdR": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -33.91,
+        "LocationLongitude": 18.4304,
+        "Duration (in seconds)": 1962
+    },
+    "R_3O7XNI61XjBUjSc": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 1425
+    },
+    "R_70remZoeUX5TXKx": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 49.1617,
+        "LocationLongitude": -123.175,
+        "Duration (in seconds)": 791
+    },
+    "R_7SkmabusR15lAtz": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 41.1691,
+        "LocationLongitude": -8.6793,
+        "Duration (in seconds)": 2102
+    },
+    "R_3Gw9BxM8NpzDfk3": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 55.867,
+        "LocationLongitude": -4.2621,
+        "Duration (in seconds)": 1393
+    },
+    "R_4F4yPGSeAaO92IV": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 35.6897,
+        "LocationLongitude": 139.6895,
+        "Duration (in seconds)": 1890
+    },
+    "R_2pYluQ22OlhYKoQ": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 52.0565,
+        "LocationLongitude": 4.328,
+        "Duration (in seconds)": 1300
+    },
+    "R_6k2eTbo1jb7uONW": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.9156,
+        "LocationLongitude": 4.5146,
+        "Duration (in seconds)": 874
+    },
+    "R_7JsgSA4KITsvk6f": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 52.1889,
+        "LocationLongitude": 6.8775,
+        "Duration (in seconds)": 1285
+    },
+    "R_6IosW7si9nSOXu1": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 19.3015,
+        "LocationLongitude": -99.6697,
+        "Duration (in seconds)": 1628
+    },
+    "R_53qLW6uFHleBVuP": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 41.1691,
+        "LocationLongitude": -8.6793,
+        "Duration (in seconds)": 1808
+    },
+    "R_3IewPdA5f5hmHbH": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 31.4201,
+        "LocationLongitude": -113.4908,
+        "Duration (in seconds)": 1633
+    },
+    "R_7ATOdjKXxOKavWz": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 49.2773,
+        "LocationLongitude": -123.0679,
+        "Duration (in seconds)": 1584
+    },
+    "R_5DIr3yw9ziU8ule": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -33.91,
+        "LocationLongitude": 18.4304,
+        "Duration (in seconds)": 2487
+    },
+    "R_7rP30e7Y6ocU0FI": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 2405
+    },
+    "R_86Oj0JMyZWx1UHL": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.9056,
+        "LocationLongitude": 30.9405,
+        "Duration (in seconds)": 1522
+    },
+    "R_3py8AdYH3DbmSIS": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -33.91,
+        "LocationLongitude": 18.4304,
+        "Duration (in seconds)": 2494
+    },
+    "R_1xKR43E0dnGi1MI": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 2495
+    },
+    "R_3DvAZqJpDtgL3iH": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 50.0585,
+        "LocationLongitude": 19.9342,
+        "Duration (in seconds)": 2403
+    },
+    "R_2fdxqjZObayrSCh": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 1982
+    },
+    "R_6upHKQHezpZhPDG": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 32.6333,
+        "LocationLongitude": -16.9,
+        "Duration (in seconds)": 2441
+    },
+    "R_4KTUDiO7BBpJM5X": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 44.488,
+        "LocationLongitude": 11.3752,
+        "Duration (in seconds)": 1828
+    },
+    "R_51gPEqpCiAmSPid": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 43.709,
+        "LocationLongitude": -79.4057,
+        "Duration (in seconds)": 1860
+    },
+    "R_374ooa285cBdvJB": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 50.8511,
+        "LocationLongitude": 4.3132,
+        "Duration (in seconds)": 1696
+    },
+    "R_3VxqOAZFpyRFWXy": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -33.0348,
+        "LocationLongitude": -71.6256,
+        "Duration (in seconds)": 1342
+    },
+    "R_6L5wT52jjrs4kWp": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -28.9984,
+        "LocationLongitude": 23.9888,
+        "Duration (in seconds)": 1813
+    },
+    "R_4QAmCcsCt4ZMyW7": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 35.7161,
+        "LocationLongitude": 139.5171,
+        "Duration (in seconds)": 2078
+    },
+    "R_30Yh4NsVO1mxdT6": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 43.8678,
+        "LocationLongitude": -79.442,
+        "Duration (in seconds)": 1935
+    },
+    "R_3j18HR3l05KUlK9": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 43.1482,
+        "LocationLongitude": -79.2645,
+        "Duration (in seconds)": 2052
+    },
+    "R_1Yakr5yyZp4heU3": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 50.2527,
+        "LocationLongitude": 19.0284,
+        "Duration (in seconds)": 2778
+    },
+    "R_2qqJQ7OGwQLHGEy": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.8556,
+        "LocationLongitude": 31.0449,
+        "Duration (in seconds)": 2170
+    },
+    "R_4peWcFePiSYXhIa": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 33.2676,
+        "LocationLongitude": 131.495,
+        "Duration (in seconds)": 1581
+    },
+    "R_5DoQGtjMWwYt9CR": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 40.2057,
+        "LocationLongitude": -8.4213,
+        "Duration (in seconds)": 2340
+    },
+    "R_6gL5XLGjexSq2kN": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 47.5364,
+        "LocationLongitude": -122.278,
+        "Duration (in seconds)": 2806
+    },
+    "R_7Sitv2nFWYJq8lT": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 3289
+    },
+    "R_5efbpbA0b1FCdBd": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.8775,
+        "LocationLongitude": 28.168,
+        "Duration (in seconds)": 3285
+    },
+    "R_41ivvISTwjzT8PS": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.9056,
+        "LocationLongitude": 30.9405,
+        "Duration (in seconds)": 2453
+    },
+    "R_5MaIgaHxF3gEeqU": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.1564,
+        "LocationLongitude": -114.0566,
+        "Duration (in seconds)": 2067
+    },
+    "R_6Z0YM1lqLDKeDYd": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.0455,
+        "LocationLongitude": -114.1988,
+        "Duration (in seconds)": 2239
+    },
+    "R_1fqGNf7wCjBkOKV": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.4635,
+        "LocationLongitude": 30.9624,
+        "Duration (in seconds)": 3530
+    },
+    "R_2PmywoOC99GjFrH": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.8556,
+        "LocationLongitude": 31.0449,
+        "Duration (in seconds)": 2768
+    },
+    "R_2dTnWrn2q6hGEDh": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 2904
+    },
+    "R_28Zg9vTkVtLEx34": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 3994
+    },
+    "R_8mqqFXXQScgSqzu": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.8556,
+        "LocationLongitude": 31.0449,
+        "Duration (in seconds)": 2081
+    },
+    "R_7hy5Tsya71WrQhY": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 49.1689,
+        "LocationLongitude": -123.1442,
+        "Duration (in seconds)": 2906
+    },
+    "R_7pW534j0dh2BvMZ": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 41.6579,
+        "LocationLongitude": -0.8777,
+        "Duration (in seconds)": 2097
+    },
+    "R_7gBzy1JPfBlpiWu": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 3471
+    },
+    "R_81LfhIFjYTqqXEr": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 45.0914,
+        "LocationLongitude": 7.6639,
+        "Duration (in seconds)": 2260
+    },
+    "R_3h63E1wwIHPHOOB": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 44.4209,
+        "LocationLongitude": 12.21,
+        "Duration (in seconds)": 1459
+    },
+    "R_4V8cjlQ7zP3XFwn": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 38.752,
+        "LocationLongitude": -9.2279,
+        "Duration (in seconds)": 1652
+    },
+    "R_2iOMGYyLXnGQhUA": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 2095
+    },
+    "R_43ecQrjRQInrNQ1": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 37.9433,
+        "LocationLongitude": 23.7098,
+        "Duration (in seconds)": 2136
+    },
+    "R_3nMqyfm5LXNr8OJ": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 43.693,
+        "LocationLongitude": -79.8365,
+        "Duration (in seconds)": 1561
+    },
+    "R_6D9DXijikSAaA37": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.5591,
+        "LocationLongitude": -0.2283,
+        "Duration (in seconds)": 1153
+    },
+    "R_1Nm7NQDYo5tp6Bb": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 51.5268,
+        "LocationLongitude": -0.187,
+        "Duration (in seconds)": 1217
+    },
+    "R_2gTIRRpGJnq5eyR": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1965
+    },
+    "R_2v068l1aJPwhsjn": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 2724
+    },
+    "R_7FaCngM8wVX7hO3": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -25.7599,
+        "LocationLongitude": 28.2604,
+        "Duration (in seconds)": 2562
+    },
+    "R_2az3gfYIVsxjluB": {
+        "UserLanguage": "EN",
+        "LocationLatitude": 55.6078,
+        "LocationLongitude": 12.9982,
+        "Duration (in seconds)": 3039
+    },
+    "R_2SBlng2J6GUnxsO": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -29.8556,
+        "LocationLongitude": 31.0449,
+        "Duration (in seconds)": 1838
+    },
+    "R_2g9bO0Swie918Bz": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 2221
+    },
+    "R_5645ZzS9EBfFSIU": {
+        "UserLanguage": "EN",
+        "LocationLatitude": -26.2309,
+        "LocationLongitude": 28.0583,
+        "Duration (in seconds)": 1240
+    }
+}

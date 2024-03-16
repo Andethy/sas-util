@@ -1,1416 +1,2426 @@
 {
-    "000740": [
-        0.19,
-        -0.16,
-        -0.16,
-        0.03,
-        -0.03
-    ],
-    "000756": [
-        -0.44,
-        -0.46,
-        -0.03,
-        -0.15,
-        0.15
-    ],
-    "001554": [
-        -0.75,
-        -0.5,
-        -0.75,
-        0.29,
-        0.33
-    ],
-    "001730": [
-        0.16,
-        -0.14,
-        -0.43,
-        0.14,
-        0.36
-    ],
-    "003497": [
-        0.38,
-        0.22,
-        -0.03,
-        0.44,
-        0.41
-    ],
-    "003499": [
-        0.23,
-        0.35,
-        0.65,
-        0.23,
-        0.13
-    ],
-    "004066": [
-        -0.17,
-        0.27,
-        0.1,
-        0.17,
-        0.5
-    ],
-    "004069": [
-        -0.18,
-        0.06,
-        -0.09,
-        0.06,
-        0.47
-    ],
-    "004511": [
-        -0.05,
-        0.21,
-        -0.74,
-        0.03,
-        0.18
-    ],
-    "004703": [
-        0.23,
-        -0.43,
-        0.1,
-        0.43,
-        0.53
-    ],
-    "004850": [
-        0.2,
-        0.1,
-        -0.17,
-        0.43,
-        0.6
-    ],
-    "005222": [
-        -0.08,
-        -0.11,
-        0.0,
-        0.26,
-        0.26
-    ],
-    "005224": [
-        0.21,
-        0.32,
-        -0.09,
-        0.0,
-        0.09
-    ],
-    "005348": [
-        0.25,
-        0.18,
-        -0.07,
-        0.14,
-        0.36
-    ],
-    "006525": [
-        0.13,
-        0.03,
-        -0.48,
-        0.45,
-        0.71
-    ],
-    "006658": [
-        0.09,
-        -0.09,
-        -0.3,
-        0.3,
-        0.79
-    ],
-    "006664": [
-        -0.4,
-        0.44,
-        -0.32,
-        0.52,
-        0.2
-    ],
-    "006778": [
-        -0.17,
-        0.83,
-        0.17,
-        0.5,
-        0.5
-    ],
-    "007545": [
-        -0.47,
-        -0.06,
-        -0.22,
-        0.56,
-        0.69
-    ],
-    "007709": [
-        -0.29,
-        -0.32,
-        0.11,
-        0.64,
-        0.43
-    ],
-    "009512": [
-        -0.17,
-        -0.1,
-        0.13,
-        0.63,
-        0.63
-    ],
-    "009989": [
-        -0.5,
-        0.18,
-        0.25,
-        0.29,
-        0.21
-    ],
-    "010442": [
-        0.19,
-        0.38,
-        0.05,
-        0.03,
-        0.14
-    ],
-    "010690": [
-        0.14,
-        0.25,
-        -0.14,
-        0.25,
-        0.39
-    ],
-    "010737": [
-        -0.19,
-        -0.25,
-        0.03,
-        0.34,
-        0.44
-    ],
-    "011201": [
-        0.13,
-        0.13,
-        0.0,
-        0.63,
-        0.33
-    ],
-    "011432": [
-        -0.14,
-        -0.11,
-        0.56,
-        0.06,
-        0.25
-    ],
-    "011454": [
-        -0.68,
-        0.04,
-        0.24,
-        -0.08,
-        -0.2
-    ],
-    "011612": [
-        -0.56,
-        -0.06,
-        -0.33,
-        0.03,
-        0.33
-    ],
-    "011724": [
-        -0.34,
-        0.28,
-        -0.38,
-        0.79,
-        0.76
-    ],
-    "011748": [
-        0.38,
-        0.38,
-        -0.46,
-        0.31,
-        0.81
-    ],
-    "011752": [
-        -0.37,
-        0.37,
-        0.26,
-        0.48,
-        1.04
-    ],
-    "012489": [
-        -0.06,
-        -0.16,
-        -0.44,
-        0.25,
-        0.62
-    ],
-    "013014": [
-        0.0,
-        0.16,
-        -0.32,
-        0.19,
-        0.48
-    ],
-    "013578": [
-        -0.11,
-        0.56,
-        0.0,
-        0.19,
-        0.42
-    ],
-    "013582": [
-        0.09,
-        -0.17,
-        -0.13,
-        0.52,
-        0.3
-    ],
-    "013814": [
-        -0.45,
-        -0.39,
-        -0.1,
-        0.39,
-        0.32
-    ],
-    "013864": [
-        -1.09,
-        0.14,
-        -0.77,
-        0.95,
-        0.41
-    ],
-    "014053": [
-        0.13,
-        0.34,
-        0.08,
-        0.03,
-        -0.13
-    ],
-    "014216": [
-        -0.16,
-        0.03,
-        -0.19,
-        0.45,
-        0.29
-    ],
-    "014390": [
-        0.16,
-        0.26,
-        0.16,
-        0.58,
-        0.35
-    ],
-    "014921": [
-        -0.15,
-        -0.38,
-        -0.38,
-        0.41,
-        0.65
-    ],
-    "015094": [
-        -0.1,
-        -0.34,
-        -0.24,
-        0.21,
-        0.52
-    ],
-    "015145": [
-        0.67,
-        0.07,
-        -0.44,
-        0.48,
-        0.7
-    ],
-    "016057": [
-        0.08,
-        0.63,
-        0.39,
-        0.05,
-        0.37
-    ],
-    "016095": [
-        -0.77,
-        -0.36,
-        -0.41,
-        0.23,
-        0.14
-    ],
-    "016439": [
-        -0.12,
-        0.15,
-        -0.09,
-        0.3,
-        0.48
-    ],
-    "016448": [
-        -0.03,
-        -0.17,
-        -0.17,
-        0.0,
-        0.17
-    ],
-    "016554": [
-        0.41,
-        0.23,
-        -0.46,
-        0.79,
-        0.33
-    ],
-    "016878": [
-        0.24,
-        0.61,
-        0.09,
-        0.15,
-        0.39
-    ],
-    "016997": [
-        0.04,
-        0.36,
-        0.14,
-        0.21,
-        0.07
-    ],
-    "017324": [
-        -1.0,
-        -0.58,
-        -0.58,
-        0.46,
-        0.65
-    ],
-    "017344": [
-        -0.33,
-        -0.33,
-        -0.6,
-        0.17,
-        1.1
-    ],
-    "017609": [
-        -0.19,
-        0.22,
-        0.03,
-        0.3,
-        0.27
-    ],
-    "017910": [
-        0.03,
-        -0.16,
-        -0.06,
-        0.22,
-        0.47
-    ],
-    "018022": [
-        -0.36,
-        -0.33,
-        -0.53,
-        -0.08,
-        0.25
-    ],
-    "018578": [
-        -0.07,
-        -0.04,
-        0.04,
-        0.25,
-        0.25
-    ],
-    "018579": [
-        0.38,
-        0.06,
-        -0.68,
-        0.76,
-        0.59
-    ],
-    "019266": [
-        -0.52,
-        0.0,
-        -0.31,
-        0.07,
-        0.41
-    ],
-    "019354": [
-        0.14,
-        -0.11,
-        -0.11,
-        0.29,
-        0.6
-    ],
-    "019355": [
-        -0.68,
-        -0.71,
-        -0.32,
-        -0.06,
-        -0.09
-    ],
-    "020376": [
-        -0.29,
-        0.22,
-        0.34,
-        0.34,
-        0.2
-    ],
-    "020432": [
-        -0.19,
-        -0.07,
-        -0.41,
-        0.33,
-        0.78
-    ],
-    "020449": [
-        -0.56,
-        -0.24,
-        -0.26,
-        -0.35,
-        -0.15
-    ],
-    "021542": [
-        -0.4,
-        -0.2,
-        -0.13,
-        0.03,
-        0.6
-    ],
-    "021708": [
-        0.03,
-        0.15,
-        -0.21,
-        0.29,
-        0.65
-    ],
-    "021848": [
-        -0.33,
-        -0.03,
-        0.0,
-        0.2,
-        0.13
-    ],
-    "021898": [
-        0.0,
-        -0.2,
-        -0.32,
-        -0.16,
-        0.24
-    ],
-    "022128": [
-        -0.42,
-        0.13,
-        -0.42,
-        -0.19,
-        -0.1
-    ],
-    "023013": [
-        -0.22,
-        -0.28,
-        -0.31,
-        -0.22,
-        0.19
-    ],
-    "023146": [
-        0.41,
-        0.03,
-        -0.52,
-        0.76,
-        1.1
-    ],
-    "023525": [
-        -0.52,
-        0.17,
-        0.52,
-        0.26,
-        0.35
-    ],
-    "023820": [
-        -0.34,
-        0.19,
-        -0.03,
-        -0.19,
-        0.03
-    ],
-    "024178": [
-        -0.21,
-        -0.88,
-        -0.35,
-        0.32,
-        0.12
-    ],
-    "024418": [
-        -0.45,
-        0.15,
-        -0.06,
-        0.27,
-        0.24
-    ],
-    "024422": [
-        0.09,
-        -0.37,
-        0.0,
-        0.29,
-        0.57
-    ],
-    "024429": [
-        0.85,
-        0.22,
-        -0.22,
-        -0.22,
-        -0.22
-    ],
-    "024640": [
-        -0.74,
-        0.0,
-        -0.96,
-        0.7,
-        0.74
-    ],
-    "024794": [
-        0.41,
-        0.24,
-        0.1,
-        0.17,
-        0.07
-    ],
-    "024995": [
-        0.09,
-        0.0,
-        -0.28,
-        0.75,
-        0.62
-    ],
-    "025005": [
-        -0.09,
-        -0.15,
-        -0.06,
-        0.06,
-        0.27
-    ],
-    "025145": [
-        -0.23,
-        0.17,
-        -0.13,
-        -0.1,
-        0.23
-    ],
-    "025364": [
-        0.29,
-        0.34,
-        0.32,
-        0.34,
-        0.79
-    ],
-    "025804": [
-        -0.6,
-        -0.17,
-        -0.34,
-        0.14,
-        0.31
-    ],
-    "026171": [
-        -0.27,
-        -0.07,
-        -0.13,
-        0.33,
-        -0.07
-    ],
-    "026630": [
-        0.39,
-        0.32,
-        0.21,
-        -0.14,
-        0.18
-    ],
-    "026632": [
-        0.26,
-        0.09,
-        -0.2,
-        -0.34,
-        0.17
-    ],
-    "026697": [
-        0.24,
-        0.09,
-        0.35,
-        -0.15,
-        -0.09
-    ],
-    "027148": [
-        -0.85,
-        -0.64,
-        -0.52,
-        -0.3,
-        -0.24
-    ],
-    "027633": [
-        0.15,
-        0.22,
-        -0.63,
-        0.48,
-        0.26
-    ],
-    "027752": [
-        -0.13,
-        0.35,
-        0.32,
-        0.65,
-        0.58
-    ],
-    "027866": [
-        0.19,
-        0.31,
-        -0.04,
-        0.04,
-        0.15
-    ],
-    "028111": [
-        -0.46,
-        0.23,
-        0.06,
-        -0.31,
-        0.06
-    ],
-    "028175": [
-        -0.13,
-        -0.05,
-        -0.24,
-        0.08,
-        0.16
-    ],
-    "028178": [
-        -0.52,
-        -0.35,
-        -0.45,
-        0.0,
-        0.03
-    ],
-    "028476": [
-        0.04,
-        0.26,
-        0.33,
-        -0.26,
-        -0.11
-    ],
-    "029324": [
-        -0.33,
-        0.43,
-        0.13,
-        0.73,
-        0.77
-    ],
-    "029469": [
-        -0.79,
-        -0.46,
-        -0.82,
-        -0.04,
-        0.0
-    ],
-    "029957": [
-        -0.78,
-        -0.43,
-        -0.57,
-        -0.24,
-        0.22
-    ],
-    "030071": [
-        -0.49,
-        0.0,
-        -0.51,
-        0.29,
-        0.66
-    ],
-    "030095": [
-        -0.52,
-        -0.57,
-        -0.82,
-        -0.05,
-        0.32
-    ],
-    "030740": [
-        -0.77,
-        -0.19,
-        -0.12,
-        -0.46,
-        -0.15
-    ],
-    "031234": [
-        0.42,
-        0.26,
-        0.03,
-        -0.74,
-        -0.29
-    ],
-    "031236": [
-        -0.18,
-        0.29,
-        -0.18,
-        -0.21,
-        0.0
-    ],
-    "031574": [
-        -0.26,
-        -0.18,
-        -0.36,
-        -0.31,
-        -0.21
-    ],
-    "031576": [
-        -0.19,
-        -0.03,
-        0.22,
-        0.16,
-        0.38
-    ],
-    "032326": [
-        0.18,
-        -0.36,
-        -0.77,
-        0.32,
-        0.32
-    ],
-    "032517": [
-        0.0,
-        -0.23,
-        -0.35,
-        -0.19,
-        0.58
-    ],
-    "033064": [
-        -0.64,
-        0.08,
-        0.03,
-        0.22,
-        0.44
-    ],
-    "033220": [
-        0.1,
-        -0.22,
-        -0.38,
-        0.1,
-        0.35
-    ],
-    "033271": [
-        -1.11,
-        -0.25,
-        -0.36,
-        0.29,
-        0.36
-    ],
-    "034513": [
-        0.19,
-        0.04,
-        -0.08,
-        -0.08,
-        0.0
-    ],
-    "035299": [
-        -0.18,
-        -0.53,
-        -0.88,
-        -0.41,
-        0.35
-    ],
-    "035454": [
-        -0.46,
-        -0.34,
-        -0.31,
-        -0.03,
-        0.54
-    ],
-    "035461": [
-        -0.06,
-        0.38,
-        -0.15,
-        0.47,
-        0.59
-    ],
-    "035539": [
-        -0.05,
-        0.27,
-        -0.24,
-        0.22,
-        0.62
-    ],
-    "035569": [
-        0.36,
-        0.33,
-        0.18,
-        0.18,
-        0.36
-    ],
-    "035991": [
-        0.04,
-        0.19,
-        0.04,
-        0.26,
-        0.15
-    ],
-    "036144": [
-        0.29,
-        0.46,
-        0.43,
-        0.2,
-        0.31
-    ],
-    "036187": [
-        -0.65,
-        -0.19,
-        -0.23,
-        0.23,
-        0.39
-    ],
-    "036243": [
-        0.42,
-        0.33,
-        0.09,
-        0.24,
-        0.15
-    ],
-    "036485": [
-        0.5,
-        0.2,
-        -0.5,
-        0.27,
-        0.57
-    ],
-    "036988": [
-        0.41,
-        0.0,
-        -0.07,
-        -0.34,
-        0.07
-    ],
-    "036990": [
-        -0.03,
-        -0.15,
-        -0.26,
-        0.74,
-        0.76
-    ],
-    "038318": [
-        -0.52,
-        0.55,
-        0.45,
-        0.09,
-        -0.39
-    ],
-    "038361": [
-        -0.38,
-        0.18,
-        0.09,
-        0.12,
-        -0.12
-    ],
-    "038679": [
-        0.11,
-        -0.22,
-        -0.22,
-        -0.22,
-        -0.16
-    ],
-    "038819": [
-        -0.41,
-        -0.33,
-        -0.63,
-        0.74,
-        0.89
-    ],
-    "039282": [
-        -0.44,
-        -0.04,
-        0.07,
-        0.44,
-        -0.07
-    ],
-    "039530": [
-        0.42,
-        -0.22,
-        -0.06,
-        0.47,
-        0.44
-    ],
-    "039941": [
-        -0.38,
-        0.02,
-        -0.33,
-        0.31,
-        0.6
-    ],
-    "039947": [
-        -0.58,
-        -0.06,
-        -0.39,
-        0.52,
-        0.68
-    ],
-    "039949": [
-        -0.63,
-        0.14,
-        -0.46,
-        0.63,
-        0.83
-    ],
-    "039984": [
-        -0.28,
-        0.0,
-        -0.28,
-        0.86,
-        0.83
-    ],
-    "040162": [
-        -0.7,
-        -0.52,
-        -0.87,
-        0.35,
-        0.65
-    ],
-    "040175": [
-        -0.23,
-        -0.31,
-        -0.41,
-        0.18,
-        0.85
-    ],
-    "040369": [
-        0.18,
-        0.05,
-        0.68,
-        -0.14,
-        0.0
-    ],
-    "040782": [
-        -0.44,
-        -0.41,
-        -0.03,
-        0.31,
-        0.56
-    ],
-    "040784": [
-        -0.38,
-        0.85,
-        0.09,
-        0.06,
-        -0.09
-    ],
-    "040798": [
-        -0.31,
-        -0.06,
-        -0.34,
-        0.03,
-        0.11
-    ],
-    "041090": [
-        0.0,
-        -0.07,
-        0.07,
-        0.5,
-        0.5
-    ],
-    "041453": [
-        0.0,
-        0.08,
-        -0.16,
-        0.28,
-        0.64
-    ],
-    "041870": [
-        0.03,
-        -0.41,
-        -0.24,
-        0.03,
-        0.38
-    ],
-    "041939": [
-        -0.42,
-        -0.67,
-        -1.0,
-        0.17,
-        0.79
-    ],
-    "042234": [
-        0.08,
-        0.04,
-        0.0,
-        -0.15,
-        0.23
-    ],
-    "042286": [
-        -0.11,
-        0.46,
-        -0.06,
-        0.37,
-        0.71
-    ],
-    "042756": [
-        -0.46,
-        -0.29,
-        -0.43,
-        0.5,
-        0.79
-    ],
-    "042842": [
-        -0.14,
-        -0.18,
-        -0.23,
-        0.91,
-        1.14
-    ],
-    "043509": [
-        -0.53,
-        0.03,
-        0.12,
-        0.12,
-        -0.22
-    ],
-    "044344": [
-        0.17,
-        0.12,
-        -0.08,
-        0.12,
-        0.33
-    ],
-    "044359": [
-        0.43,
-        0.25,
-        -0.29,
-        0.25,
-        0.32
-    ],
-    "044821": [
-        0.09,
-        0.0,
-        -0.26,
-        0.3,
-        0.52
-    ],
-    "044985": [
-        -0.68,
-        -0.16,
-        -0.32,
-        -0.11,
-        0.42
-    ],
-    "045012": [
-        -0.73,
-        -0.31,
-        -0.15,
-        0.04,
-        -0.15
-    ],
-    "046144": [
-        0.33,
-        0.88,
-        0.17,
-        0.12,
-        0.21
-    ],
-    "046147": [
-        -0.76,
-        -0.19,
-        -0.43,
-        -0.05,
-        0.1
-    ],
-    "047016": [
-        -0.29,
-        -0.12,
-        -0.35,
-        0.35,
-        0.47
-    ],
-    "047481": [
-        -0.11,
-        0.11,
-        0.17,
-        0.56,
-        0.83
-    ],
-    "047832": [
-        -0.07,
-        0.07,
-        0.26,
-        -0.11,
-        -0.15
-    ],
-    "047835": [
-        0.24,
-        -0.76,
-        -0.47,
-        0.12,
-        0.35
-    ],
-    "048412": [
-        0.33,
-        0.48,
-        0.38,
-        0.48,
-        0.05
-    ],
-    "048453": [
-        -0.24,
-        0.05,
-        -0.76,
-        0.71,
-        0.76
-    ],
-    "048731": [
-        -0.21,
-        -0.57,
-        -0.21,
-        0.14,
-        0.5
-    ],
-    "049361": [
-        0.44,
-        -0.04,
-        -0.44,
-        -0.08,
-        0.24
-    ],
-    "050167": [
-        0.0,
-        0.67,
-        0.25,
-        0.75,
-        0.08
-    ],
-    "051657": [
-        -0.31,
-        0.69,
-        -0.19,
-        0.0,
-        -0.06
-    ],
-    "051785": [
-        -0.28,
-        -0.06,
-        -0.61,
-        0.44,
-        0.22
-    ],
-    "052004": [
-        -0.2,
-        -0.07,
-        -0.53,
-        -0.53,
-        -0.4
-    ],
-    "052358": [
-        -0.27,
-        0.18,
-        0.09,
-        0.91,
-        1.36
-    ],
-    "052404": [
-        -0.59,
-        -0.18,
-        -0.65,
-        -0.06,
-        0.29
-    ],
-    "052638": [
-        -0.56,
-        0.19,
-        0.19,
-        0.69,
-        0.94
-    ],
-    "052648": [
-        -0.38,
-        0.5,
-        0.75,
-        1.38,
-        1.5
-    ],
-    "054004": [
-        -1.29,
-        0.41,
-        0.06,
-        0.88,
-        0.88
-    ],
-    "054062": [
-        -0.53,
-        0.33,
-        -0.53,
-        0.73,
-        0.6
-    ],
-    "054124": [
-        0.18,
-        0.45,
-        0.09,
-        0.36,
-        0.36
-    ],
-    "054131": [
-        -0.2,
-        0.8,
-        -0.33,
-        0.4,
-        0.73
-    ],
-    "054137": [
-        0.65,
-        -0.06,
-        0.0,
-        -0.18,
-        -0.18
-    ],
-    "054465": [
-        -0.21,
-        -0.14,
-        0.29,
-        -0.21,
-        -0.29
-    ],
-    "054833": [
-        1.2,
-        1.0,
-        -0.1,
-        0.4,
-        0.9
-    ],
-    "055100": [
-        0.0,
-        0.83,
-        0.33,
-        0.58,
-        0.33
-    ],
-    "055109": [
-        0.14,
-        0.14,
-        -0.21,
-        0.0,
-        -0.14
-    ],
-    "055821": [
-        -1.0,
-        0.67,
-        0.0,
-        0.44,
-        0.0
-    ],
-    "056273": [
-        -0.83,
-        0.5,
-        -0.67,
-        -0.5,
-        -0.08
-    ],
-    "056649": [
-        -1.2,
-        -0.2,
-        0.8,
-        -0.2,
-        0.0
-    ],
-    "056802": [
-        0.36,
-        -0.73,
-        -0.09,
-        0.18,
-        0.45
-    ],
-    "056872": [
-        -0.5,
-        -0.17,
-        -0.17,
-        0.33,
-        0.17
-    ],
-    "056882": [
-        -0.88,
-        0.88,
-        -0.38,
-        -0.5,
-        0.38
-    ],
-    "057180": [
-        -0.67,
-        0.56,
-        0.11,
-        0.67,
-        0.0
-    ],
-    "058130": [
-        0.0,
-        1.14,
-        -0.57,
-        -0.57,
-        -0.71
-    ],
-    "058757": [
-        0.0,
-        1.0,
-        1.0,
-        -1.0,
-        -0.25
-    ],
-    "059173": [
-        0.92,
-        0.17,
-        -0.58,
-        0.42,
-        0.92
-    ],
-    "059192": [
-        -0.86,
-        0.0,
-        -1.14,
-        0.0,
-        1.14
-    ],
-    "059504": [
-        -2.0,
-        -2.0,
-        0.0,
-        0.0,
-        0.0
-    ],
-    "059679": [
-        -2.25,
-        -1.75,
-        -1.75,
-        -0.5,
-        1.5
-    ],
-    "060510": [
-        -0.67,
-        0.67,
-        1.33,
-        -0.33,
-        -0.67
-    ],
-    "060701": [
-        -1.0,
-        0.0,
-        -0.67,
-        0.67,
-        1.0
-    ],
-    "060757": [
-        -1.33,
-        -0.67,
-        -1.17,
-        -0.17,
-        0.5
-    ],
-    "062049": [
-        -0.75,
-        -1.0,
-        -1.5,
-        0.5,
-        0.25
-    ],
-    "064445": [
-        0.8,
-        1.0,
-        0.8,
-        0.4,
-        0.2
-    ],
-    "064447": [
-        0.25,
-        -0.25,
-        -0.5,
-        0.75,
-        -0.25
-    ],
-    "064450": [
-        0.33,
-        -0.33,
-        -0.67,
-        0.0,
-        0.33
-    ],
-    "064542": [
-        0.09,
-        0.29,
-        -0.35,
-        0.0,
-        0.12
-    ]
+    "000740": {
+        "Danger Mean": 0.19,
+        "Urgency Mean": -0.16,
+        "Risk of Failure Mean": -0.16,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": -0.03,
+        "Danger SD": 2.07,
+        "Urgency SD": 2.02,
+        "Risk of Failure SD": 2.07,
+        "Collaboration SD": 1.77,
+        "Approachable SD": 1.87
+    },
+    "000756": {
+        "Danger Mean": -0.44,
+        "Urgency Mean": -0.46,
+        "Risk of Failure Mean": -0.03,
+        "Collaboration Mean": -0.15,
+        "Approachable Mean": 0.15,
+        "Danger SD": 2.05,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 2.03,
+        "Collaboration SD": 1.66,
+        "Approachable SD": 1.93
+    },
+    "001554": {
+        "Danger Mean": -0.75,
+        "Urgency Mean": -0.5,
+        "Risk of Failure Mean": -0.75,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.33,
+        "Danger SD": 1.94,
+        "Urgency SD": 1.83,
+        "Risk of Failure SD": 1.94,
+        "Collaboration SD": 1.17,
+        "Approachable SD": 1.57
+    },
+    "001730": {
+        "Danger Mean": 0.16,
+        "Urgency Mean": -0.14,
+        "Risk of Failure Mean": -0.43,
+        "Collaboration Mean": 0.14,
+        "Approachable Mean": 0.36,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.91,
+        "Risk of Failure SD": 1.78,
+        "Collaboration SD": 1.53,
+        "Approachable SD": 1.9
+    },
+    "003497": {
+        "Danger Mean": 0.38,
+        "Urgency Mean": 0.22,
+        "Risk of Failure Mean": -0.03,
+        "Collaboration Mean": 0.44,
+        "Approachable Mean": 0.41,
+        "Danger SD": 2.07,
+        "Urgency SD": 2.1,
+        "Risk of Failure SD": 1.83,
+        "Collaboration SD": 1.68,
+        "Approachable SD": 1.64
+    },
+    "003499": {
+        "Danger Mean": 0.23,
+        "Urgency Mean": 0.35,
+        "Risk of Failure Mean": 0.65,
+        "Collaboration Mean": 0.23,
+        "Approachable Mean": 0.13,
+        "Danger SD": 1.95,
+        "Urgency SD": 1.68,
+        "Risk of Failure SD": 1.81,
+        "Collaboration SD": 1.43,
+        "Approachable SD": 1.5
+    },
+    "004066": {
+        "Danger Mean": -0.17,
+        "Urgency Mean": 0.27,
+        "Risk of Failure Mean": 0.1,
+        "Collaboration Mean": 0.17,
+        "Approachable Mean": 0.5,
+        "Danger SD": 2.16,
+        "Urgency SD": 1.84,
+        "Risk of Failure SD": 1.66,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.63
+    },
+    "004069": {
+        "Danger Mean": -0.18,
+        "Urgency Mean": 0.06,
+        "Risk of Failure Mean": -0.09,
+        "Collaboration Mean": 0.06,
+        "Approachable Mean": 0.47,
+        "Danger SD": 1.96,
+        "Urgency SD": 1.81,
+        "Risk of Failure SD": 1.76,
+        "Collaboration SD": 1.45,
+        "Approachable SD": 1.68
+    },
+    "004511": {
+        "Danger Mean": -0.05,
+        "Urgency Mean": 0.21,
+        "Risk of Failure Mean": -0.74,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.18,
+        "Danger SD": 1.88,
+        "Urgency SD": 1.81,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.78
+    },
+    "004703": {
+        "Danger Mean": 0.23,
+        "Urgency Mean": -0.43,
+        "Risk of Failure Mean": 0.1,
+        "Collaboration Mean": 0.43,
+        "Approachable Mean": 0.53,
+        "Danger SD": 1.69,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 1.9,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.84
+    },
+    "004850": {
+        "Danger Mean": 0.2,
+        "Urgency Mean": 0.1,
+        "Risk of Failure Mean": -0.17,
+        "Collaboration Mean": 0.43,
+        "Approachable Mean": 0.6,
+        "Danger SD": 1.87,
+        "Urgency SD": 1.99,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 1.61,
+        "Approachable SD": 1.69
+    },
+    "005222": {
+        "Danger Mean": -0.08,
+        "Urgency Mean": -0.11,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.26,
+        "Approachable Mean": 0.26,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.7,
+        "Risk of Failure SD": 1.96,
+        "Collaboration SD": 1.35,
+        "Approachable SD": 1.67
+    },
+    "005224": {
+        "Danger Mean": 0.21,
+        "Urgency Mean": 0.32,
+        "Risk of Failure Mean": -0.09,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.09,
+        "Danger SD": 1.73,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.92,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.62
+    },
+    "005348": {
+        "Danger Mean": 0.25,
+        "Urgency Mean": 0.18,
+        "Risk of Failure Mean": -0.07,
+        "Collaboration Mean": 0.14,
+        "Approachable Mean": 0.36,
+        "Danger SD": 1.98,
+        "Urgency SD": 1.93,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.77,
+        "Approachable SD": 1.74
+    },
+    "006525": {
+        "Danger Mean": 0.13,
+        "Urgency Mean": 0.03,
+        "Risk of Failure Mean": -0.48,
+        "Collaboration Mean": 0.45,
+        "Approachable Mean": 0.71,
+        "Danger SD": 2.12,
+        "Urgency SD": 2.13,
+        "Risk of Failure SD": 1.68,
+        "Collaboration SD": 1.98,
+        "Approachable SD": 1.8
+    },
+    "006658": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": -0.09,
+        "Risk of Failure Mean": -0.3,
+        "Collaboration Mean": 0.3,
+        "Approachable Mean": 0.79,
+        "Danger SD": 2.02,
+        "Urgency SD": 1.99,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.49,
+        "Approachable SD": 1.53
+    },
+    "006664": {
+        "Danger Mean": -0.4,
+        "Urgency Mean": 0.44,
+        "Risk of Failure Mean": -0.32,
+        "Collaboration Mean": 0.52,
+        "Approachable Mean": 0.2,
+        "Danger SD": 1.88,
+        "Urgency SD": 1.94,
+        "Risk of Failure SD": 1.97,
+        "Collaboration SD": 1.5,
+        "Approachable SD": 1.65
+    },
+    "006778": {
+        "Danger Mean": -0.17,
+        "Urgency Mean": 0.83,
+        "Risk of Failure Mean": 0.17,
+        "Collaboration Mean": 0.5,
+        "Approachable Mean": 0.5,
+        "Danger SD": 1.73,
+        "Urgency SD": 1.29,
+        "Risk of Failure SD": 1.71,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 1.43
+    },
+    "007545": {
+        "Danger Mean": -0.47,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": -0.22,
+        "Collaboration Mean": 0.56,
+        "Approachable Mean": 0.69,
+        "Danger SD": 2.08,
+        "Urgency SD": 1.94,
+        "Risk of Failure SD": 2.03,
+        "Collaboration SD": 1.25,
+        "Approachable SD": 1.76
+    },
+    "007709": {
+        "Danger Mean": -0.29,
+        "Urgency Mean": -0.32,
+        "Risk of Failure Mean": 0.11,
+        "Collaboration Mean": 0.64,
+        "Approachable Mean": 0.43,
+        "Danger SD": 2.05,
+        "Urgency SD": 2.04,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 1.74,
+        "Approachable SD": 1.86
+    },
+    "009512": {
+        "Danger Mean": -0.17,
+        "Urgency Mean": -0.1,
+        "Risk of Failure Mean": 0.13,
+        "Collaboration Mean": 0.63,
+        "Approachable Mean": 0.63,
+        "Danger SD": 1.98,
+        "Urgency SD": 1.66,
+        "Risk of Failure SD": 1.98,
+        "Collaboration SD": 1.47,
+        "Approachable SD": 1.47
+    },
+    "009989": {
+        "Danger Mean": -0.5,
+        "Urgency Mean": 0.18,
+        "Risk of Failure Mean": 0.25,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.21,
+        "Danger SD": 1.7,
+        "Urgency SD": 2.02,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.53,
+        "Approachable SD": 1.97
+    },
+    "010442": {
+        "Danger Mean": 0.19,
+        "Urgency Mean": 0.38,
+        "Risk of Failure Mean": 0.05,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.14,
+        "Danger SD": 1.97,
+        "Urgency SD": 1.57,
+        "Risk of Failure SD": 1.89,
+        "Collaboration SD": 1.28,
+        "Approachable SD": 1.68
+    },
+    "010690": {
+        "Danger Mean": 0.14,
+        "Urgency Mean": 0.25,
+        "Risk of Failure Mean": -0.14,
+        "Collaboration Mean": 0.25,
+        "Approachable Mean": 0.39,
+        "Danger SD": 1.97,
+        "Urgency SD": 2.03,
+        "Risk of Failure SD": 1.64,
+        "Collaboration SD": 1.77,
+        "Approachable SD": 1.67
+    },
+    "010737": {
+        "Danger Mean": -0.19,
+        "Urgency Mean": -0.25,
+        "Risk of Failure Mean": 0.03,
+        "Collaboration Mean": 0.34,
+        "Approachable Mean": 0.44,
+        "Danger SD": 1.81,
+        "Urgency SD": 1.58,
+        "Risk of Failure SD": 1.76,
+        "Collaboration SD": 1.81,
+        "Approachable SD": 1.89
+    },
+    "011201": {
+        "Danger Mean": 0.13,
+        "Urgency Mean": 0.13,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.63,
+        "Approachable Mean": 0.33,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.98,
+        "Risk of Failure SD": 1.9,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 1.76
+    },
+    "011432": {
+        "Danger Mean": -0.14,
+        "Urgency Mean": -0.11,
+        "Risk of Failure Mean": 0.56,
+        "Collaboration Mean": 0.06,
+        "Approachable Mean": 0.25,
+        "Danger SD": 1.93,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.68,
+        "Approachable SD": 1.83
+    },
+    "011454": {
+        "Danger Mean": -0.68,
+        "Urgency Mean": 0.04,
+        "Risk of Failure Mean": 0.24,
+        "Collaboration Mean": -0.08,
+        "Approachable Mean": -0.2,
+        "Danger SD": 2.17,
+        "Urgency SD": 1.78,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.94
+    },
+    "011612": {
+        "Danger Mean": -0.56,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": -0.33,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.33,
+        "Danger SD": 1.83,
+        "Urgency SD": 1.88,
+        "Risk of Failure SD": 1.94,
+        "Collaboration SD": 1.44,
+        "Approachable SD": 1.2
+    },
+    "011724": {
+        "Danger Mean": -0.34,
+        "Urgency Mean": 0.28,
+        "Risk of Failure Mean": -0.38,
+        "Collaboration Mean": 0.79,
+        "Approachable Mean": 0.76,
+        "Danger SD": 2.28,
+        "Urgency SD": 1.78,
+        "Risk of Failure SD": 1.86,
+        "Collaboration SD": 1.83,
+        "Approachable SD": 1.74
+    },
+    "011748": {
+        "Danger Mean": 0.38,
+        "Urgency Mean": 0.38,
+        "Risk of Failure Mean": -0.46,
+        "Collaboration Mean": 0.31,
+        "Approachable Mean": 0.81,
+        "Danger SD": 1.78,
+        "Urgency SD": 1.52,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.38,
+        "Approachable SD": 1.44
+    },
+    "011752": {
+        "Danger Mean": -0.37,
+        "Urgency Mean": 0.37,
+        "Risk of Failure Mean": 0.26,
+        "Collaboration Mean": 0.48,
+        "Approachable Mean": 1.04,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.61,
+        "Risk of Failure SD": 1.78,
+        "Collaboration SD": 1.71,
+        "Approachable SD": 1.5
+    },
+    "012489": {
+        "Danger Mean": -0.06,
+        "Urgency Mean": -0.16,
+        "Risk of Failure Mean": -0.44,
+        "Collaboration Mean": 0.25,
+        "Approachable Mean": 0.62,
+        "Danger SD": 2.12,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 1.6,
+        "Collaboration SD": 1.75,
+        "Approachable SD": 1.76
+    },
+    "013014": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 0.16,
+        "Risk of Failure Mean": -0.32,
+        "Collaboration Mean": 0.19,
+        "Approachable Mean": 0.48,
+        "Danger SD": 1.83,
+        "Urgency SD": 1.72,
+        "Risk of Failure SD": 1.86,
+        "Collaboration SD": 1.42,
+        "Approachable SD": 1.27
+    },
+    "013578": {
+        "Danger Mean": -0.11,
+        "Urgency Mean": 0.56,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.19,
+        "Approachable Mean": 0.42,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.79,
+        "Risk of Failure SD": 1.8,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 1.95
+    },
+    "013582": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": -0.17,
+        "Risk of Failure Mean": -0.13,
+        "Collaboration Mean": 0.52,
+        "Approachable Mean": 0.3,
+        "Danger SD": 1.69,
+        "Urgency SD": 1.55,
+        "Risk of Failure SD": 1.65,
+        "Collaboration SD": 1.17,
+        "Approachable SD": 1.08
+    },
+    "013814": {
+        "Danger Mean": -0.45,
+        "Urgency Mean": -0.39,
+        "Risk of Failure Mean": -0.1,
+        "Collaboration Mean": 0.39,
+        "Approachable Mean": 0.32,
+        "Danger SD": 2.17,
+        "Urgency SD": 1.99,
+        "Risk of Failure SD": 2.15,
+        "Collaboration SD": 1.88,
+        "Approachable SD": 2.15
+    },
+    "013864": {
+        "Danger Mean": -1.09,
+        "Urgency Mean": 0.14,
+        "Risk of Failure Mean": -0.77,
+        "Collaboration Mean": 0.95,
+        "Approachable Mean": 0.41,
+        "Danger SD": 1.78,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.68,
+        "Collaboration SD": 1.58,
+        "Approachable SD": 1.92
+    },
+    "014053": {
+        "Danger Mean": 0.13,
+        "Urgency Mean": 0.34,
+        "Risk of Failure Mean": 0.08,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": -0.13,
+        "Danger SD": 2.14,
+        "Urgency SD": 1.85,
+        "Risk of Failure SD": 1.87,
+        "Collaboration SD": 1.65,
+        "Approachable SD": 1.73
+    },
+    "014216": {
+        "Danger Mean": -0.16,
+        "Urgency Mean": 0.03,
+        "Risk of Failure Mean": -0.19,
+        "Collaboration Mean": 0.45,
+        "Approachable Mean": 0.29,
+        "Danger SD": 2.17,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.66,
+        "Approachable SD": 1.9
+    },
+    "014390": {
+        "Danger Mean": 0.16,
+        "Urgency Mean": 0.26,
+        "Risk of Failure Mean": 0.16,
+        "Collaboration Mean": 0.58,
+        "Approachable Mean": 0.35,
+        "Danger SD": 1.89,
+        "Urgency SD": 1.76,
+        "Risk of Failure SD": 1.57,
+        "Collaboration SD": 1.21,
+        "Approachable SD": 1.36
+    },
+    "014921": {
+        "Danger Mean": -0.15,
+        "Urgency Mean": -0.38,
+        "Risk of Failure Mean": -0.38,
+        "Collaboration Mean": 0.41,
+        "Approachable Mean": 0.65,
+        "Danger SD": 1.94,
+        "Urgency SD": 1.96,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 2.09,
+        "Approachable SD": 2.25
+    },
+    "015094": {
+        "Danger Mean": -0.1,
+        "Urgency Mean": -0.34,
+        "Risk of Failure Mean": -0.24,
+        "Collaboration Mean": 0.21,
+        "Approachable Mean": 0.52,
+        "Danger SD": 2.14,
+        "Urgency SD": 1.97,
+        "Risk of Failure SD": 1.96,
+        "Collaboration SD": 1.3,
+        "Approachable SD": 1.73
+    },
+    "015145": {
+        "Danger Mean": 0.67,
+        "Urgency Mean": 0.07,
+        "Risk of Failure Mean": -0.44,
+        "Collaboration Mean": 0.48,
+        "Approachable Mean": 0.7,
+        "Danger SD": 2.02,
+        "Urgency SD": 2.23,
+        "Risk of Failure SD": 1.73,
+        "Collaboration SD": 1.64,
+        "Approachable SD": 1.78
+    },
+    "016057": {
+        "Danger Mean": 0.08,
+        "Urgency Mean": 0.63,
+        "Risk of Failure Mean": 0.39,
+        "Collaboration Mean": 0.05,
+        "Approachable Mean": 0.37,
+        "Danger SD": 1.95,
+        "Urgency SD": 1.84,
+        "Risk of Failure SD": 2.01,
+        "Collaboration SD": 1.59,
+        "Approachable SD": 1.75
+    },
+    "016095": {
+        "Danger Mean": -0.77,
+        "Urgency Mean": -0.36,
+        "Risk of Failure Mean": -0.41,
+        "Collaboration Mean": 0.23,
+        "Approachable Mean": 0.14,
+        "Danger SD": 1.83,
+        "Urgency SD": 2.06,
+        "Risk of Failure SD": 1.72,
+        "Collaboration SD": 1.28,
+        "Approachable SD": 1.66
+    },
+    "016439": {
+        "Danger Mean": -0.12,
+        "Urgency Mean": 0.15,
+        "Risk of Failure Mean": -0.09,
+        "Collaboration Mean": 0.3,
+        "Approachable Mean": 0.48,
+        "Danger SD": 1.82,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.96,
+        "Collaboration SD": 1.77,
+        "Approachable SD": 1.86
+    },
+    "016448": {
+        "Danger Mean": -0.03,
+        "Urgency Mean": -0.17,
+        "Risk of Failure Mean": -0.17,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.17,
+        "Danger SD": 1.87,
+        "Urgency SD": 2.02,
+        "Risk of Failure SD": 1.98,
+        "Collaboration SD": 1.88,
+        "Approachable SD": 1.98
+    },
+    "016554": {
+        "Danger Mean": 0.41,
+        "Urgency Mean": 0.23,
+        "Risk of Failure Mean": -0.46,
+        "Collaboration Mean": 0.79,
+        "Approachable Mean": 0.33,
+        "Danger SD": 2.05,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 1.68,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.94
+    },
+    "016878": {
+        "Danger Mean": 0.24,
+        "Urgency Mean": 0.61,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.15,
+        "Approachable Mean": 0.39,
+        "Danger SD": 1.72,
+        "Urgency SD": 1.74,
+        "Risk of Failure SD": 1.73,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.72
+    },
+    "016997": {
+        "Danger Mean": 0.04,
+        "Urgency Mean": 0.36,
+        "Risk of Failure Mean": 0.14,
+        "Collaboration Mean": 0.21,
+        "Approachable Mean": 0.07,
+        "Danger SD": 1.78,
+        "Urgency SD": 2.12,
+        "Risk of Failure SD": 1.87,
+        "Collaboration SD": 1.5,
+        "Approachable SD": 1.79
+    },
+    "017324": {
+        "Danger Mean": -1.0,
+        "Urgency Mean": -0.58,
+        "Risk of Failure Mean": -0.58,
+        "Collaboration Mean": 0.46,
+        "Approachable Mean": 0.65,
+        "Danger SD": 1.92,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.47,
+        "Collaboration SD": 1.47,
+        "Approachable SD": 1.17
+    },
+    "017344": {
+        "Danger Mean": -0.33,
+        "Urgency Mean": -0.33,
+        "Risk of Failure Mean": -0.6,
+        "Collaboration Mean": 0.17,
+        "Approachable Mean": 1.1,
+        "Danger SD": 2.04,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.7,
+        "Collaboration SD": 1.46,
+        "Approachable SD": 1.66
+    },
+    "017609": {
+        "Danger Mean": -0.19,
+        "Urgency Mean": 0.22,
+        "Risk of Failure Mean": 0.03,
+        "Collaboration Mean": 0.3,
+        "Approachable Mean": 0.27,
+        "Danger SD": 2.12,
+        "Urgency SD": 2.13,
+        "Risk of Failure SD": 1.99,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 1.7
+    },
+    "017910": {
+        "Danger Mean": 0.03,
+        "Urgency Mean": -0.16,
+        "Risk of Failure Mean": -0.06,
+        "Collaboration Mean": 0.22,
+        "Approachable Mean": 0.47,
+        "Danger SD": 1.74,
+        "Urgency SD": 1.79,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.67,
+        "Approachable SD": 1.54
+    },
+    "018022": {
+        "Danger Mean": -0.36,
+        "Urgency Mean": -0.33,
+        "Risk of Failure Mean": -0.53,
+        "Collaboration Mean": -0.08,
+        "Approachable Mean": 0.25,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.95,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.85
+    },
+    "018578": {
+        "Danger Mean": -0.07,
+        "Urgency Mean": -0.04,
+        "Risk of Failure Mean": 0.04,
+        "Collaboration Mean": 0.25,
+        "Approachable Mean": 0.25,
+        "Danger SD": 1.93,
+        "Urgency SD": 1.8,
+        "Risk of Failure SD": 1.72,
+        "Collaboration SD": 1.82,
+        "Approachable SD": 1.92
+    },
+    "018579": {
+        "Danger Mean": 0.38,
+        "Urgency Mean": 0.06,
+        "Risk of Failure Mean": -0.68,
+        "Collaboration Mean": 0.76,
+        "Approachable Mean": 0.59,
+        "Danger SD": 1.93,
+        "Urgency SD": 1.91,
+        "Risk of Failure SD": 1.87,
+        "Collaboration SD": 1.33,
+        "Approachable SD": 1.65
+    },
+    "019266": {
+        "Danger Mean": -0.52,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.31,
+        "Collaboration Mean": 0.07,
+        "Approachable Mean": 0.41,
+        "Danger SD": 2.08,
+        "Urgency SD": 1.88,
+        "Risk of Failure SD": 1.98,
+        "Collaboration SD": 1.78,
+        "Approachable SD": 1.77
+    },
+    "019354": {
+        "Danger Mean": 0.14,
+        "Urgency Mean": -0.11,
+        "Risk of Failure Mean": -0.11,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.6,
+        "Danger SD": 2.13,
+        "Urgency SD": 1.91,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 1.64
+    },
+    "019355": {
+        "Danger Mean": -0.68,
+        "Urgency Mean": -0.71,
+        "Risk of Failure Mean": -0.32,
+        "Collaboration Mean": -0.06,
+        "Approachable Mean": -0.09,
+        "Danger SD": 2.1,
+        "Urgency SD": 1.87,
+        "Risk of Failure SD": 1.92,
+        "Collaboration SD": 1.49,
+        "Approachable SD": 1.67
+    },
+    "020376": {
+        "Danger Mean": -0.29,
+        "Urgency Mean": 0.22,
+        "Risk of Failure Mean": 0.34,
+        "Collaboration Mean": 0.34,
+        "Approachable Mean": 0.2,
+        "Danger SD": 1.82,
+        "Urgency SD": 1.83,
+        "Risk of Failure SD": 1.8,
+        "Collaboration SD": 1.32,
+        "Approachable SD": 1.49
+    },
+    "020432": {
+        "Danger Mean": -0.19,
+        "Urgency Mean": -0.07,
+        "Risk of Failure Mean": -0.41,
+        "Collaboration Mean": 0.33,
+        "Approachable Mean": 0.78,
+        "Danger SD": 1.89,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.47,
+        "Approachable SD": 1.69
+    },
+    "020449": {
+        "Danger Mean": -0.56,
+        "Urgency Mean": -0.24,
+        "Risk of Failure Mean": -0.26,
+        "Collaboration Mean": -0.35,
+        "Approachable Mean": -0.15,
+        "Danger SD": 1.87,
+        "Urgency SD": 2.03,
+        "Risk of Failure SD": 2.0,
+        "Collaboration SD": 1.8,
+        "Approachable SD": 2.1
+    },
+    "021542": {
+        "Danger Mean": -0.4,
+        "Urgency Mean": -0.2,
+        "Risk of Failure Mean": -0.13,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.6,
+        "Danger SD": 1.96,
+        "Urgency SD": 1.87,
+        "Risk of Failure SD": 1.98,
+        "Collaboration SD": 1.85,
+        "Approachable SD": 1.76
+    },
+    "021708": {
+        "Danger Mean": 0.03,
+        "Urgency Mean": 0.15,
+        "Risk of Failure Mean": -0.21,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.65,
+        "Danger SD": 1.99,
+        "Urgency SD": 1.78,
+        "Risk of Failure SD": 1.71,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.49
+    },
+    "021848": {
+        "Danger Mean": -0.33,
+        "Urgency Mean": -0.03,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.2,
+        "Approachable Mean": 0.13,
+        "Danger SD": 1.68,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 2.02,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.69
+    },
+    "021898": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": -0.2,
+        "Risk of Failure Mean": -0.32,
+        "Collaboration Mean": -0.16,
+        "Approachable Mean": 0.24,
+        "Danger SD": 1.85,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.89,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 2.01
+    },
+    "022128": {
+        "Danger Mean": -0.42,
+        "Urgency Mean": 0.13,
+        "Risk of Failure Mean": -0.42,
+        "Collaboration Mean": -0.19,
+        "Approachable Mean": -0.1,
+        "Danger SD": 1.91,
+        "Urgency SD": 1.76,
+        "Risk of Failure SD": 1.86,
+        "Collaboration SD": 1.51,
+        "Approachable SD": 2.04
+    },
+    "023013": {
+        "Danger Mean": -0.22,
+        "Urgency Mean": -0.28,
+        "Risk of Failure Mean": -0.31,
+        "Collaboration Mean": -0.22,
+        "Approachable Mean": 0.19,
+        "Danger SD": 2.04,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.94,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 1.93
+    },
+    "023146": {
+        "Danger Mean": 0.41,
+        "Urgency Mean": 0.03,
+        "Risk of Failure Mean": -0.52,
+        "Collaboration Mean": 0.76,
+        "Approachable Mean": 1.1,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.94,
+        "Risk of Failure SD": 1.61,
+        "Collaboration SD": 1.43,
+        "Approachable SD": 1.47
+    },
+    "023525": {
+        "Danger Mean": -0.52,
+        "Urgency Mean": 0.17,
+        "Risk of Failure Mean": 0.52,
+        "Collaboration Mean": 0.26,
+        "Approachable Mean": 0.35,
+        "Danger SD": 1.95,
+        "Urgency SD": 1.69,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.39,
+        "Approachable SD": 1.73
+    },
+    "023820": {
+        "Danger Mean": -0.34,
+        "Urgency Mean": 0.19,
+        "Risk of Failure Mean": -0.03,
+        "Collaboration Mean": -0.19,
+        "Approachable Mean": 0.03,
+        "Danger SD": 1.88,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.69,
+        "Collaboration SD": 2.05,
+        "Approachable SD": 2.07
+    },
+    "024178": {
+        "Danger Mean": -0.21,
+        "Urgency Mean": -0.88,
+        "Risk of Failure Mean": -0.35,
+        "Collaboration Mean": 0.32,
+        "Approachable Mean": 0.12,
+        "Danger SD": 2.07,
+        "Urgency SD": 1.81,
+        "Risk of Failure SD": 1.85,
+        "Collaboration SD": 1.66,
+        "Approachable SD": 1.83
+    },
+    "024418": {
+        "Danger Mean": -0.45,
+        "Urgency Mean": 0.15,
+        "Risk of Failure Mean": -0.06,
+        "Collaboration Mean": 0.27,
+        "Approachable Mean": 0.24,
+        "Danger SD": 2.06,
+        "Urgency SD": 2.0,
+        "Risk of Failure SD": 1.91,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 1.72
+    },
+    "024422": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": -0.37,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.57,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.73,
+        "Risk of Failure SD": 1.69,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.84
+    },
+    "024429": {
+        "Danger Mean": 0.85,
+        "Urgency Mean": 0.22,
+        "Risk of Failure Mean": -0.22,
+        "Collaboration Mean": -0.22,
+        "Approachable Mean": -0.22,
+        "Danger SD": 1.84,
+        "Urgency SD": 1.79,
+        "Risk of Failure SD": 1.89,
+        "Collaboration SD": 1.5,
+        "Approachable SD": 1.73
+    },
+    "024640": {
+        "Danger Mean": -0.74,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.96,
+        "Collaboration Mean": 0.7,
+        "Approachable Mean": 0.74,
+        "Danger SD": 2.07,
+        "Urgency SD": 1.98,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.76
+    },
+    "024794": {
+        "Danger Mean": 0.41,
+        "Urgency Mean": 0.24,
+        "Risk of Failure Mean": 0.1,
+        "Collaboration Mean": 0.17,
+        "Approachable Mean": 0.07,
+        "Danger SD": 1.79,
+        "Urgency SD": 1.79,
+        "Risk of Failure SD": 1.65,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.72
+    },
+    "024995": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.28,
+        "Collaboration Mean": 0.75,
+        "Approachable Mean": 0.62,
+        "Danger SD": 2.16,
+        "Urgency SD": 1.95,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.64,
+        "Approachable SD": 1.58
+    },
+    "025005": {
+        "Danger Mean": -0.09,
+        "Urgency Mean": -0.15,
+        "Risk of Failure Mean": -0.06,
+        "Collaboration Mean": 0.06,
+        "Approachable Mean": 0.27,
+        "Danger SD": 1.75,
+        "Urgency SD": 1.74,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.8
+    },
+    "025145": {
+        "Danger Mean": -0.23,
+        "Urgency Mean": 0.17,
+        "Risk of Failure Mean": -0.13,
+        "Collaboration Mean": -0.1,
+        "Approachable Mean": 0.23,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.97,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 1.4,
+        "Approachable SD": 1.56
+    },
+    "025364": {
+        "Danger Mean": 0.29,
+        "Urgency Mean": 0.34,
+        "Risk of Failure Mean": 0.32,
+        "Collaboration Mean": 0.34,
+        "Approachable Mean": 0.79,
+        "Danger SD": 1.97,
+        "Urgency SD": 1.51,
+        "Risk of Failure SD": 1.49,
+        "Collaboration SD": 1.61,
+        "Approachable SD": 1.47
+    },
+    "025804": {
+        "Danger Mean": -0.6,
+        "Urgency Mean": -0.17,
+        "Risk of Failure Mean": -0.34,
+        "Collaboration Mean": 0.14,
+        "Approachable Mean": 0.31,
+        "Danger SD": 2.38,
+        "Urgency SD": 2.1,
+        "Risk of Failure SD": 2.15,
+        "Collaboration SD": 1.66,
+        "Approachable SD": 1.91
+    },
+    "026171": {
+        "Danger Mean": -0.27,
+        "Urgency Mean": -0.07,
+        "Risk of Failure Mean": -0.13,
+        "Collaboration Mean": 0.33,
+        "Approachable Mean": -0.07,
+        "Danger SD": 1.82,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.69,
+        "Collaboration SD": 1.53,
+        "Approachable SD": 1.59
+    },
+    "026630": {
+        "Danger Mean": 0.39,
+        "Urgency Mean": 0.32,
+        "Risk of Failure Mean": 0.21,
+        "Collaboration Mean": -0.14,
+        "Approachable Mean": 0.18,
+        "Danger SD": 1.86,
+        "Urgency SD": 2.07,
+        "Risk of Failure SD": 1.9,
+        "Collaboration SD": 1.53,
+        "Approachable SD": 1.65
+    },
+    "026632": {
+        "Danger Mean": 0.26,
+        "Urgency Mean": 0.09,
+        "Risk of Failure Mean": -0.2,
+        "Collaboration Mean": -0.34,
+        "Approachable Mean": 0.17,
+        "Danger SD": 1.76,
+        "Urgency SD": 1.79,
+        "Risk of Failure SD": 1.49,
+        "Collaboration SD": 1.6,
+        "Approachable SD": 1.8
+    },
+    "026697": {
+        "Danger Mean": 0.24,
+        "Urgency Mean": 0.09,
+        "Risk of Failure Mean": 0.35,
+        "Collaboration Mean": -0.15,
+        "Approachable Mean": -0.09,
+        "Danger SD": 1.91,
+        "Urgency SD": 1.99,
+        "Risk of Failure SD": 1.98,
+        "Collaboration SD": 1.8,
+        "Approachable SD": 2.02
+    },
+    "027148": {
+        "Danger Mean": -0.85,
+        "Urgency Mean": -0.64,
+        "Risk of Failure Mean": -0.52,
+        "Collaboration Mean": -0.3,
+        "Approachable Mean": -0.24,
+        "Danger SD": 2.02,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 2.02,
+        "Collaboration SD": 1.85,
+        "Approachable SD": 1.86
+    },
+    "027633": {
+        "Danger Mean": 0.15,
+        "Urgency Mean": 0.22,
+        "Risk of Failure Mean": -0.63,
+        "Collaboration Mean": 0.48,
+        "Approachable Mean": 0.26,
+        "Danger SD": 1.84,
+        "Urgency SD": 1.73,
+        "Risk of Failure SD": 1.64,
+        "Collaboration SD": 1.29,
+        "Approachable SD": 1.92
+    },
+    "027752": {
+        "Danger Mean": -0.13,
+        "Urgency Mean": 0.35,
+        "Risk of Failure Mean": 0.32,
+        "Collaboration Mean": 0.65,
+        "Approachable Mean": 0.58,
+        "Danger SD": 1.91,
+        "Urgency SD": 2.04,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.43,
+        "Approachable SD": 1.45
+    },
+    "027866": {
+        "Danger Mean": 0.19,
+        "Urgency Mean": 0.31,
+        "Risk of Failure Mean": -0.04,
+        "Collaboration Mean": 0.04,
+        "Approachable Mean": 0.15,
+        "Danger SD": 1.88,
+        "Urgency SD": 1.77,
+        "Risk of Failure SD": 1.53,
+        "Collaboration SD": 1.81,
+        "Approachable SD": 1.66
+    },
+    "028111": {
+        "Danger Mean": -0.46,
+        "Urgency Mean": 0.23,
+        "Risk of Failure Mean": 0.06,
+        "Collaboration Mean": -0.31,
+        "Approachable Mean": 0.06,
+        "Danger SD": 1.99,
+        "Urgency SD": 1.93,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.82,
+        "Approachable SD": 1.85
+    },
+    "028175": {
+        "Danger Mean": -0.13,
+        "Urgency Mean": -0.05,
+        "Risk of Failure Mean": -0.24,
+        "Collaboration Mean": 0.08,
+        "Approachable Mean": 0.16,
+        "Danger SD": 1.98,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.74,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.97
+    },
+    "028178": {
+        "Danger Mean": -0.52,
+        "Urgency Mean": -0.35,
+        "Risk of Failure Mean": -0.45,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.03,
+        "Danger SD": 1.98,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.88,
+        "Collaboration SD": 1.59,
+        "Approachable SD": 1.77
+    },
+    "028476": {
+        "Danger Mean": 0.04,
+        "Urgency Mean": 0.26,
+        "Risk of Failure Mean": 0.33,
+        "Collaboration Mean": -0.26,
+        "Approachable Mean": -0.11,
+        "Danger SD": 2.08,
+        "Urgency SD": 1.97,
+        "Risk of Failure SD": 1.91,
+        "Collaboration SD": 1.65,
+        "Approachable SD": 2.01
+    },
+    "029324": {
+        "Danger Mean": -0.33,
+        "Urgency Mean": 0.43,
+        "Risk of Failure Mean": 0.13,
+        "Collaboration Mean": 0.73,
+        "Approachable Mean": 0.77,
+        "Danger SD": 1.9,
+        "Urgency SD": 1.71,
+        "Risk of Failure SD": 1.28,
+        "Collaboration SD": 1.21,
+        "Approachable SD": 1.26
+    },
+    "029469": {
+        "Danger Mean": -0.79,
+        "Urgency Mean": -0.46,
+        "Risk of Failure Mean": -0.82,
+        "Collaboration Mean": -0.04,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.99,
+        "Urgency SD": 2.13,
+        "Risk of Failure SD": 2.02,
+        "Collaboration SD": 1.72,
+        "Approachable SD": 2.12
+    },
+    "029957": {
+        "Danger Mean": -0.78,
+        "Urgency Mean": -0.43,
+        "Risk of Failure Mean": -0.57,
+        "Collaboration Mean": -0.24,
+        "Approachable Mean": 0.22,
+        "Danger SD": 2.06,
+        "Urgency SD": 2.13,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.91,
+        "Approachable SD": 2.18
+    },
+    "030071": {
+        "Danger Mean": -0.49,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.51,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.66,
+        "Danger SD": 2.08,
+        "Urgency SD": 2.07,
+        "Risk of Failure SD": 1.65,
+        "Collaboration SD": 1.61,
+        "Approachable SD": 1.8
+    },
+    "030095": {
+        "Danger Mean": -0.52,
+        "Urgency Mean": -0.57,
+        "Risk of Failure Mean": -0.82,
+        "Collaboration Mean": -0.05,
+        "Approachable Mean": 0.32,
+        "Danger SD": 2.01,
+        "Urgency SD": 2.06,
+        "Risk of Failure SD": 1.73,
+        "Collaboration SD": 1.82,
+        "Approachable SD": 1.88
+    },
+    "030740": {
+        "Danger Mean": -0.77,
+        "Urgency Mean": -0.19,
+        "Risk of Failure Mean": -0.12,
+        "Collaboration Mean": -0.46,
+        "Approachable Mean": -0.15,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.84,
+        "Risk of Failure SD": 1.72,
+        "Collaboration SD": 1.67,
+        "Approachable SD": 1.79
+    },
+    "031234": {
+        "Danger Mean": 0.42,
+        "Urgency Mean": 0.26,
+        "Risk of Failure Mean": 0.03,
+        "Collaboration Mean": -0.74,
+        "Approachable Mean": -0.29,
+        "Danger SD": 2.0,
+        "Urgency SD": 2.02,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.8,
+        "Approachable SD": 1.84
+    },
+    "031236": {
+        "Danger Mean": -0.18,
+        "Urgency Mean": 0.29,
+        "Risk of Failure Mean": -0.18,
+        "Collaboration Mean": -0.21,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.79,
+        "Urgency SD": 1.53,
+        "Risk of Failure SD": 1.81,
+        "Collaboration SD": 1.74,
+        "Approachable SD": 1.77
+    },
+    "031574": {
+        "Danger Mean": -0.26,
+        "Urgency Mean": -0.18,
+        "Risk of Failure Mean": -0.36,
+        "Collaboration Mean": -0.31,
+        "Approachable Mean": -0.21,
+        "Danger SD": 2.13,
+        "Urgency SD": 1.75,
+        "Risk of Failure SD": 1.97,
+        "Collaboration SD": 1.88,
+        "Approachable SD": 1.77
+    },
+    "031576": {
+        "Danger Mean": -0.19,
+        "Urgency Mean": -0.03,
+        "Risk of Failure Mean": 0.22,
+        "Collaboration Mean": 0.16,
+        "Approachable Mean": 0.38,
+        "Danger SD": 2.07,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.83,
+        "Collaboration SD": 1.6,
+        "Approachable SD": 1.92
+    },
+    "032326": {
+        "Danger Mean": 0.18,
+        "Urgency Mean": -0.36,
+        "Risk of Failure Mean": -0.77,
+        "Collaboration Mean": 0.32,
+        "Approachable Mean": 0.32,
+        "Danger SD": 2.06,
+        "Urgency SD": 2.06,
+        "Risk of Failure SD": 1.54,
+        "Collaboration SD": 1.79,
+        "Approachable SD": 2.08
+    },
+    "032517": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": -0.23,
+        "Risk of Failure Mean": -0.35,
+        "Collaboration Mean": -0.19,
+        "Approachable Mean": 0.58,
+        "Danger SD": 2.15,
+        "Urgency SD": 1.97,
+        "Risk of Failure SD": 2.09,
+        "Collaboration SD": 1.96,
+        "Approachable SD": 1.57
+    },
+    "033064": {
+        "Danger Mean": -0.64,
+        "Urgency Mean": 0.08,
+        "Risk of Failure Mean": 0.03,
+        "Collaboration Mean": 0.22,
+        "Approachable Mean": 0.44,
+        "Danger SD": 2.11,
+        "Urgency SD": 1.95,
+        "Risk of Failure SD": 1.85,
+        "Collaboration SD": 1.47,
+        "Approachable SD": 1.59
+    },
+    "033220": {
+        "Danger Mean": 0.1,
+        "Urgency Mean": -0.22,
+        "Risk of Failure Mean": -0.38,
+        "Collaboration Mean": 0.1,
+        "Approachable Mean": 0.35,
+        "Danger SD": 2.1,
+        "Urgency SD": 2.12,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.62,
+        "Approachable SD": 1.73
+    },
+    "033271": {
+        "Danger Mean": -1.11,
+        "Urgency Mean": -0.25,
+        "Risk of Failure Mean": -0.36,
+        "Collaboration Mean": 0.29,
+        "Approachable Mean": 0.36,
+        "Danger SD": 1.63,
+        "Urgency SD": 1.5,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.46,
+        "Approachable SD": 1.59
+    },
+    "034513": {
+        "Danger Mean": 0.19,
+        "Urgency Mean": 0.04,
+        "Risk of Failure Mean": -0.08,
+        "Collaboration Mean": -0.08,
+        "Approachable Mean": 0.0,
+        "Danger SD": 2.13,
+        "Urgency SD": 1.97,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.84,
+        "Approachable SD": 2.02
+    },
+    "035299": {
+        "Danger Mean": -0.18,
+        "Urgency Mean": -0.53,
+        "Risk of Failure Mean": -0.88,
+        "Collaboration Mean": -0.41,
+        "Approachable Mean": 0.35,
+        "Danger SD": 1.87,
+        "Urgency SD": 1.7,
+        "Risk of Failure SD": 1.57,
+        "Collaboration SD": 1.78,
+        "Approachable SD": 1.8
+    },
+    "035454": {
+        "Danger Mean": -0.46,
+        "Urgency Mean": -0.34,
+        "Risk of Failure Mean": -0.31,
+        "Collaboration Mean": -0.03,
+        "Approachable Mean": 0.54,
+        "Danger SD": 2.07,
+        "Urgency SD": 1.98,
+        "Risk of Failure SD": 2.08,
+        "Collaboration SD": 1.68,
+        "Approachable SD": 1.78
+    },
+    "035461": {
+        "Danger Mean": -0.06,
+        "Urgency Mean": 0.38,
+        "Risk of Failure Mean": -0.15,
+        "Collaboration Mean": 0.47,
+        "Approachable Mean": 0.59,
+        "Danger SD": 1.8,
+        "Urgency SD": 1.83,
+        "Risk of Failure SD": 2.07,
+        "Collaboration SD": 1.52,
+        "Approachable SD": 1.63
+    },
+    "035539": {
+        "Danger Mean": -0.05,
+        "Urgency Mean": 0.27,
+        "Risk of Failure Mean": -0.24,
+        "Collaboration Mean": 0.22,
+        "Approachable Mean": 0.62,
+        "Danger SD": 1.8,
+        "Urgency SD": 1.73,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.86,
+        "Approachable SD": 2.04
+    },
+    "035569": {
+        "Danger Mean": 0.36,
+        "Urgency Mean": 0.33,
+        "Risk of Failure Mean": 0.18,
+        "Collaboration Mean": 0.18,
+        "Approachable Mean": 0.36,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.82,
+        "Risk of Failure SD": 1.57,
+        "Collaboration SD": 1.6,
+        "Approachable SD": 1.7
+    },
+    "035991": {
+        "Danger Mean": 0.04,
+        "Urgency Mean": 0.19,
+        "Risk of Failure Mean": 0.04,
+        "Collaboration Mean": 0.26,
+        "Approachable Mean": 0.15,
+        "Danger SD": 1.9,
+        "Urgency SD": 1.49,
+        "Risk of Failure SD": 1.64,
+        "Collaboration SD": 1.67,
+        "Approachable SD": 1.65
+    },
+    "036144": {
+        "Danger Mean": 0.29,
+        "Urgency Mean": 0.46,
+        "Risk of Failure Mean": 0.43,
+        "Collaboration Mean": 0.2,
+        "Approachable Mean": 0.31,
+        "Danger SD": 1.92,
+        "Urgency SD": 1.78,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.82
+    },
+    "036187": {
+        "Danger Mean": -0.65,
+        "Urgency Mean": -0.19,
+        "Risk of Failure Mean": -0.23,
+        "Collaboration Mean": 0.23,
+        "Approachable Mean": 0.39,
+        "Danger SD": 2.21,
+        "Urgency SD": 2.1,
+        "Risk of Failure SD": 1.88,
+        "Collaboration SD": 1.93,
+        "Approachable SD": 2.07
+    },
+    "036243": {
+        "Danger Mean": 0.42,
+        "Urgency Mean": 0.33,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.24,
+        "Approachable Mean": 0.15,
+        "Danger SD": 1.71,
+        "Urgency SD": 1.63,
+        "Risk of Failure SD": 1.46,
+        "Collaboration SD": 1.39,
+        "Approachable SD": 1.56
+    },
+    "036485": {
+        "Danger Mean": 0.5,
+        "Urgency Mean": 0.2,
+        "Risk of Failure Mean": -0.5,
+        "Collaboration Mean": 0.27,
+        "Approachable Mean": 0.57,
+        "Danger SD": 1.98,
+        "Urgency SD": 1.76,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.86
+    },
+    "036988": {
+        "Danger Mean": 0.41,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.07,
+        "Collaboration Mean": -0.34,
+        "Approachable Mean": 0.07,
+        "Danger SD": 2.17,
+        "Urgency SD": 2.1,
+        "Risk of Failure SD": 1.58,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 1.96
+    },
+    "036990": {
+        "Danger Mean": -0.03,
+        "Urgency Mean": -0.15,
+        "Risk of Failure Mean": -0.26,
+        "Collaboration Mean": 0.74,
+        "Approachable Mean": 0.76,
+        "Danger SD": 2.19,
+        "Urgency SD": 1.67,
+        "Risk of Failure SD": 1.8,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.46
+    },
+    "038318": {
+        "Danger Mean": -0.52,
+        "Urgency Mean": 0.55,
+        "Risk of Failure Mean": 0.45,
+        "Collaboration Mean": 0.09,
+        "Approachable Mean": -0.39,
+        "Danger SD": 1.88,
+        "Urgency SD": 1.76,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.86,
+        "Approachable SD": 1.91
+    },
+    "038361": {
+        "Danger Mean": -0.38,
+        "Urgency Mean": 0.18,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.12,
+        "Approachable Mean": -0.12,
+        "Danger SD": 1.88,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.76,
+        "Collaboration SD": 1.59,
+        "Approachable SD": 1.73
+    },
+    "038679": {
+        "Danger Mean": 0.11,
+        "Urgency Mean": -0.22,
+        "Risk of Failure Mean": -0.22,
+        "Collaboration Mean": -0.22,
+        "Approachable Mean": -0.16,
+        "Danger SD": 1.83,
+        "Urgency SD": 1.9,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.74,
+        "Approachable SD": 1.98
+    },
+    "038819": {
+        "Danger Mean": -0.41,
+        "Urgency Mean": -0.33,
+        "Risk of Failure Mean": -0.63,
+        "Collaboration Mean": 0.74,
+        "Approachable Mean": 0.89,
+        "Danger SD": 2.06,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.43,
+        "Approachable SD": 1.42
+    },
+    "039282": {
+        "Danger Mean": -0.44,
+        "Urgency Mean": -0.04,
+        "Risk of Failure Mean": 0.07,
+        "Collaboration Mean": 0.44,
+        "Approachable Mean": -0.07,
+        "Danger SD": 2.02,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 2.04,
+        "Collaboration SD": 1.45,
+        "Approachable SD": 1.68
+    },
+    "039530": {
+        "Danger Mean": 0.42,
+        "Urgency Mean": -0.22,
+        "Risk of Failure Mean": -0.06,
+        "Collaboration Mean": 0.47,
+        "Approachable Mean": 0.44,
+        "Danger SD": 1.88,
+        "Urgency SD": 2.07,
+        "Risk of Failure SD": 1.78,
+        "Collaboration SD": 1.44,
+        "Approachable SD": 1.92
+    },
+    "039941": {
+        "Danger Mean": -0.38,
+        "Urgency Mean": 0.02,
+        "Risk of Failure Mean": -0.33,
+        "Collaboration Mean": 0.31,
+        "Approachable Mean": 0.6,
+        "Danger SD": 1.96,
+        "Urgency SD": 1.87,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.92
+    },
+    "039947": {
+        "Danger Mean": -0.58,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": -0.39,
+        "Collaboration Mean": 0.52,
+        "Approachable Mean": 0.68,
+        "Danger SD": 2.09,
+        "Urgency SD": 1.78,
+        "Risk of Failure SD": 1.86,
+        "Collaboration SD": 1.64,
+        "Approachable SD": 1.71
+    },
+    "039949": {
+        "Danger Mean": -0.63,
+        "Urgency Mean": 0.14,
+        "Risk of Failure Mean": -0.46,
+        "Collaboration Mean": 0.63,
+        "Approachable Mean": 0.83,
+        "Danger SD": 1.93,
+        "Urgency SD": 1.71,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.87,
+        "Approachable SD": 1.84
+    },
+    "039984": {
+        "Danger Mean": -0.28,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.28,
+        "Collaboration Mean": 0.86,
+        "Approachable Mean": 0.83,
+        "Danger SD": 2.24,
+        "Urgency SD": 2.05,
+        "Risk of Failure SD": 2.03,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.62
+    },
+    "040162": {
+        "Danger Mean": -0.7,
+        "Urgency Mean": -0.52,
+        "Risk of Failure Mean": -0.87,
+        "Collaboration Mean": 0.35,
+        "Approachable Mean": 0.65,
+        "Danger SD": 2.25,
+        "Urgency SD": 1.84,
+        "Risk of Failure SD": 2.01,
+        "Collaboration SD": 1.52,
+        "Approachable SD": 1.73
+    },
+    "040175": {
+        "Danger Mean": -0.23,
+        "Urgency Mean": -0.31,
+        "Risk of Failure Mean": -0.41,
+        "Collaboration Mean": 0.18,
+        "Approachable Mean": 0.85,
+        "Danger SD": 2.21,
+        "Urgency SD": 1.98,
+        "Risk of Failure SD": 1.94,
+        "Collaboration SD": 1.52,
+        "Approachable SD": 1.81
+    },
+    "040369": {
+        "Danger Mean": 0.18,
+        "Urgency Mean": 0.05,
+        "Risk of Failure Mean": 0.68,
+        "Collaboration Mean": -0.14,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.99,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.18,
+        "Approachable SD": 1.24
+    },
+    "040782": {
+        "Danger Mean": -0.44,
+        "Urgency Mean": -0.41,
+        "Risk of Failure Mean": -0.03,
+        "Collaboration Mean": 0.31,
+        "Approachable Mean": 0.56,
+        "Danger SD": 2.0,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 1.79,
+        "Approachable SD": 1.69
+    },
+    "040784": {
+        "Danger Mean": -0.38,
+        "Urgency Mean": 0.85,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.06,
+        "Approachable Mean": -0.09,
+        "Danger SD": 1.73,
+        "Urgency SD": 1.83,
+        "Risk of Failure SD": 1.7,
+        "Collaboration SD": 1.35,
+        "Approachable SD": 1.63
+    },
+    "040798": {
+        "Danger Mean": -0.31,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": -0.34,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.11,
+        "Danger SD": 1.62,
+        "Urgency SD": 1.67,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.65,
+        "Approachable SD": 1.67
+    },
+    "041090": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": -0.07,
+        "Risk of Failure Mean": 0.07,
+        "Collaboration Mean": 0.5,
+        "Approachable Mean": 0.5,
+        "Danger SD": 1.63,
+        "Urgency SD": 1.91,
+        "Risk of Failure SD": 1.61,
+        "Collaboration SD": 1.52,
+        "Approachable SD": 1.8
+    },
+    "041453": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 0.08,
+        "Risk of Failure Mean": -0.16,
+        "Collaboration Mean": 0.28,
+        "Approachable Mean": 0.64,
+        "Danger SD": 1.81,
+        "Urgency SD": 1.83,
+        "Risk of Failure SD": 1.62,
+        "Collaboration SD": 1.69,
+        "Approachable SD": 1.72
+    },
+    "041870": {
+        "Danger Mean": 0.03,
+        "Urgency Mean": -0.41,
+        "Risk of Failure Mean": -0.24,
+        "Collaboration Mean": 0.03,
+        "Approachable Mean": 0.38,
+        "Danger SD": 1.99,
+        "Urgency SD": 2.03,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.22,
+        "Approachable SD": 1.61
+    },
+    "041939": {
+        "Danger Mean": -0.42,
+        "Urgency Mean": -0.67,
+        "Risk of Failure Mean": -1.0,
+        "Collaboration Mean": 0.17,
+        "Approachable Mean": 0.79,
+        "Danger SD": 2.14,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.8,
+        "Collaboration SD": 1.65,
+        "Approachable SD": 1.85
+    },
+    "042234": {
+        "Danger Mean": 0.08,
+        "Urgency Mean": 0.04,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": -0.15,
+        "Approachable Mean": 0.23,
+        "Danger SD": 1.73,
+        "Urgency SD": 1.81,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.77,
+        "Approachable SD": 1.8
+    },
+    "042286": {
+        "Danger Mean": -0.11,
+        "Urgency Mean": 0.46,
+        "Risk of Failure Mean": -0.06,
+        "Collaboration Mean": 0.37,
+        "Approachable Mean": 0.71,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.74,
+        "Approachable SD": 1.72
+    },
+    "042756": {
+        "Danger Mean": -0.46,
+        "Urgency Mean": -0.29,
+        "Risk of Failure Mean": -0.43,
+        "Collaboration Mean": 0.5,
+        "Approachable Mean": 0.79,
+        "Danger SD": 1.95,
+        "Urgency SD": 2.12,
+        "Risk of Failure SD": 1.84,
+        "Collaboration SD": 1.76,
+        "Approachable SD": 1.8
+    },
+    "042842": {
+        "Danger Mean": -0.14,
+        "Urgency Mean": -0.18,
+        "Risk of Failure Mean": -0.23,
+        "Collaboration Mean": 0.91,
+        "Approachable Mean": 1.14,
+        "Danger SD": 1.74,
+        "Urgency SD": 1.77,
+        "Risk of Failure SD": 2.02,
+        "Collaboration SD": 1.59,
+        "Approachable SD": 1.55
+    },
+    "043509": {
+        "Danger Mean": -0.53,
+        "Urgency Mean": 0.03,
+        "Risk of Failure Mean": 0.12,
+        "Collaboration Mean": 0.12,
+        "Approachable Mean": -0.22,
+        "Danger SD": 2.05,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.8,
+        "Collaboration SD": 1.71,
+        "Approachable SD": 2.01
+    },
+    "044344": {
+        "Danger Mean": 0.17,
+        "Urgency Mean": 0.12,
+        "Risk of Failure Mean": -0.08,
+        "Collaboration Mean": 0.12,
+        "Approachable Mean": 0.33,
+        "Danger SD": 1.91,
+        "Urgency SD": 2.07,
+        "Risk of Failure SD": 2.1,
+        "Collaboration SD": 1.59,
+        "Approachable SD": 1.67
+    },
+    "044359": {
+        "Danger Mean": 0.43,
+        "Urgency Mean": 0.25,
+        "Risk of Failure Mean": -0.29,
+        "Collaboration Mean": 0.25,
+        "Approachable Mean": 0.32,
+        "Danger SD": 1.9,
+        "Urgency SD": 1.74,
+        "Risk of Failure SD": 1.6,
+        "Collaboration SD": 1.88,
+        "Approachable SD": 1.95
+    },
+    "044821": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.26,
+        "Collaboration Mean": 0.3,
+        "Approachable Mean": 0.52,
+        "Danger SD": 2.15,
+        "Urgency SD": 1.93,
+        "Risk of Failure SD": 1.89,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 1.86
+    },
+    "044985": {
+        "Danger Mean": -0.68,
+        "Urgency Mean": -0.16,
+        "Risk of Failure Mean": -0.32,
+        "Collaboration Mean": -0.11,
+        "Approachable Mean": 0.42,
+        "Danger SD": 2.08,
+        "Urgency SD": 2.11,
+        "Risk of Failure SD": 1.75,
+        "Collaboration SD": 1.86,
+        "Approachable SD": 2.01
+    },
+    "045012": {
+        "Danger Mean": -0.73,
+        "Urgency Mean": -0.31,
+        "Risk of Failure Mean": -0.15,
+        "Collaboration Mean": 0.04,
+        "Approachable Mean": -0.15,
+        "Danger SD": 1.87,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.63,
+        "Approachable SD": 1.97
+    },
+    "046144": {
+        "Danger Mean": 0.33,
+        "Urgency Mean": 0.88,
+        "Risk of Failure Mean": 0.17,
+        "Collaboration Mean": 0.12,
+        "Approachable Mean": 0.21,
+        "Danger SD": 1.91,
+        "Urgency SD": 1.86,
+        "Risk of Failure SD": 1.77,
+        "Collaboration SD": 1.42,
+        "Approachable SD": 1.68
+    },
+    "046147": {
+        "Danger Mean": -0.76,
+        "Urgency Mean": -0.19,
+        "Risk of Failure Mean": -0.43,
+        "Collaboration Mean": -0.05,
+        "Approachable Mean": 0.1,
+        "Danger SD": 2.09,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 2.06,
+        "Collaboration SD": 1.4,
+        "Approachable SD": 1.66
+    },
+    "047016": {
+        "Danger Mean": -0.29,
+        "Urgency Mean": -0.12,
+        "Risk of Failure Mean": -0.35,
+        "Collaboration Mean": 0.35,
+        "Approachable Mean": 0.47,
+        "Danger SD": 2.11,
+        "Urgency SD": 1.87,
+        "Risk of Failure SD": 2.0,
+        "Collaboration SD": 1.85,
+        "Approachable SD": 1.79
+    },
+    "047481": {
+        "Danger Mean": -0.11,
+        "Urgency Mean": 0.11,
+        "Risk of Failure Mean": 0.17,
+        "Collaboration Mean": 0.56,
+        "Approachable Mean": 0.83,
+        "Danger SD": 2.05,
+        "Urgency SD": 1.63,
+        "Risk of Failure SD": 1.61,
+        "Collaboration SD": 1.71,
+        "Approachable SD": 1.8
+    },
+    "047832": {
+        "Danger Mean": -0.07,
+        "Urgency Mean": 0.07,
+        "Risk of Failure Mean": 0.26,
+        "Collaboration Mean": -0.11,
+        "Approachable Mean": -0.15,
+        "Danger SD": 1.92,
+        "Urgency SD": 1.72,
+        "Risk of Failure SD": 1.48,
+        "Collaboration SD": 1.89,
+        "Approachable SD": 1.84
+    },
+    "047835": {
+        "Danger Mean": 0.24,
+        "Urgency Mean": -0.76,
+        "Risk of Failure Mean": -0.47,
+        "Collaboration Mean": 0.12,
+        "Approachable Mean": 0.35,
+        "Danger SD": 2.41,
+        "Urgency SD": 2.29,
+        "Risk of Failure SD": 2.3,
+        "Collaboration SD": 1.6,
+        "Approachable SD": 2.0
+    },
+    "048412": {
+        "Danger Mean": 0.33,
+        "Urgency Mean": 0.48,
+        "Risk of Failure Mean": 0.38,
+        "Collaboration Mean": 0.48,
+        "Approachable Mean": 0.05,
+        "Danger SD": 1.75,
+        "Urgency SD": 1.92,
+        "Risk of Failure SD": 1.79,
+        "Collaboration SD": 1.47,
+        "Approachable SD": 1.46
+    },
+    "048453": {
+        "Danger Mean": -0.24,
+        "Urgency Mean": 0.05,
+        "Risk of Failure Mean": -0.76,
+        "Collaboration Mean": 0.71,
+        "Approachable Mean": 0.76,
+        "Danger SD": 2.18,
+        "Urgency SD": 2.01,
+        "Risk of Failure SD": 1.63,
+        "Collaboration SD": 1.69,
+        "Approachable SD": 1.54
+    },
+    "048731": {
+        "Danger Mean": -0.21,
+        "Urgency Mean": -0.57,
+        "Risk of Failure Mean": -0.21,
+        "Collaboration Mean": 0.14,
+        "Approachable Mean": 0.5,
+        "Danger SD": 2.37,
+        "Urgency SD": 1.8,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.19,
+        "Approachable SD": 1.76
+    },
+    "049361": {
+        "Danger Mean": 0.44,
+        "Urgency Mean": -0.04,
+        "Risk of Failure Mean": -0.44,
+        "Collaboration Mean": -0.08,
+        "Approachable Mean": 0.24,
+        "Danger SD": 1.96,
+        "Urgency SD": 2.03,
+        "Risk of Failure SD": 1.83,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.99
+    },
+    "050167": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 0.67,
+        "Risk of Failure Mean": 0.25,
+        "Collaboration Mean": 0.75,
+        "Approachable Mean": 0.08,
+        "Danger SD": 1.47,
+        "Urgency SD": 1.65,
+        "Risk of Failure SD": 1.53,
+        "Collaboration SD": 1.42,
+        "Approachable SD": 1.11
+    },
+    "051657": {
+        "Danger Mean": -0.31,
+        "Urgency Mean": 0.69,
+        "Risk of Failure Mean": -0.19,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": -0.06,
+        "Danger SD": 2.2,
+        "Urgency SD": 1.76,
+        "Risk of Failure SD": 1.94,
+        "Collaboration SD": 1.73,
+        "Approachable SD": 2.01
+    },
+    "051785": {
+        "Danger Mean": -0.28,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": -0.61,
+        "Collaboration Mean": 0.44,
+        "Approachable Mean": 0.22,
+        "Danger SD": 2.42,
+        "Urgency SD": 1.9,
+        "Risk of Failure SD": 1.95,
+        "Collaboration SD": 1.86,
+        "Approachable SD": 2.15
+    },
+    "052004": {
+        "Danger Mean": -0.2,
+        "Urgency Mean": -0.07,
+        "Risk of Failure Mean": -0.53,
+        "Collaboration Mean": -0.53,
+        "Approachable Mean": -0.4,
+        "Danger SD": 2.01,
+        "Urgency SD": 1.88,
+        "Risk of Failure SD": 1.82,
+        "Collaboration SD": 1.54,
+        "Approachable SD": 1.93
+    },
+    "052358": {
+        "Danger Mean": -0.27,
+        "Urgency Mean": 0.18,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.91,
+        "Approachable Mean": 1.36,
+        "Danger SD": 1.35,
+        "Urgency SD": 1.75,
+        "Risk of Failure SD": 1.93,
+        "Collaboration SD": 1.31,
+        "Approachable SD": 1.15
+    },
+    "052404": {
+        "Danger Mean": -0.59,
+        "Urgency Mean": -0.18,
+        "Risk of Failure Mean": -0.65,
+        "Collaboration Mean": -0.06,
+        "Approachable Mean": 0.29,
+        "Danger SD": 1.54,
+        "Urgency SD": 1.72,
+        "Risk of Failure SD": 1.28,
+        "Collaboration SD": 1.43,
+        "Approachable SD": 1.4
+    },
+    "052638": {
+        "Danger Mean": -0.56,
+        "Urgency Mean": 0.19,
+        "Risk of Failure Mean": 0.19,
+        "Collaboration Mean": 0.69,
+        "Approachable Mean": 0.94,
+        "Danger SD": 1.87,
+        "Urgency SD": 1.94,
+        "Risk of Failure SD": 1.07,
+        "Collaboration SD": 1.16,
+        "Approachable SD": 1.75
+    },
+    "052648": {
+        "Danger Mean": -0.38,
+        "Urgency Mean": 0.5,
+        "Risk of Failure Mean": 0.75,
+        "Collaboration Mean": 1.38,
+        "Approachable Mean": 1.5,
+        "Danger SD": 1.32,
+        "Urgency SD": 1.94,
+        "Risk of Failure SD": 1.09,
+        "Collaboration SD": 1.32,
+        "Approachable SD": 1.58
+    },
+    "054004": {
+        "Danger Mean": -1.29,
+        "Urgency Mean": 0.41,
+        "Risk of Failure Mean": 0.06,
+        "Collaboration Mean": 0.88,
+        "Approachable Mean": 0.88,
+        "Danger SD": 1.87,
+        "Urgency SD": 2.09,
+        "Risk of Failure SD": 1.86,
+        "Collaboration SD": 1.74,
+        "Approachable SD": 1.45
+    },
+    "054062": {
+        "Danger Mean": -0.53,
+        "Urgency Mean": 0.33,
+        "Risk of Failure Mean": -0.53,
+        "Collaboration Mean": 0.73,
+        "Approachable Mean": 0.6,
+        "Danger SD": 1.93,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.96,
+        "Collaboration SD": 1.29,
+        "Approachable SD": 1.58
+    },
+    "054124": {
+        "Danger Mean": 0.18,
+        "Urgency Mean": 0.45,
+        "Risk of Failure Mean": 0.09,
+        "Collaboration Mean": 0.36,
+        "Approachable Mean": 0.36,
+        "Danger SD": 1.8,
+        "Urgency SD": 1.67,
+        "Risk of Failure SD": 1.78,
+        "Collaboration SD": 1.55,
+        "Approachable SD": 1.61
+    },
+    "054131": {
+        "Danger Mean": -0.2,
+        "Urgency Mean": 0.8,
+        "Risk of Failure Mean": -0.33,
+        "Collaboration Mean": 0.4,
+        "Approachable Mean": 0.73,
+        "Danger SD": 1.9,
+        "Urgency SD": 1.72,
+        "Risk of Failure SD": 1.74,
+        "Collaboration SD": 1.36,
+        "Approachable SD": 1.69
+    },
+    "054137": {
+        "Danger Mean": 0.65,
+        "Urgency Mean": -0.06,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": -0.18,
+        "Approachable Mean": -0.18,
+        "Danger SD": 1.68,
+        "Urgency SD": 1.89,
+        "Risk of Failure SD": 1.88,
+        "Collaboration SD": 1.38,
+        "Approachable SD": 1.95
+    },
+    "054465": {
+        "Danger Mean": -0.21,
+        "Urgency Mean": -0.14,
+        "Risk of Failure Mean": 0.29,
+        "Collaboration Mean": -0.21,
+        "Approachable Mean": -0.29,
+        "Danger SD": 1.61,
+        "Urgency SD": 1.36,
+        "Risk of Failure SD": 1.53,
+        "Collaboration SD": 1.15,
+        "Approachable SD": 1.62
+    },
+    "054833": {
+        "Danger Mean": 1.2,
+        "Urgency Mean": 1.0,
+        "Risk of Failure Mean": -0.1,
+        "Collaboration Mean": 0.4,
+        "Approachable Mean": 0.9,
+        "Danger SD": 1.17,
+        "Urgency SD": 1.18,
+        "Risk of Failure SD": 1.58,
+        "Collaboration SD": 1.28,
+        "Approachable SD": 0.94
+    },
+    "055100": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 0.83,
+        "Risk of Failure Mean": 0.33,
+        "Collaboration Mean": 0.58,
+        "Approachable Mean": 0.33,
+        "Danger SD": 1.53,
+        "Urgency SD": 1.4,
+        "Risk of Failure SD": 1.18,
+        "Collaboration SD": 1.32,
+        "Approachable SD": 1.37
+    },
+    "055109": {
+        "Danger Mean": 0.14,
+        "Urgency Mean": 0.14,
+        "Risk of Failure Mean": -0.21,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": -0.14,
+        "Danger SD": 1.6,
+        "Urgency SD": 1.51,
+        "Risk of Failure SD": 1.52,
+        "Collaboration SD": 1.56,
+        "Approachable SD": 1.3
+    },
+    "055821": {
+        "Danger Mean": -1.0,
+        "Urgency Mean": 0.67,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.44,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.63,
+        "Urgency SD": 2.0,
+        "Risk of Failure SD": 2.05,
+        "Collaboration SD": 1.71,
+        "Approachable SD": 1.76
+    },
+    "056273": {
+        "Danger Mean": -0.83,
+        "Urgency Mean": 0.5,
+        "Risk of Failure Mean": -0.67,
+        "Collaboration Mean": -0.5,
+        "Approachable Mean": -0.08,
+        "Danger SD": 2.07,
+        "Urgency SD": 1.61,
+        "Risk of Failure SD": 2.01,
+        "Collaboration SD": 1.8,
+        "Approachable SD": 1.66
+    },
+    "056649": {
+        "Danger Mean": -1.2,
+        "Urgency Mean": -0.2,
+        "Risk of Failure Mean": 0.8,
+        "Collaboration Mean": -0.2,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.17,
+        "Urgency SD": 1.72,
+        "Risk of Failure SD": 0.75,
+        "Collaboration SD": 1.33,
+        "Approachable SD": 0.63
+    },
+    "056802": {
+        "Danger Mean": 0.36,
+        "Urgency Mean": -0.73,
+        "Risk of Failure Mean": -0.09,
+        "Collaboration Mean": 0.18,
+        "Approachable Mean": 0.45,
+        "Danger SD": 2.35,
+        "Urgency SD": 2.05,
+        "Risk of Failure SD": 1.88,
+        "Collaboration SD": 2.08,
+        "Approachable SD": 1.88
+    },
+    "056872": {
+        "Danger Mean": -0.5,
+        "Urgency Mean": -0.17,
+        "Risk of Failure Mean": -0.17,
+        "Collaboration Mean": 0.33,
+        "Approachable Mean": 0.17,
+        "Danger SD": 1.26,
+        "Urgency SD": 1.95,
+        "Risk of Failure SD": 1.67,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.86
+    },
+    "056882": {
+        "Danger Mean": -0.88,
+        "Urgency Mean": 0.88,
+        "Risk of Failure Mean": -0.38,
+        "Collaboration Mean": -0.5,
+        "Approachable Mean": 0.38,
+        "Danger SD": 1.96,
+        "Urgency SD": 1.27,
+        "Risk of Failure SD": 1.32,
+        "Collaboration SD": 1.66,
+        "Approachable SD": 1.93
+    },
+    "057180": {
+        "Danger Mean": -0.67,
+        "Urgency Mean": 0.56,
+        "Risk of Failure Mean": 0.11,
+        "Collaboration Mean": 0.67,
+        "Approachable Mean": 0.0,
+        "Danger SD": 0.94,
+        "Urgency SD": 1.71,
+        "Risk of Failure SD": 1.2,
+        "Collaboration SD": 1.05,
+        "Approachable SD": 0.94
+    },
+    "058130": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 1.14,
+        "Risk of Failure Mean": -0.57,
+        "Collaboration Mean": -0.57,
+        "Approachable Mean": -0.71,
+        "Danger SD": 2.07,
+        "Urgency SD": 2.1,
+        "Risk of Failure SD": 1.76,
+        "Collaboration SD": 1.84,
+        "Approachable SD": 1.28
+    },
+    "058757": {
+        "Danger Mean": 0.0,
+        "Urgency Mean": 1.0,
+        "Risk of Failure Mean": 1.0,
+        "Collaboration Mean": -1.0,
+        "Approachable Mean": -0.25,
+        "Danger SD": 2.12,
+        "Urgency SD": 1.22,
+        "Risk of Failure SD": 1.22,
+        "Collaboration SD": 1.58,
+        "Approachable SD": 1.09
+    },
+    "059173": {
+        "Danger Mean": 0.92,
+        "Urgency Mean": 0.17,
+        "Risk of Failure Mean": -0.58,
+        "Collaboration Mean": 0.42,
+        "Approachable Mean": 0.92,
+        "Danger SD": 1.26,
+        "Urgency SD": 1.95,
+        "Risk of Failure SD": 1.5,
+        "Collaboration SD": 1.26,
+        "Approachable SD": 1.44
+    },
+    "059192": {
+        "Danger Mean": -0.86,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -1.14,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 1.14,
+        "Danger SD": 1.96,
+        "Urgency SD": 1.51,
+        "Risk of Failure SD": 1.46,
+        "Collaboration SD": 1.85,
+        "Approachable SD": 2.03
+    },
+    "059504": {
+        "Danger Mean": -2.0,
+        "Urgency Mean": -2.0,
+        "Risk of Failure Mean": 0.0,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.0,
+        "Danger SD": 1.41,
+        "Urgency SD": 1.41,
+        "Risk of Failure SD": 2.45,
+        "Collaboration SD": 2.45,
+        "Approachable SD": 2.45
+    },
+    "059679": {
+        "Danger Mean": -2.25,
+        "Urgency Mean": -1.75,
+        "Risk of Failure Mean": -1.75,
+        "Collaboration Mean": -0.5,
+        "Approachable Mean": 1.5,
+        "Danger SD": 1.3,
+        "Urgency SD": 1.3,
+        "Risk of Failure SD": 1.3,
+        "Collaboration SD": 1.5,
+        "Approachable SD": 1.12
+    },
+    "060510": {
+        "Danger Mean": -0.67,
+        "Urgency Mean": 0.67,
+        "Risk of Failure Mean": 1.33,
+        "Collaboration Mean": -0.33,
+        "Approachable Mean": -0.67,
+        "Danger SD": 1.7,
+        "Urgency SD": 0.94,
+        "Risk of Failure SD": 0.94,
+        "Collaboration SD": 2.05,
+        "Approachable SD": 1.7
+    },
+    "060701": {
+        "Danger Mean": -1.0,
+        "Urgency Mean": 0.0,
+        "Risk of Failure Mean": -0.67,
+        "Collaboration Mean": 0.67,
+        "Approachable Mean": 1.0,
+        "Danger SD": 1.41,
+        "Urgency SD": 2.45,
+        "Risk of Failure SD": 1.7,
+        "Collaboration SD": 1.7,
+        "Approachable SD": 1.41
+    },
+    "060757": {
+        "Danger Mean": -1.33,
+        "Urgency Mean": -0.67,
+        "Risk of Failure Mean": -1.17,
+        "Collaboration Mean": -0.17,
+        "Approachable Mean": 0.5,
+        "Danger SD": 1.49,
+        "Urgency SD": 1.11,
+        "Risk of Failure SD": 0.9,
+        "Collaboration SD": 1.57,
+        "Approachable SD": 1.38
+    },
+    "062049": {
+        "Danger Mean": -0.75,
+        "Urgency Mean": -1.0,
+        "Risk of Failure Mean": -1.5,
+        "Collaboration Mean": 0.5,
+        "Approachable Mean": 0.25,
+        "Danger SD": 1.92,
+        "Urgency SD": 2.12,
+        "Risk of Failure SD": 1.5,
+        "Collaboration SD": 1.8,
+        "Approachable SD": 1.79
+    },
+    "064445": {
+        "Danger Mean": 0.8,
+        "Urgency Mean": 1.0,
+        "Risk of Failure Mean": 0.8,
+        "Collaboration Mean": 0.4,
+        "Approachable Mean": 0.2,
+        "Danger SD": 0.75,
+        "Urgency SD": 0.89,
+        "Risk of Failure SD": 1.6,
+        "Collaboration SD": 1.36,
+        "Approachable SD": 1.72
+    },
+    "064447": {
+        "Danger Mean": 0.25,
+        "Urgency Mean": -0.25,
+        "Risk of Failure Mean": -0.5,
+        "Collaboration Mean": 0.75,
+        "Approachable Mean": -0.25,
+        "Danger SD": 1.09,
+        "Urgency SD": 1.09,
+        "Risk of Failure SD": 1.5,
+        "Collaboration SD": 0.83,
+        "Approachable SD": 1.79
+    },
+    "064450": {
+        "Danger Mean": 0.33,
+        "Urgency Mean": -0.33,
+        "Risk of Failure Mean": -0.67,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.33,
+        "Danger SD": 1.25,
+        "Urgency SD": 0.47,
+        "Risk of Failure SD": 0.47,
+        "Collaboration SD": 0.82,
+        "Approachable SD": 1.25
+    },
+    "064542": {
+        "Danger Mean": 0.09,
+        "Urgency Mean": 0.29,
+        "Risk of Failure Mean": -0.35,
+        "Collaboration Mean": 0.0,
+        "Approachable Mean": 0.12,
+        "Danger SD": 1.76,
+        "Urgency SD": 1.71,
+        "Risk of Failure SD": 1.68,
+        "Collaboration SD": 1.61,
+        "Approachable SD": 1.57
+    }
 }
