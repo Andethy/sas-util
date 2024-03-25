@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from typing import Dict, Union, Any
+from typing import Union, Any
 
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
@@ -13,6 +13,8 @@ from file import JsonFileIO
 
 
 class PreviewApp:
+    track_data: list[list[Any]]
+
     def __init__(self, window):
         self.track_data = [[]] * 5
         self.root_path = '../resources/study'
@@ -48,11 +50,11 @@ class PreviewApp:
         # Output Text Box for Stats Data
         self.stats_label = tk.Label(stats_frame, text="Song Stats:")
         self.stats_label.pack()
-        self.stats_data = tk.Text(stats_frame, height=10, width=50)
+        self.stats_data = tk.Text(stats_frame, height=25, width=50)
         self.stats_data.pack()
 
         # Graph for Visual Data (using matplotlib)
-        self.figure = plt.Figure(figsize=(6, 4), dpi=100)
+        self.figure = plt.Figure(figsize=(6.5, 4), dpi=100)
         self.ax = self.figure.add_subplot(111)
         self.canvas = FigureCanvasTkAgg(self.figure, graph_frame)
         self.canvas.get_tk_widget().pack()
@@ -70,11 +72,8 @@ class PreviewApp:
         self.entry_song_id.delete(0, tk.END)
         self.audio_file = self.get_path(song_id)
 
-        try:
-            self.stats_data.delete('1.0', tk.END)
-        except tk.TclError:
-            pass
-        self.stats_data.insert(tk.END, 'Search result for track ID: ' + song_id + "\n")
+        self.clear_text()
+        self.stats_data.insert(tk.END, 'Search result for track ID: ' + song_id + "\n\n")
 
         res = self.analyze_data(song_id)
         for key, vals in res.items():
@@ -82,12 +81,10 @@ class PreviewApp:
             for field, val in vals.items():
                 self.stats_data.insert(tk.END, f'- {field}: {val}\n')
 
-
-
         # Demonstrate plotting dummy data
         self.ax.clear()
         # self.ax.plot([1, 2, 3], [1, 4, 9])  # Example plot
-        self.ax.boxplot(self.track_data)
+        self.ax.boxplot(self.track_data, labels=EVAL_KEYS_A)
         self.canvas.draw()
 
     def analyze_data(self, track) -> dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]]:
@@ -126,8 +123,18 @@ class PreviewApp:
         for dir_path, dir_names, file_names in os.walk(self.root_path):
             if file_name in file_names:
                 return os.path.join(dir_path, file_name)
-        raise FileNotFoundError("Song ID not found")
+        self.clear_text()
+        self.add_text("Error: Song ID not found")
+        return ''
 
+    def add_text(self, text: str):
+        pass
+
+    def clear_text(self):
+        try:
+            self.stats_data.delete('1.0', tk.END)
+        except tk.TclError:
+            pass
 
 if __name__ == '__main__':
     root = tk.Tk()
