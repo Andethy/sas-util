@@ -76,6 +76,9 @@ class PreviewApp:
         self.stats_data.insert(tk.END, 'Search result for track ID: ' + song_id + "\n\n")
 
         res = self.analyze_data(song_id)
+        if not res:
+            return
+
         for key, vals in res.items():
             self.stats_data.insert(tk.END, key + ':\n')
             for field, val in vals.items():
@@ -87,13 +90,18 @@ class PreviewApp:
         self.ax.boxplot(self.track_data, labels=EVAL_KEYS_A)
         self.canvas.draw()
 
-    def analyze_data(self, track) -> dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]]:
+    def analyze_data(self, track) -> Union[dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]], None]:
 
         # Extract data for each field into separate lists for calculations
         fields_data = {field: [] for field in EVAL_KEYS_A}
 
         print(self.data)
-        data = self.data[track]
+        try:
+            data = self.data[track]
+        except KeyError:
+            self.clear_text()
+            self.add_text(f'Song ID {track} not found')
+            return None
 
         for entry in data.values():
             for field, value in entry.items():
@@ -114,21 +122,20 @@ class PreviewApp:
         if self.audio_file:
             pygame.mixer.music.load(self.audio_file)
             pygame.mixer.music.play()
+
         else:
             # Display message or load a default audio file
-            pass
+            self.add_text("Error: Song ID not found")
 
     def get_path(self, song_id):
         file_name = f"{song_id}.mp3"
         for dir_path, dir_names, file_names in os.walk(self.root_path):
             if file_name in file_names:
                 return os.path.join(dir_path, file_name)
-        self.clear_text()
-        self.add_text("Error: Song ID not found")
         return ''
 
     def add_text(self, text: str):
-        pass
+        self.stats_data.insert(tk.END, text + "\n")
 
     def clear_text(self):
         try:
