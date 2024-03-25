@@ -89,7 +89,6 @@ class PreviewApp:
         # self.ax.plot([1, 2, 3], [1, 4, 9])  # Example plot
         self.ax.boxplot(self.track_data)
         self.canvas.draw()
-        # INSTEAD I WANT THIS: plt.boxplot(self.track_data)
 
     def analyze_data(self, track) -> dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]]:
 
