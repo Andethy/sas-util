@@ -5,7 +5,7 @@ from queue import Queue
 import random
 from typing import TextIO
 
-from constants import JSON_FIELDS, JSON_ONSET_PATH, JSON_FEATURES_PATH
+from constants import JSON_FIELDS, JSON_ONSET_PATH, JSON_FEATURES_PATH, TRACKS_ARR
 
 
 class FileFinder(object):
@@ -233,29 +233,51 @@ def trim_folders(folder_path, keep=20):
         print("All files removed that could be removed")
 
 
-if __name__ == '__main__':
-    trim_folders('/Volumes/Music/Robotics/fma_buckets', 100)
-    # test()
-    # fma()
-    # csv = CsvFileIO('../resources/tagatune/annotations.csv')
-    # print(str(csv.headers).replace(',', ',\n'))
+def remove_irrelevant_files(folder_path: str, files_to_keep: tuple[str, ...]):
+    # Set the path to the main folder
+    main_folder_path = Path(folder_path)
 
-    # js = JsonFileIO(JSON_FEATURES_PATH)
-    # js.numerize_entries(Index=int,
-    #                     mfcc_mean=float,
-    #                     mfcc_min=float,
-    #                     mfcc_max=float,
-    #                     melSpec_mean=float,
-    #                     melSpec_min=float,
-    #                     melSpec_max=float,
-    #                     chromaVec_mean=float,
-    #                     chromaVec_min=float,
-    #                     chromaVec_max=float,
-    #                     roll_mean=float,
-    #                     roll_min=float,
-    #                     roll_max=float,
-    #                     zcr_mean=float,
-    #                     zcr_min=float,
-    #                     zcr_max=float)
-    # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
-    # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
+    # Iterate over each sub_folder in the main folder
+    for sub_folder in os.listdir(main_folder_path):
+        sub_folder_path = os.path.join(main_folder_path, sub_folder)
+
+        # Ensure the path is indeed a directory to avoid processing any files in the main folder
+        if os.path.isdir(sub_folder_path):
+            # List all files in the sub_folder
+            files = [f for f in os.listdir(sub_folder_path) if os.path.isfile(os.path.join(sub_folder_path, f))]
+            # Delete all files not in the 'files_to_keep' list
+            for f in files:
+                if Path(f).name[:-4] not in files_to_keep:
+                    file_path = os.path.join(sub_folder_path, f)
+                    print(f'Attempting to remove {file_path}')
+                    os.remove(file_path)  # Use shutil.rmtree(file_path) if directories are also to be considered
+
+
+# trim_folders('/Volumes/Music/Robotics/fma_buckets', 100)
+# test()
+# fma()
+# csv = CsvFileIO('../resources/tagatune/annotations.csv')
+# print(str(csv.headers).replace(',', ',\n'))
+
+# js = JsonFileIO(JSON_FEATURES_PATH)
+# js.numerize_entries(Index=int,
+#                     mfcc_mean=float,
+#                     mfcc_min=float,
+#                     mfcc_max=float,
+#                     melSpec_mean=float,
+#                     melSpec_min=float,
+#                     melSpec_max=float,
+#                     chromaVec_mean=float,
+#                     chromaVec_min=float,
+#                     chromaVec_max=float,
+#                     roll_mean=float,
+#                     roll_min=float,
+#                     roll_max=float,
+#                     zcr_mean=float,
+#                     zcr_min=float,
+#                     zcr_max=float)
+# js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
+# js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
+
+if __name__ == '__main__':
+    remove_irrelevant_files('../resources/study/dataset', TRACKS_ARR)

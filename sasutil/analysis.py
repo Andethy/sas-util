@@ -170,7 +170,7 @@ class StudyAnalyzer:
             for n in RATING_RANGE:
                 response = {}
                 null_count = 0
-                for m, key in enumerate(EVAL_KEYS):
+                for m, key in enumerate(EVAL_KEYS_A):
                     curr = values[n + m]
                     if not curr:
                         null_count += 1
@@ -178,7 +178,7 @@ class StudyAnalyzer:
                     else:
                         curr = int(curr)
                     response[key] = curr
-                if null_count == len(EVAL_KEYS):
+                if null_count == len(EVAL_KEYS_A):
                     continue
                 self.data[TRACKS_ARR[int(items[0]) - 1]][person] = response
                 items.pop(0)
@@ -205,8 +205,8 @@ class StudyAnalyzer:
                 person_tracks = np.vstack((person_tracks, track_data))
             average_values = np.mean(person_tracks, axis=0)
             sd_values = np.std(person_tracks, axis=0)
-            track_means[keyTrack] = {key + " Mean": round(value, 2) for key, value in zip(EVAL_KEYS, average_values)}
-            track_means[keyTrack].update({key + " SD": round(value, 2) for key, value in zip(EVAL_KEYS, sd_values)})
+            track_means[keyTrack] = {key + " Mean": round(value, 2) for key, value in zip(EVAL_KEYS_A, average_values)}
+            track_means[keyTrack].update({key + " SD": round(value, 2) for key, value in zip(EVAL_KEYS_A, sd_values)})
             sd_sorted.append((abs(track_means[keyTrack]["Danger SD"]), keyTrack))
 
         sd_sorted.sort()
@@ -238,8 +238,8 @@ class StudyAnalyzer:
             approach.append(tv[4])
 
         plt.boxplot([danger, urgency, rof, collab, approach])
-        plt.xticks([1, 2, 3, 4, 5], EVAL_KEYS, minor=True, rotation=45)
-        plt.xlabel(' --------- '.join(EVAL_KEYS))
+        plt.xticks([1, 2, 3, 4, 5], EVAL_KEYS_A, minor=True, rotation=45)
+        plt.xlabel(' --------- '.join(EVAL_KEYS_A))
 
         # Toggle boxplot
         # plt.show()
