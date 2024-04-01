@@ -163,6 +163,10 @@ class StudyAnalyzer:
         self.out.add_entries_dict(self.data)
 
     def extract_tracks(self):
+        """
+        Extracts all responses from the file and stores them in an output JSON file.
+        """
+
         for entry in self.csv.data[START_ROW:]:
             values = list(entry.values())
             person = entry[ID_FIELD]
@@ -180,6 +184,8 @@ class StudyAnalyzer:
                     response[key] = curr
                 if null_count == len(EVAL_KEYS_A):
                     continue
+                elif n >= STUDY_PARTITION:
+                    response[EVAL_KEYS_A[0]] *= -1
                 self.data[TRACKS_ARR[int(items[0]) - 1]][person] = response
                 items.pop(0)
         self.out.add_entries_dict(self.data)
@@ -207,6 +213,7 @@ class StudyAnalyzer:
             sd_values = np.std(person_tracks, axis=0)
             track_means[keyTrack] = {key + " Mean": round(value, 2) for key, value in zip(EVAL_KEYS_A, average_values)}
             track_means[keyTrack].update({key + " SD": round(value, 2) for key, value in zip(EVAL_KEYS_A, sd_values)})
+            track_means[keyTrack]["Entries"] = len(valueTrack)
             sd_sorted.append((abs(track_means[keyTrack]["Danger SD"]), keyTrack))
 
         sd_sorted.sort()
@@ -297,4 +304,5 @@ if __name__ == '__main__':
                              '../resources/study/results.json',
                              '../resources/study/summary.json',
                              '../resources/study/analysis.json')
+    # analyzer.extract_tracks()
     analyzer.summarize()

@@ -2,165 +2,165 @@
     "Lowest 20 Danger SD": [
         {
             "Track": "064445",
-            "Danger Mean": 0.8
+            "Danger Mean": -0.4
         },
         {
-            "Track": "057180",
-            "Danger Mean": -0.67
+            "Track": "062049",
+            "Danger Mean": -1.75
         },
         {
             "Track": "064447",
-            "Danger Mean": 0.25
+            "Danger Mean": -0.25
         },
         {
-            "Track": "054833",
-            "Danger Mean": 1.2
+            "Track": "057180",
+            "Danger Mean": -0.22
         },
         {
-            "Track": "056649",
-            "Danger Mean": -1.2
+            "Track": "060510",
+            "Danger Mean": 1.33
         },
         {
             "Track": "064450",
-            "Danger Mean": 0.33
+            "Danger Mean": -0.33
         },
         {
             "Track": "056872",
-            "Danger Mean": -0.5
+            "Danger Mean": 0.5
         },
         {
-            "Track": "059173",
-            "Danger Mean": 0.92
+            "Track": "052358",
+            "Danger Mean": -0.45
         },
         {
             "Track": "059679",
             "Danger Mean": -2.25
         },
         {
+            "Track": "060701",
+            "Danger Mean": -0.75
+        },
+        {
             "Track": "052648",
             "Danger Mean": -0.38
         },
         {
-            "Track": "052358",
-            "Danger Mean": -0.27
+            "Track": "059173",
+            "Danger Mean": -0.75
         },
         {
-            "Track": "059504",
-            "Danger Mean": -2.0
-        },
-        {
-            "Track": "060701",
-            "Danger Mean": -1.0
+            "Track": "055100",
+            "Danger Mean": -0.67
         },
         {
             "Track": "050167",
-            "Danger Mean": 0.0
+            "Danger Mean": 0.5
+        },
+        {
+            "Track": "054833",
+            "Danger Mean": -0.8
         },
         {
             "Track": "060757",
             "Danger Mean": -1.33
         },
         {
-            "Track": "055100",
-            "Danger Mean": 0.0
-        },
-        {
-            "Track": "052404",
-            "Danger Mean": -0.59
-        },
-        {
             "Track": "055109",
-            "Danger Mean": 0.14
+            "Danger Mean": -0.57
         },
         {
-            "Track": "054465",
-            "Danger Mean": -0.21
+            "Track": "031236",
+            "Danger Mean": -0.96
         },
         {
-            "Track": "040798",
-            "Danger Mean": -0.31
+            "Track": "052638",
+            "Danger Mean": -1.19
+        },
+        {
+            "Track": "042842",
+            "Danger Mean": -0.77
         }
     ],
     "Highest 20 Danger SD": [
         {
-            "Track": "044821",
-            "Danger Mean": 0.09
+            "Track": "044985",
+            "Danger Mean": -0.58
         },
         {
-            "Track": "004066",
-            "Danger Mean": -0.17
+            "Track": "027148",
+            "Danger Mean": -0.55
         },
         {
-            "Track": "024995",
-            "Danger Mean": 0.09
+            "Track": "040162",
+            "Danger Mean": -1.04
         },
         {
-            "Track": "011454",
-            "Danger Mean": -0.68
+            "Track": "054004",
+            "Danger Mean": -0.82
         },
         {
-            "Track": "013814",
-            "Danger Mean": -0.45
+            "Track": "056882",
+            "Danger Mean": 0.38
         },
         {
-            "Track": "014216",
-            "Danger Mean": -0.16
+            "Track": "058757",
+            "Danger Mean": 0.0
+        },
+        {
+            "Track": "051785",
+            "Danger Mean": -1.17
         },
         {
             "Track": "036988",
-            "Danger Mean": 0.41
+            "Danger Mean": -0.46
         },
         {
-            "Track": "048453",
-            "Danger Mean": -0.24
+            "Track": "019355",
+            "Danger Mean": -0.32
         },
         {
-            "Track": "036990",
-            "Danger Mean": -0.03
+            "Track": "036187",
+            "Danger Mean": -0.71
+        },
+        {
+            "Track": "033064",
+            "Danger Mean": -0.19
+        },
+        {
+            "Track": "040175",
+            "Danger Mean": -0.33
         },
         {
             "Track": "051657",
             "Danger Mean": -0.31
         },
         {
-            "Track": "036187",
-            "Danger Mean": -0.65
+            "Track": "046147",
+            "Danger Mean": -0.29
         },
         {
-            "Track": "040175",
-            "Danger Mean": -0.23
+            "Track": "025804",
+            "Danger Mean": -1.06
         },
         {
-            "Track": "039984",
-            "Danger Mean": -0.28
+            "Track": "011454",
+            "Danger Mean": -0.44
         },
         {
-            "Track": "040162",
-            "Danger Mean": -0.7
-        },
-        {
-            "Track": "011724",
-            "Danger Mean": -0.34
+            "Track": "047835",
+            "Danger Mean": -0.82
         },
         {
             "Track": "056802",
-            "Danger Mean": 0.36
+            "Danger Mean": -0.55
         },
         {
             "Track": "048731",
             "Danger Mean": -0.21
         },
         {
-            "Track": "025804",
-            "Danger Mean": -0.6
-        },
-        {
-            "Track": "047835",
-            "Danger Mean": 0.24
-        },
-        {
-            "Track": "051785",
-            "Danger Mean": -0.28
+            "Track": "059504",
+            "Danger Mean": 0.0
         }
     ]
 }

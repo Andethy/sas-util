@@ -228,6 +228,10 @@ FEATURES_FIELDS_SMALL: tuple[str, ...] = ("mfcc_mean", "melSpec_mean")
 OUTPUT_BUCKETS: tuple[str, ...] = ("00", "01", "02", "03", "10", "11", "12", "13", "20", "21", "22", "23", "30", "31",
                                    "32", "33")
 
+###############################
+#            STUDY            #
+###############################
+
 TRACKS_ARR: tuple[str, ...] = (
     '000740', '000756', '001554', '001730', '003497', '003499', '004066', '004069', '004511', '004703',
     '004850', '005222', '005224', '005348', '006525', '006658', '006664', '006778', '007545', '007709',
@@ -253,7 +257,7 @@ TRACKS_ARR: tuple[str, ...] = (
 
 EVAL_KEYS_A: tuple[str, ...] = ('Danger', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable')
 
-EVAL_KEYS_B: tuple[str, ...] = ('Danger', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable')
+EVAL_KEYS_B: tuple[str, ...] = ('Safety', 'Urgency', 'Risk of Failure', 'Collaboration', 'Approachable')
 
 SELECTION_FIELD: str = 'selected_mushra'
 
@@ -261,8 +265,13 @@ PEOPLE_FIELDS: tuple[str, ...] = ('UserLanguage', 'LocationLatitude', 'LocationL
 
 PEOPLE_TYPES: dict[str, Any] = {'LocationLatitude': float, 'LocationLongitude': float, 'Duration (in seconds)': int}
 
+STUDY_PARTITION = 368
+
 RATING_RANGE: range = range(18, 717, 5)
 
 ID_FIELD: str = 'ResponseId'
 
 START_ROW: int = 1
+
+if __name__ == '__main__':
+    print(STUDY_PARTITION in RATING_RANGE)

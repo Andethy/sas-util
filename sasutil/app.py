@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import os
 import tkinter as tk
 from typing import Union, Any
@@ -90,7 +92,7 @@ class PreviewApp:
         self.ax.boxplot(self.track_data, labels=EVAL_KEYS_A)
         self.canvas.draw()
 
-    def analyze_data(self, track) -> Union[dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]], None]:
+    def analyze_data(self, track) -> dict[str, dict[str, Union[Union[str, str, generic, generic], Any]]] | None:
 
         # Extract data for each field into separate lists for calculations
         fields_data = {field: [] for field in EVAL_KEYS_A}
@@ -142,6 +144,7 @@ class PreviewApp:
             self.stats_data.delete('1.0', tk.END)
         except tk.TclError:
             pass
+
 
 if __name__ == '__main__':
     root = tk.Tk()
