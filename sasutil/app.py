@@ -171,10 +171,11 @@ class AttributeApp:
             tk.Checkbutton(control_frame, text=attr, variable=var).grid(row=idx // 2, column=idx % 2, sticky='w')
 
         # Find and Play Button
-        self.find_play_button = tk.Button(control_frame, text="Find and Play", command=self.find_and_play)
+        self.find_play_button = tk.Button(control_frame, text="Find + Play", command=self.find_and_play)
         self.find_play_button.grid(row=3, column=0, columnspan=2, pady=5)
 
     def find_and_play(self):
+        # Right now, ON = 3 and OFF = -3
         user_choices = {attr: (var.get() * 6 - 3) for attr, var in self.check_vars.items()}
         closest_match = self.calculate_similarity(user_choices)
 
