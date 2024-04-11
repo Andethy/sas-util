@@ -273,5 +273,17 @@ ID_FIELD: str = 'ResponseId'
 
 START_ROW: int = 1
 
+################################
+#      FEATURE EXTRACTION      #
+################################
+
+SAMPLE_RATE = 22050
+
+
+def void(*args):
+    return args
+
+
 if __name__ == '__main__':
     print(STUDY_PARTITION in RATING_RANGE)
+    print(len(TRACKS_ARR))

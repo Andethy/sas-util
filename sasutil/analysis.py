@@ -1,7 +1,15 @@
 import collections
 import math
+from typing import Tuple
 
 import numpy as np
+from numpy import ndarray
+from scipy.stats._mstats_basic import ModeResult
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix
 
 from constants import *
 from file import JsonFileIO, CsvFileIO
@@ -11,6 +19,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+from scipy import stats
 
 
 # librosa.feature.mfcc
@@ -166,7 +175,7 @@ class StudyAnalyzer:
         """
         Extracts all responses from the file and stores them in an output JSON file.
         """
-
+        total_entries: int = 0
         for entry in self.csv.data[START_ROW:]:
             values = list(entry.values())
             person = entry[ID_FIELD]
@@ -186,9 +195,11 @@ class StudyAnalyzer:
                     continue
                 elif n >= STUDY_PARTITION:
                     response[EVAL_KEYS_A[0]] *= -1
+                total_entries += 1
                 self.data[TRACKS_ARR[int(items[0]) - 1]][person] = response
                 items.pop(0)
         self.out.add_entries_dict(self.data)
+        print("TOTAL RATINGS:", total_entries)
 
     def extract_people(self, json: JsonFileIO):
         people = {}
@@ -202,6 +213,7 @@ class StudyAnalyzer:
     def summarize(self):
         track_means = {}
         sd_sorted = []
+        above20 = 0
         for keyTrack, valueTrack in self.data.items():
             person_tracks = [0, 0, 0, 0, 0]
             for keyPerson, valuePerson in valueTrack.items():
@@ -214,8 +226,11 @@ class StudyAnalyzer:
             track_means[keyTrack] = {key + " Mean": round(value, 2) for key, value in zip(EVAL_KEYS_A, average_values)}
             track_means[keyTrack].update({key + " SD": round(value, 2) for key, value in zip(EVAL_KEYS_A, sd_values)})
             track_means[keyTrack]["Entries"] = len(valueTrack)
+            above20 += 1 if len(valueTrack) >= 20 else 0
             sd_sorted.append((abs(track_means[keyTrack]["Danger SD"]), keyTrack))
 
+        print("TRACKS ABOVE 20:", above20)
+        print("% OF TRACKS ABOVE 20:", above20 / len(self.data))
         sd_sorted.sort()
 
         analysis_entries = {}
@@ -291,6 +306,77 @@ class StudyAnalyzer:
         pass
 
 
+class CorrelationAnalyzer:
+    study: dict[str: dict[str: dict[str: float]]]
+
+    def __init__(self, features_path, study_path, result_path):
+        self.features = JsonFileIO(features_path).get_entries()
+        self.study = JsonFileIO(study_path).get_entries()
+        self.results = JsonFileIO(result_path)
+        self.tracks = ...
+        self.tracks_ratings = ...
+        self.tracks_features = ...
+        self.store_info()
+
+    def store_info(self):
+        danger_totals = collections.defaultdict(list)
+        danger_means = {}
+        for track in TRACKS_ARR:
+            for res in self.study[track].values():
+                danger_totals[track].append(res["Danger"])
+            mode_res: ModeResult = stats.mode(danger_totals[track])
+            if True or mode_res.mode:
+                danger_means[track] = np.mean(danger_totals[track])
+
+        self.tracks = danger_means.keys()
+
+        self.tracks_ratings = [danger_means[track] for track in self.tracks]
+        self.tracks_features = [np.mean(self.features[track]["Centroid"]) for track in self.tracks]
+
+
+
+    def correlate(self):
+
+        correlation_coefficient, p_value = stats.pearsonr(self.tracks_features, self.tracks_ratings)
+
+        print(f'Correlation coefficient: {correlation_coefficient}')
+        print(f'P-value: {p_value}')
+
+        X = np.array(self.tracks_features).reshape(-1, 1)
+        y = np.array(self.tracks_ratings)  # Response
+        model = LinearRegression().fit(X, y)
+
+        print(f'Coefficient: {model.coef_[0]}')
+        print(f'Intercept: {model.intercept_}')
+        print(f'R^2 score: {model.score(X, y)}')
+
+    def binary_classification(self):
+        # Assuming self.tracks_ratings and self.tracks_features are correctly filtered from zero danger ratings
+        mean_ratings = np.array(self.tracks_ratings)
+        # print(*[a + ': ' + str(b) + '\n' for a, b in zip(self.tracks, self.tracks_ratings)])
+        averages = np.array(self.tracks_features)
+
+        # Label tracks with danger rating < 0 as 0 (safe), and danger rating > 0 as 1 (dangerous)
+        labels = (mean_ratings > 0).astype(int)  # This will create a binary array with 0s and 1s
+
+        # Split your data into training and testing sets with stratification to maintain the proportion of class labels
+        x_train, x_test, y_train, y_test = train_test_split(averages.reshape(-1, 1), labels, test_size=0.2,
+                                                            random_state=42, stratify=labels)
+
+        # Initialize the classifier with class weight 'balanced' to handle imbalanced data better
+        clf = LogisticRegression() # class_weight='balanced'
+
+        # Train the classifier
+        clf.fit(x_train, y_train)
+
+        # Predict on the test set
+        y_pred = clf.predict(x_test)
+
+        # Evaluate the classifier
+        print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
+        print(f"Confusion Matrix:\n{confusion_matrix(y_test, y_pred)}")
+
+
 # analyzer = Analyzer(JSON_ONSET_PATH, fields=ONSET_FIELDS)
 # analyzer.analyze_data('Onsets', 'BUCKET', 5)
 # analyzer = AudioAnalyzer(JSON_BUCKETS_PATH, fields=OUTPUT_BUCKETS)
@@ -299,10 +385,22 @@ class StudyAnalyzer:
 # ppl = JsonFileIO('../resources/study/people.json')
 # analyzer.extract_people(ppl)
 # ppl.numerize_entries(**PEOPLE_TYPES)
-if __name__ == '__main__':
+
+def study():
     analyzer = StudyAnalyzer('../resources/study/study.csv',
                              '../resources/study/results.json',
                              '../resources/study/summary.json',
                              '../resources/study/analysis.json')
-    # analyzer.extract_tracks()
+    analyzer.extract_tracks()
     analyzer.summarize()
+
+
+def correlation():
+    analyzer = CorrelationAnalyzer('../resources/analysis/features.json',
+                                   '../resources/study/results.json',
+                                   '../resources/analysis/results.json')
+    analyzer.binary_classification()
+
+
+if __name__ == '__main__':
+    correlation()

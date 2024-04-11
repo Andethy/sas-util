@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import tkinter as tk
+from tkinter import messagebox
 from typing import Union, Any
 
 import matplotlib.pyplot as plt
@@ -146,7 +147,81 @@ class PreviewApp:
             pass
 
 
-if __name__ == '__main__':
+class AttributeApp:
+    def __init__(self, window):
+        self.find_play_button = None
+        self.root_path = '../resources/study'
+        self.data = JsonFileIO(self.root_path + '/summary.json').get_entries()
+
+        self.window = window
+        window.title('AttributeMatcherApp')
+
+        self.check_vars = {key: tk.IntVar() for key in EVAL_KEYS_A}
+        self.setup_ui()
+
+        pygame.mixer.init()
+        self.audio_file = ''
+
+    def setup_ui(self):
+        control_frame = tk.Frame(self.window)
+        control_frame.pack(pady=10)
+
+        # Checkboxes for attributes
+        for idx, (attr, var) in enumerate(self.check_vars.items()):
+            tk.Checkbutton(control_frame, text=attr, variable=var).grid(row=idx // 2, column=idx % 2, sticky='w')
+
+        # Find and Play Button
+        self.find_play_button = tk.Button(control_frame, text="Find and Play", command=self.find_and_play)
+        self.find_play_button.grid(row=3, column=0, columnspan=2, pady=5)
+
+    def find_and_play(self):
+        user_choices = {attr: (var.get() * 6 - 3) for attr, var in self.check_vars.items()}
+        closest_match = self.calculate_similarity(user_choices)
+
+        if closest_match:
+            self.play_audio(closest_match)
+        else:
+            messagebox.showerror("Error", "No match found.")
+
+    def calculate_similarity(self, user_choices):
+        closest_key = None
+        closest_distance = float('inf')
+
+        for key, values in self.data.items():
+            distance = 0
+            for choice, value in user_choices.items():
+                mean_key = f"{choice} Mean"
+                if mean_key in values:
+                    distance += abs(values[mean_key] - value)
+
+            if distance < closest_distance:
+                closest_distance = distance
+                closest_key = key
+
+        return closest_key
+
+    def play_audio(self, track_id):
+        self.audio_file = self.get_path(track_id)
+        if self.audio_file:
+            pygame.mixer.music.load(self.audio_file)
+            pygame.mixer.music.play()
+        else:
+            messagebox.showerror("Error", "Audio file not found for the selected attributes.")
+
+    def get_path(self, track_id):
+        file_name = f"{track_id}.mp3"
+        for dir_path, _, file_names in os.walk(self.root_path):
+            if file_name in file_names:
+                return os.path.join(dir_path, file_name)
+        return ''
+
+
+# if __name__ == '__main__':
+#     root = tk.Tk()
+#     app = PreviewApp(root)
+#     root.mainloop()
+
+if __name__ == "__main__":
     root = tk.Tk()
-    app = PreviewApp(root)
+    app = AttributeApp(root)
     root.mainloop()
