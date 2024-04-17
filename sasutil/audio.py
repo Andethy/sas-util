@@ -17,10 +17,13 @@ class AudioFormatter:
     location: Path
     trim: float  # length to trim files at
 
-    def __init__(self, in_dir, trim=10):
+    def __init__(self, in_dir, trim=10, types=None, in_place=False):
+        if types is None:
+            types = {'wav', 'mp3', 'ogg'}
         self.location = in_dir
-        self.finder = FileFinder(self.location, {'wav', 'mp3', 'ogg'})
+        self.finder = FileFinder(self.location, types)
         self.trim = trim
+        self.in_place = in_place
 
     def format_all(self):
         print("Attempting to format all files...")
@@ -46,16 +49,23 @@ class AudioFormatter:
             segment = AudioSegment.from_mp3(file)
         elif file.suffix == '.ogg':
             segment = AudioSegment.from_ogg(file)
+        elif file.suffix == '.au':
+            segment = AudioSegment.from_file(file, format='au')
 
         rel_path = self.finder.get_rel_path(file)
-        exp_path = Path(os.path.abspath('../out/' + str(rel_path)))
+        exp_path = Path(os.path.abspath('../out/' + str(rel_path))) if not self.in_place else file.parent
+
+        file_name = file.name[:-len(file.suffix)] + '.mp3'
+
         exp_path.mkdir(parents=True, exist_ok=True)
-        segment[:int(1000 * self.trim)].export(exp_path.joinpath(file.name))
-        print("Exported", file.name, "to", rel_path)
+        segment[:int(1000 * self.trim)].export(exp_path.joinpath(file_name), format='mp3')
+        if file.suffix != '.mp3':
+            os.remove(file)
+
+        print("Exported", file_name, "to", rel_path)
 
 
 class AudioOrganizer:
-
     finder: FileFinder
 
     def __init__(self, in_dir: str, json_file='../resources/tagatune/annotations.json'):
@@ -160,17 +170,22 @@ def fma():
     """
     Currently Using my external SSD to store the medium FMA dataset
     """
-    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
+    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=FMA_BUCKETS_PATH)
     # organizer.put_all_one_dir('/Volumes/Music/Robotics/fma_medium')
     # formatter = AudioFormatter(os.path.abspath('/Volumes/Music/Robotics/fma'), 7)
     # formatter.format_all()
+    # organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
+    # organizer.organize_files_fma('fma_buckets')
+    # print("- DONE")
     print("ORGANIZING?")
-    organizer.organize_files_fma()
+    organizer.organize_files_fma(...)
+
+
+def gtzan():
+    # organizer = AudioOrganizer('/Volumes/Music/Robotics/gtzan'
+    formatter = AudioFormatter('/Volumes/Music/Robotics/gtzan_cut', 7, types={'au', 'mp3'}, in_place=True)
+    formatter.format_all()
 
 
 if __name__ == '__main__':
-    organizer = AudioOrganizer('/Volumes/Music/Robotics/fma', json_file=JSON_BUCKETS_PATH)
-    organizer.organize_files_fma('fma_buckets')
-    print("- DONE")
-    # fma()
-
+    gtzan()

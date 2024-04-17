@@ -333,8 +333,6 @@ class CorrelationAnalyzer:
         self.tracks_ratings = [danger_means[track] for track in self.tracks]
         self.tracks_features = [np.mean(self.features[track]["Centroid"]) for track in self.tracks]
 
-
-
     def correlate(self):
 
         correlation_coefficient, p_value = stats.pearsonr(self.tracks_features, self.tracks_ratings)
@@ -364,7 +362,7 @@ class CorrelationAnalyzer:
                                                             random_state=42, stratify=labels)
 
         # Initialize the classifier with class weight 'balanced' to handle imbalanced data better
-        clf = LogisticRegression() # class_weight='balanced'
+        clf = LogisticRegression()  # class_weight='balanced'
 
         # Train the classifier
         clf.fit(x_train, y_train)

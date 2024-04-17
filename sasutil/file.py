@@ -21,6 +21,7 @@ class FileFinder(object):
 
     def get_next_file(self):
         if self._queue.empty():
+            print("Queue is empty")
             return None
 
         res = self._queue.get()
@@ -30,6 +31,7 @@ class FileFinder(object):
                 if child.suffix[1:].lower() in self.suffixes or child.is_dir():
                     print(f'Added {child.name} to queue [{"folder" if child.is_dir() else child.suffix}]')
                     self._queue.put(child)
+            print(self._queue.qsize())
             return Ellipsis
         else:
             return res if res.suffix[1:] in self.suffixes else None

@@ -218,7 +218,10 @@ JSON_FIELDS: tuple[str, ...] = ('id', 'tags', 'file')
 JSON_MFCC_PATH: str = '../resources/fma/mfcc.json'
 JSON_ONSET_PATH: str = '../resources/fma/onset.json'
 JSON_FEATURES_PATH: str = '../resources/fma/features.json'
-JSON_BUCKETS_PATH: str = '../resources/fma/buckets.json'
+FMA_BUCKETS_PATH: str = '../resources/fma/buckets.json'
+
+GTZ_BUCKETS_PATH: str = '../resources/gtzan/buckets.json'
+
 ENERGY_FIELD: str = 'Energy'
 MFCC_FIELD: str = 'MFCCS_BUCKET'
 MFCC_FIELDS: tuple[str, ...] = ('Name', 'Index', 'Min', 'Max', 'Energy', 'BUCKET')
