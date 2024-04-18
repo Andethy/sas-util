@@ -5,7 +5,7 @@ from queue import Queue
 import random
 from typing import TextIO
 
-from constants import JSON_FIELDS, JSON_ONSET_PATH, JSON_FEATURES_PATH, TRACKS_ARR
+from constants import JSON_FIELDS, JSON_ONSET_PATH, FMA_FEATURES_PATH, TRACKS_ARR
 
 
 class FileFinder(object):

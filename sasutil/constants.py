@@ -217,17 +217,19 @@ JSON_FIELDS: tuple[str, ...] = ('id', 'tags', 'file')
 
 JSON_MFCC_PATH: str = '../resources/fma/mfcc.json'
 JSON_ONSET_PATH: str = '../resources/fma/onset.json'
-JSON_FEATURES_PATH: str = '../resources/fma/features.json'
+FMA_FEATURES_PATH: str = '../resources/fma/features.json'
 FMA_BUCKETS_PATH: str = '../resources/fma/buckets.json'
 
+GTZ_FEATURES_PATH: str = '../resources/gtzan/features.json'
 GTZ_BUCKETS_PATH: str = '../resources/gtzan/buckets.json'
+
 
 ENERGY_FIELD: str = 'Energy'
 MFCC_FIELD: str = 'MFCCS_BUCKET'
 MFCC_FIELDS: tuple[str, ...] = ('Name', 'Index', 'Min', 'Max', 'Energy', 'BUCKET')
 ONSET_FIELDS: tuple[str, ...] = ('Name', 'Index', 'Onsets', 'BUCKET')
 FEATURES_FIELDS: tuple[str, ...] = ("Onsets", "mfcc_mean", "melSpec_mean", "chromaVec_mean", "roll_mean", "zcr_mean")
-FEATURES_FIELDS_SMALL: tuple[str, ...] = ("mfcc_mean", "melSpec_mean")
+FEATURES_FIELDS_SMALL: tuple[str, ...] = ("Onsets", "mfcc_mean")
 OUTPUT_BUCKETS: tuple[str, ...] = ("00", "01", "02", "03", "10", "11", "12", "13", "20", "21", "22", "23", "30", "31",
                                    "32", "33")
 

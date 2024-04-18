@@ -90,6 +90,23 @@ class AudioOrganizer:
                     continue
         print("All files copied - DONE")
 
+    def organize_files_buckets(self, out_dir):
+        print("Attempting to retrieve data")
+        data = self.json_file.get_entries()
+        print(data)
+        print("Attempting to copy files to appropriate directories")
+        for bucket, entries in data.items():
+            for entry in entries:
+                src_path = Path(f'{self.finder.root}/{entry}')
+                des_path = Path(f'{out_dir}/{bucket}/{entry}')
+                print(f'Copying file {entry} to {des_path}')
+                Path(f'{out_dir}/{bucket}/').mkdir(parents=True, exist_ok=True)
+                try:
+                    copyfile(src_path, des_path)
+                except IsADirectoryError:
+                    continue
+        print("All files copied - DONE")
+
     def init_json(self):
         res = Queue()
         print(f"Attempting to add tracks to buffer")

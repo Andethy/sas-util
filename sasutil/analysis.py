@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 import collections
 import math
-from typing import Tuple
+from typing import Tuple, List, Any
 
 import numpy as np
 from numpy import ndarray
@@ -83,8 +85,89 @@ class AudioAnalyzer:
             bucket += 1
         return bucket
 
+    import pandas as pd
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.cluster import KMeans
+    from sklearn.decomposition import PCA
+    import matplotlib.pyplot as plt
+
     @staticmethod
     def correlate_buckets(json: JsonFileIO, fields: list, buckets: int = 5):
+        print(f'Gathering entries @ {json.file_path}')
+        data_list = json.get_entries()
+
+        if type(data_list) is dict:
+            temp: list = []
+            for key, vals in data_list.items():
+                temp.append(vals)
+                temp[-1].update(Name=key)
+            data_list = temp
+
+        print("Converting entries to DataFrame object")
+        data_df = pd.DataFrame(data_list)
+        print(data_df)
+        # Detect list fields and flatten them
+
+        list_fields = {field: len(data_df[field].iloc[0]) for field in fields if
+                       isinstance(data_df[field].iloc[0], list)}
+        for field, length in list_fields.items():
+            for i in range(length):
+                data_df[f'{field}_{i}'] = data_df[field].apply(lambda x: x[i])
+            data_df.drop(columns=[field], inplace=True)
+
+        print("Extracting fields to analyze")
+        # Update fields list to include newly created columns from lists
+        fields_updated = [column for column in data_df.columns if
+                          any(field == column.split('_')[0] for field in fields)]
+
+        print("Standardizing data based on fields")
+        scaler = StandardScaler()
+        variables_scaled = scaler.fit_transform(data_df[fields_updated])
+
+        print(f'Performing K-means clustering into {buckets} buckets')
+        kmeans = KMeans(n_init=10, n_clusters=buckets, random_state=42)
+        data_df['bucket'] = kmeans.fit_predict(variables_scaled)
+
+        print("Calculating cluster centroids")
+        centroids = scaler.inverse_transform(kmeans.cluster_centers_)
+        centroids_df = pd.DataFrame(centroids, columns=fields_updated)
+
+        print("Assigning buckets as a field in JSON data")
+        for i, row in data_df.iterrows():
+            data_list[i]['bucket'] = row['bucket']
+
+        print("Writing new field to JSON")
+        json.add_entries(data_list)
+
+        #TODO: FIX LATER
+        # # PCA for visualization purposes
+        # pca = PCA(n_components=2)
+        # principal_components = pca.fit_transform(variables_scaled)
+        # principal_df = pd.DataFrame(data=principal_components,
+        #                             columns=['principal component 1', 'principal component 2'])
+        # principal_df['bucket'] = data_df['bucket']
+        # # Plotting
+        # fig, ax = plt.subplots()
+        # colors = ['r', 'g', 'b', 'y', 'c']
+        # for bucket, color in zip(principal_df['bucket'].unique(), colors):
+        #     indices_to_keep = principal_df['bucket'] == bucket
+        #     ax.scatter(principal_df.loc[indices_to_keep, 'principal component 1'],
+        #                principal_df.loc[indices_to_keep, 'principal component 2'],
+        #                c=color, s=50)
+        # ax.legend(principal_df['bucket'].unique())
+        # ax.grid()
+        # plt.xlabel('Principal Component 1')
+        # plt.ylabel('Principal Component 2')
+        # plt.title('2D PCA of Clustering Results')
+        # plt.show()
+
+        print("\nAverage values for each bucket (centroids):")
+        print(centroids_df)
+
+        print("Analysis complete - done.")
+
+    @staticmethod
+    def correlate_buckets_old(json: JsonFileIO, fields: list, buckets: int = 5):
         print(f'Gathering entries @ {json.file_path}')
         data_list = json.get_entries()
 
