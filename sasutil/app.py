@@ -150,6 +150,7 @@ class PreviewApp:
 class AttributeApp:
     def __init__(self, window):
         self.find_play_button = None
+        self.next_button = None  # Initialize the "Next" button
         self.root_path = '../resources/study'
         self.data = JsonFileIO(self.root_path + '/summary.json').get_entries()
 
@@ -161,6 +162,8 @@ class AttributeApp:
 
         pygame.mixer.init()
         self.audio_file = ''
+        self.matches = []  # List to store sorted matches
+        self.current_match_index = -1  # Index to track the current match
 
     def setup_ui(self):
         control_frame = tk.Frame(self.window)
@@ -174,32 +177,47 @@ class AttributeApp:
         self.find_play_button = tk.Button(control_frame, text="Find + Play", command=self.find_and_play)
         self.find_play_button.grid(row=3, column=0, columnspan=2, pady=5)
 
+        # Text widget to display track ID
+        self.track_display = tk.Text(control_frame, height=1, width=20)
+        self.track_display.grid(row=4, column=0, columnspan=2, pady=5)
+        self.track_display.insert(tk.END, "Track ID will appear here")
+
+        # Next Button
+        self.next_button = tk.Button(control_frame, text="Next Match", command=self.play_next_match)
+        self.next_button.grid(row=5, column=0, columnspan=2, pady=5)
+
     def find_and_play(self):
-        # Right now, ON = 3 and OFF = -3
+        # Reset matches and current index
+        self.matches = []
+        self.current_match_index = -1
+
+        # Gather user choices
         user_choices = {attr: (var.get() * 6 - 3) for attr, var in self.check_vars.items()}
-        closest_match = self.calculate_similarity(user_choices)
 
-        if closest_match:
-            self.play_audio(closest_match)
-        else:
-            messagebox.showerror("Error", "No match found.")
-
-    def calculate_similarity(self, user_choices):
-        closest_key = None
-        closest_distance = float('inf')
-
+        # Calculate all matches and sort them by distance
         for key, values in self.data.items():
             distance = 0
             for choice, value in user_choices.items():
                 mean_key = f"{choice} Mean"
                 if mean_key in values:
                     distance += abs(values[mean_key] - value)
+            self.matches.append((key, distance))
 
-            if distance < closest_distance:
-                closest_distance = distance
-                closest_key = key
+        self.matches.sort(key=lambda x: x[1])  # Sort by distance
 
-        return closest_key
+        # Play the closest match
+        self.play_next_match()
+
+    def play_next_match(self):
+        self.current_match_index += 1
+        if self.current_match_index < len(self.matches):
+            track_id = self.matches[self.current_match_index][0]
+            self.play_audio(track_id)
+            self.track_display.delete('1.0', tk.END)
+            self.track_display.insert(tk.END, track_id)
+        else:
+            messagebox.showerror("Error", "No more matches found.")
+            self.current_match_index = -1  # Reset the index
 
     def play_audio(self, track_id):
         self.audio_file = self.get_path(track_id)
