@@ -186,25 +186,28 @@ class AttributeApp:
             self.check_vars[attr].set(0)
             self.check_vars[attr].grid(row=idx // 2, column=idx % 2, sticky='w')
 
-        # Find and Play Button
-        self.find_play_button = tk.Button(control_frame, text="Find + Play", command=self.find_and_play)
-        self.find_play_button.grid(row=3, column=0, columnspan=2, pady=5)
+        # Find Button
+        self.find_play_button = tk.Button(control_frame, text="Find", command=self.find_matches)
+        self.find_play_button.grid(row=3, column=0, pady=5)
+
+        # Play Button
+        self.play_button = tk.Button(control_frame, text="Play", command=self.play_audio)
+        self.play_button.grid(row=3, column=1, pady=5)
 
         # Text widget to display track ID and attributes
         self.track_display = tk.Text(control_frame, height=10, width=50)
         self.track_display.grid(row=4, column=0, columnspan=2, pady=5)
 
-        # Next Button
+        # Next Match Button
         self.next_button = tk.Button(control_frame, text="Next Match", command=self.play_next_match)
         self.next_button.grid(row=5, column=0, columnspan=2, pady=5)
 
         # Setup multiple plot areas
-        self.fig, self.axes = plt.subplots(nrows=4, ncols=2, figsize=(10, 10))  # Adjust layout according to your need
+        self.fig, self.axes = plt.subplots(nrows=4, ncols=2, figsize=(10, 10))
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.window)
         self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
-    def find_and_play(self):
-        # Reset matches and current index
+    def find_matches(self):
         self.matches = []
         self.current_match_index = -1
 
@@ -221,21 +224,18 @@ class AttributeApp:
             self.matches.append((key, distance))
 
         self.matches.sort(key=lambda x: x[1])  # Sort by distance
-
-        # Play the closest match
-        self.play_next_match()
+        self.play_next_match()  # Automatically move to the first match
 
     def play_next_match(self):
         self.current_match_index += 1
         if self.current_match_index < len(self.matches):
             track_id, _ = self.matches[self.current_match_index]
             self.track_features = self.features[track_id]
+            self.audio_file = self.get_path(track_id)
             self.display_track_info(track_id)
             self.plot_feature()
-            self.play_audio(track_id)
 
-    def play_audio(self, track_id):
-        self.audio_file = self.get_path(track_id)
+    def play_audio(self):
         if self.audio_file:
             pygame.mixer.music.load(self.audio_file)
             pygame.mixer.music.play()
@@ -247,17 +247,27 @@ class AttributeApp:
             features = ['Centroid', 'Onsets', 'MFCCs', 'Bandwidth', 'Contrast', 'Flatness', 'Rolloff']
             bounds = {'Centroid': (0, 5000),
                       'Onsets': (-1, 1),
-                      'MFCCs': (-50, 50),
+                      'MFCCs': (-200, 200),
                       'Bandwidth': (0, 5000),
                       'Contrast': (0, 50),
                       'Flatness': (0, 0.1),
                       'Rolloff': (0, 10000)}
-            for ax, feature in zip(self.axes.flatten(), features):
+
+            y, sr = librosa.load(self.audio_file)
+            y = y / max(y, key=abs)
+            self.axes[0,0].clear()
+            self.axes[0,0].plot(librosa.times_like(y, sr=sr/2) / 1000, y)
+            self.axes[0,0].set(title="Waveform", xlabel="Time (s)", ylabel="Amplitude")
+            self.axes[0,0].set_ylim((-1, 1))
+
+            for ax, feature in zip(self.axes.flatten()[1:], features):
                 data = self.track_features.get(feature, [])
                 ax.clear()
                 if feature == 'Onsets':
                     # ax.plot(librosa.frames_to_time(range(len(data))),
                     ax.vlines(data, ymin=-1, ymax=1, color='r', linestyle='--', label=f"{feature} Times")
+                elif feature == 'MFCCs':
+                    ax.plot(librosa.frames_to_time(range(len(data[0]))), np.transpose(data[1:5]))
                 else:
                     ax.plot(librosa.frames_to_time(range(len(data))), data)
                 ax.set(title=f"{feature}", xlabel="Time", ylabel=f"{feature}")
