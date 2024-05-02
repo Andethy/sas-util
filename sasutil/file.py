@@ -156,7 +156,7 @@ class JsonFileIO(BaseFileIO):
     def rem_fields(self, *args):
         with open(self.file_path, 'r') as self.file:
             self.data = json.load(self.file)
-            for coll in self.data:
+            for coll in self.data if type(self.data) != dict else self.data.values():
                 for field in args:
                     del coll[field]
         with open(self.file_path, 'w') as self.file:
@@ -281,5 +281,8 @@ def remove_irrelevant_files(folder_path: str, files_to_keep: tuple[str, ...]):
 # js.numerize_entries(Index=int, Min=float, Max=float, Energy=float)
 # js.rem_fields('MFCCS_Bucket', 'ONSET_BUCKET')
 
+# remove_irrelevant_files('../resources/study/dataset', TRACKS_ARR)
+
 if __name__ == '__main__':
-    remove_irrelevant_files('../resources/study/dataset', TRACKS_ARR)
+    features = JsonFileIO('../resources/analysis/features.json')
+    features.rem_fields('MFCC')
