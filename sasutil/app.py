@@ -2,9 +2,10 @@ from __future__ import annotations
 
 import os
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk
 from typing import Union, Any
 
+import librosa
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import pygame
@@ -148,51 +149,67 @@ class PreviewApp:
 
 
 class AttributeApp:
+    features: dict[str: dict]
+
     def __init__(self, window):
+        self.canvas = None
+        self.fig = None
+        self.track_display = None
         self.find_play_button = None
-        self.next_button = None  # Initialize the "Next" button
+        self.next_button = None
+
         self.root_path = '../resources/study'
         self.data = JsonFileIO(self.root_path + '/summary.json').get_entries()
+        self.features = JsonFileIO('../resources/analysis/features.json').get_entries()
 
         self.window = window
-        window.title('AttributeMatcherApp')
+        window.title('AttributeLookupApp')
 
         self.check_vars = {key: tk.IntVar() for key in EVAL_KEYS_A}
-        self.setup_ui()
+
+        self.audio_file = ''
+        self.matches = []
+        self.current_match_index = -1
+
+        self.track_features = None
 
         pygame.mixer.init()
-        self.audio_file = ''
-        self.matches = []  # List to store sorted matches
-        self.current_match_index = -1  # Index to track the current match
+        self.setup_ui()
 
     def setup_ui(self):
         control_frame = tk.Frame(self.window)
         control_frame.pack(pady=10)
 
-        # Checkboxes for attributes
+        # Sliders for attributes
         for idx, (attr, var) in enumerate(self.check_vars.items()):
-            tk.Checkbutton(control_frame, text=attr, variable=var).grid(row=idx // 2, column=idx % 2, sticky='w')
+            self.check_vars[attr] = tk.Scale(control_frame, from_=-3, to=3, orient='horizontal', label=attr)
+            self.check_vars[attr].set(0)
+            self.check_vars[attr].grid(row=idx // 2, column=idx % 2, sticky='w')
 
         # Find and Play Button
         self.find_play_button = tk.Button(control_frame, text="Find + Play", command=self.find_and_play)
         self.find_play_button.grid(row=3, column=0, columnspan=2, pady=5)
 
-        # Text widget to display track ID
-        self.track_display = tk.Text(control_frame, height=1, width=20)
+        # Text widget to display track ID and attributes
+        self.track_display = tk.Text(control_frame, height=10, width=50)
         self.track_display.grid(row=4, column=0, columnspan=2, pady=5)
-        self.track_display.insert(tk.END, "Track ID will appear here")
 
         # Next Button
         self.next_button = tk.Button(control_frame, text="Next Match", command=self.play_next_match)
         self.next_button.grid(row=5, column=0, columnspan=2, pady=5)
+
+        # Setup multiple plot areas
+        self.fig, self.axes = plt.subplots(nrows=4, ncols=2, figsize=(10, 10))  # Adjust layout according to your need
+        self.canvas = FigureCanvasTkAgg(self.fig, master=self.window)
+        self.canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
     def find_and_play(self):
         # Reset matches and current index
         self.matches = []
         self.current_match_index = -1
 
-        # Gather user choices
-        user_choices = {attr: (var.get() * 6 - 3) for attr, var in self.check_vars.items()}
+        # Gather user choices from sliders
+        user_choices = {attr: var.get() for attr, var in self.check_vars.items()}
 
         # Calculate all matches and sort them by distance
         for key, values in self.data.items():
@@ -211,13 +228,11 @@ class AttributeApp:
     def play_next_match(self):
         self.current_match_index += 1
         if self.current_match_index < len(self.matches):
-            track_id = self.matches[self.current_match_index][0]
+            track_id, _ = self.matches[self.current_match_index]
+            self.track_features = self.features[track_id]
+            self.display_track_info(track_id)
+            self.plot_feature()
             self.play_audio(track_id)
-            self.track_display.delete('1.0', tk.END)
-            self.track_display.insert(tk.END, track_id)
-        else:
-            messagebox.showerror("Error", "No more matches found.")
-            self.current_match_index = -1  # Reset the index
 
     def play_audio(self, track_id):
         self.audio_file = self.get_path(track_id)
@@ -225,7 +240,40 @@ class AttributeApp:
             pygame.mixer.music.load(self.audio_file)
             pygame.mixer.music.play()
         else:
-            messagebox.showerror("Error", "Audio file not found for the selected attributes.")
+            tk.messagebox.showerror("Error", "Audio file not found for the selected attributes.")
+
+    def plot_feature(self):
+        if self.track_features:
+            features = ['Centroid', 'Onsets', 'MFCCs', 'Bandwidth', 'Contrast', 'Flatness', 'Rolloff']
+            bounds = {'Centroid': (0, 5000),
+                      'Onsets': (-1, 1),
+                      'MFCCs': (-50, 50),
+                      'Bandwidth': (0, 5000),
+                      'Contrast': (0, 50),
+                      'Flatness': (0, 0.1),
+                      'Rolloff': (0, 10000)}
+            for ax, feature in zip(self.axes.flatten(), features):
+                data = self.track_features.get(feature, [])
+                ax.clear()
+                if feature == 'Onsets':
+                    # ax.plot(librosa.frames_to_time(range(len(data))),
+                    ax.vlines(data, ymin=-1, ymax=1, color='r', linestyle='--', label=f"{feature} Times")
+                else:
+                    ax.plot(librosa.frames_to_time(range(len(data))), data)
+                ax.set(title=f"{feature}", xlabel="Time", ylabel=f"{feature}")
+                ax.set_ylim(bounds[feature])
+
+            self.fig.tight_layout()  # Improve spacing between plots
+            self.canvas.draw()
+
+    def display_track_info(self, track_id):
+        attributes = self.data.get(track_id, {})
+        display_text = f"Track ID: {track_id}\n"
+        for attr in sorted(attributes.keys()):
+            if 'mean' in attr.lower():
+                display_text += f"{attr}: {attributes[attr]}\n"
+        self.track_display.delete('1.0', tk.END)
+        self.track_display.insert(tk.END, display_text)
 
     def get_path(self, track_id):
         file_name = f"{track_id}.mp3"
